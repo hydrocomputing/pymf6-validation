@@ -1,0 +1,49 @@
+[project]
+authors = [{name = "Mike Müller", email = "mmueller@hydrocomputing.com"}]
+dependencies = []
+name = "pymf6-validation"
+requires-python = ">= 3.11"
+version = "0.1.0"
+readme = "README.md"
+keywords = [
+    "MODFLOW6",
+    "groundwater",
+    "modeling",
+    "dynamic boundary condition"
+    ]
+license = {text = "MIT License"}
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Environment :: Console",
+  "Framework :: Jupyter :: JupyterLab",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: POSIX",
+  "Operating System :: MacOS :: MacOS X",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Hydrology"
+]
+
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.pixi.workspace]
+channels = ["hydrocomputing", "conda-forge"]
+platforms = ["win-64", "linux-64", "osx-arm64"]
+
+[tool.pixi.dependencies]
+python = "3.13.*"
+jupyterlab = ">=4.4.3,<5"
+pytest = ">=8.4.1,<9"
+pymf6-tools = ">=0.1.3,<0.2"
+
+[tool.pixi.pypi-dependencies]
+pymf6_validation = { path = ".", editable = true }
+
+[tool.pixi.tasks]
