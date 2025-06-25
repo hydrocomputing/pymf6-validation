@@ -10147,15 +10147,15 @@ END OF MODEL CONNECTIONS
 
  Solution SLN_1 summary
  ----------------------------------------------------------------------
- Total formulate time:  0.26647999999999727E-1 seconds
- Total solution time:   0.11553999999999731E-1 seconds
+ Total formulate time:  0.26132000000000266E-1 seconds
+ Total solution time:   0.11229999999999796E-1 seconds
 
 
 
  Solution SLN_2 summary
  ----------------------------------------------------------------------
- Total formulate time:  0.20600000000000229E-1 seconds
- Total solution time:   0.11740000000000139E-1 seconds
+ Total formulate time:  0.19700999999999580E-1 seconds
+ Total solution time:   0.11432000000000109E-1 seconds
 
 
  MEMORY MANAGER TOTAL STORAGE BY DATA TYPE, IN KILOBYTES
@@ -10174,6 +10174,6 @@ END OF MODEL CONNECTIONS
 
 
 
- Run end date and time (yyyy/mm/dd hh:mm:ss): 2025/06/24 20:58:24
- Elapsed run time:  0.353 Seconds
+ Run end date and time (yyyy/mm/dd hh:mm:ss): 2025/06/25  9:25:21
+ Elapsed run time:  0.340 Seconds
  Normal termination of simulation.
