@@ -92,7 +92,7 @@ def run_model(model_path, verbose=False):
                 wel.q[2] *= 0.3
             elif been_above_conc and current_conc <= lower_limit_conc:
                 been_above_conc = False
-                 wel.q[1] *= 1.1
+                wel.q[1] *= 1.1
                 wel.q[2] *= 1.1
                 
     # Save results
