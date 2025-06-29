@@ -1,32 +1,29 @@
                                    MODFLOW 6
                 U.S. GEOLOGICAL SURVEY MODULAR HYDROLOGIC MODEL
-                            VERSION 6.6.2 05/12/2025
+                  VERSION 6.7.0.dev2 (preliminary) 05/20/2025
+                               ***DEVELOP MODE***
 
-   MODFLOW 6 compiled May 12 2025 12:42:18 with Intel(R) Fortran Intel(R) 64
-   Compiler Classic for applications running on Intel(R) 64, Version 2021.7.0
-                             Build 20220726_000000
+        MODFLOW 6 compiled May 20 2025 13:40:03 with GCC version 13.3.0
 
-This software has been approved for release by the U.S. Geological 
-Survey (USGS). Although the software has been subjected to rigorous 
-review, the USGS reserves the right to update the software as needed 
-pursuant to further analysis and review. No warranty, expressed or 
-implied, is made by the USGS or the U.S. Government as to the 
-functionality of the software and related material nor shall the 
-fact of release constitute any such warranty. Furthermore, the 
-software is released on condition that neither the USGS nor the U.S. 
-Government shall be held liable for any damages resulting from its 
-authorized or unauthorized use. Also refer to the USGS Water 
-Resources Software User Rights Notice for complete use, copyright, 
-and distribution information.
+This software is preliminary or provisional and is subject to 
+revision. It is being provided to meet the need for timely best 
+science. The software has not received final approval by the U.S. 
+Geological Survey (USGS). No warranty, expressed or implied, is made 
+by the USGS or the U.S. Government as to the functionality of the 
+software and related material nor shall the fact of release 
+constitute any such warranty. The software is provided on the 
+condition that neither the USGS nor the U.S. Government shall be held 
+liable for any damages resulting from the authorized or unauthorized 
+use of the software.
 
- 
+
  MODFLOW runs in SEQUENTIAL mode
- 
- Run start date and time (yyyy/mm/dd hh:mm:ss): 2025/06/29 20:54:14
- 
+
+ Run start date and time (yyyy/mm/dd hh:mm:ss): 2025/06/29 21:31:03
+
  Writing simulation list file: mfsim.lst
  Using Simulation name file: mfsim.nam
- 
+
     Solving:  Stress period:     1    Time step:     1
     Solving:  Stress period:     2    Time step:     1
     Solving:  Stress period:     2    Time step:     2
@@ -388,8 +385,8 @@ and distribution information.
     Solving:  Stress period:     4    Time step:   118
     Solving:  Stress period:     4    Time step:   119
     Solving:  Stress period:     4    Time step:   120
- 
- Run end date and time (yyyy/mm/dd hh:mm:ss): 2025/06/29 20:54:38
- Elapsed run time: 24.524 Seconds
- 
+
+ Run end date and time (yyyy/mm/dd hh:mm:ss): 2025/06/29 21:31:11
+ Elapsed run time:  7.502 Seconds
+
  Normal termination of simulation.

@@ -1,24 +1,21 @@
                                    MODFLOW 6
                 U.S. GEOLOGICAL SURVEY MODULAR HYDROLOGIC MODEL
                           GROUNDWATER FLOW MODEL (GWF)
-                            VERSION 6.6.2 05/12/2025
+                  VERSION 6.7.0.dev2 (preliminary) 05/20/2025
+                               ***DEVELOP MODE***
 
-   MODFLOW 6 compiled May 12 2025 12:42:18 with Intel(R) Fortran Intel(R) 64
-   Compiler Classic for applications running on Intel(R) 64, Version 2021.7.0
-                             Build 20220726_000000
+        MODFLOW 6 compiled May 20 2025 13:40:03 with GCC version 13.3.0
 
-This software has been approved for release by the U.S. Geological 
-Survey (USGS). Although the software has been subjected to rigorous 
-review, the USGS reserves the right to update the software as needed 
-pursuant to further analysis and review. No warranty, expressed or 
-implied, is made by the USGS or the U.S. Government as to the 
-functionality of the software and related material nor shall the 
-fact of release constitute any such warranty. Furthermore, the 
-software is released on condition that neither the USGS nor the U.S. 
-Government shall be held liable for any damages resulting from its 
-authorized or unauthorized use. Also refer to the USGS Water 
-Resources Software User Rights Notice for complete use, copyright, 
-and distribution information.
+This software is preliminary or provisional and is subject to 
+revision. It is being provided to meet the need for timely best 
+science. The software has not received final approval by the U.S. 
+Geological Survey (USGS). No warranty, expressed or implied, is made 
+by the USGS or the U.S. Government as to the functionality of the 
+software and related material nor shall the fact of release 
+constitute any such warranty. The software is provided on the 
+condition that neither the USGS nor the U.S. Government shall be held 
+liable for any damages resulting from the authorized or unauthorized 
+use of the software.
 
 
 As a work of the United States Government, this USGS product is 
@@ -53,16 +50,17 @@ The following BSD-3 License libraries are used in this USGS product:
       All rights reserved.
       (https://github.com/jacobwilliams/daglib)
 
-MODFLOW 6 compiler options: /Isrc\libmf6core.a.p /Isrc /I..\src
-/Isrc\libmf6_external.a.p /MT /nologo /warn:general /warn:truncated_source
-/stand:f18 /O2 /fpe:0 /heap-arrays:0 /traceback /fpp /Qdiag-disable:7416
-/Qdiag-disable:7025 /Qdiag-disable:5268 /Qdiag-disable:10448
-/Fdsrc\libmf6core.a.p\Utilities_compilerversion.F90.pdb
-/module:src\libmf6core.a.p
-/Fosrc/libmf6core.a.p/Utilities_compilerversion.F90.obj /c
+MODFLOW 6 compiler options: -fdiagnostics-color=always -cpp -I
+src/libmf6core.a.p -I src -I ../src -I src/libmf6_external.a.p -iprefix
+/opt/homebrew/Cellar/gcc@13/13.3.0/bin/../lib/gcc/13/gcc/aarch64-apple-darwin2
+3/13/ -D__DYNAMIC__ -D __APPLE__ -fPIC -mmacosx-version-min=14.0.0
+-mcpu=apple-m1 -mlittle-endian -mabi=lp64 -O1 -Wall -Wpedantic
+-Wcharacter-truncation -Wno-unused-dummy-argument -Wno-intrinsic-shadow
+-Wno-maybe-uninitialized -Wno-uninitialized -std=f2018 -fall-intrinsics
+-ffpe-summary=overflow -ffpe-trap=overflow,zero,invalid -J src/libmf6core.a.p
 
 System command used to initiate simulation:
-"C:\Users\lucialabarca\pymf6-validation\.pixi\envs\default\python.EXE" system_well_control.py
+
 
 MODFLOW was compiled using uniform precision.
 
@@ -86,7 +84,7 @@ Long Integer Variables
 Logical Variables
   KIND: 4
   SIZE IN BITS: 32
- 
+
  NAMEFILE OPTIONS:
     FLOWS WILL BE SAVED TO BUDGET FILE SPECIFIED IN OUTPUT CONTROL
  END NAMEFILE OPTIONS:
@@ -1977,7 +1975,7 @@ start timestep kper="2" kstp="120" mode="normal"
 
            TOTAL OUT =           1.5000             TOTAL OUT =           0.1500
 
-            IN - OUT =      -4.6654E-06              IN - OUT =      -4.3120E-07
+            IN - OUT =      -4.6655E-06              IN - OUT =      -4.3145E-07
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -3691,25 +3689,25 @@ start timestep kper="3" kstp="120" mode="normal"
 
            IN:                                      IN:
            ---                                      ---
-              STO-SS =       2.0608E-03                STO-SS =       1.8746E-04     STORAGE                          
-              STO-SY =          16.4979                STO-SY =           1.4998     STORAGE                          
+              STO-SS =       8.3366E-04                STO-SS =       6.3705E-05     STORAGE                          
+              STO-SY =           6.7256                STO-SY =           0.5143     STORAGE                          
                  WEL =           0.0000                   WEL =           0.0000     WEL-1                            
-                 CHD =       1.7269E-05                   CHD =       3.0488E-06     CHD-1                            
+                 CHD =       1.4808E-05                   CHD =       2.5276E-06     CHD-1                            
 
-            TOTAL IN =          16.4999              TOTAL IN =           1.5000
+            TOTAL IN =           6.7264              TOTAL IN =           0.5144
 
           OUT:                                     OUT:
           ----                                     ----
-              STO-SS =           0.0000                STO-SS =           0.0000     STORAGE                          
-              STO-SY =           0.0000                STO-SY =           0.0000     STORAGE                          
-                 WEL =          16.5000                   WEL =           1.5000     WEL-1                            
+              STO-SS =       1.4042E-05                STO-SS =       1.2179E-06     STORAGE                          
+              STO-SY =           0.1647                STO-SY =       1.4415E-02     STORAGE                          
+                 WEL =           6.5453                   WEL =           0.5000     WEL-1                            
                  CHD =           0.0000                   CHD =           0.0000     CHD-1                            
 
-           TOTAL OUT =          16.5000             TOTAL OUT =           1.5000
+           TOTAL OUT =           6.7100             TOTAL OUT =           0.5144
 
-            IN - OUT =      -5.0531E-05              IN - OUT =      -4.2359E-06
+            IN - OUT =       1.6368E-02              IN - OUT =      -1.8868E-06
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =           0.24     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -5421,25 +5419,25 @@ start timestep kper="4" kstp="120" mode="normal"
 
            IN:                                      IN:
            ---                                      ---
-              STO-SS =       2.3664E-03                STO-SS =       2.8562E-05     STORAGE                          
-              STO-SY =          19.2636                STO-SY =           0.2565     STORAGE                          
+              STO-SS =       1.0622E-03                STO-SS =       2.2229E-05     STORAGE                          
+              STO-SY =           8.6620                STO-SY =           0.1874     STORAGE                          
                  WEL =           0.0000                   WEL =           0.0000     WEL-1                            
-                 CHD =       5.3666E-05                   CHD =       4.2347E-06     CHD-1                            
+                 CHD =       4.5136E-05                   CHD =       3.5440E-06     CHD-1                            
 
-            TOTAL IN =          19.2661              TOTAL IN =           0.2566
+            TOTAL IN =           8.6631              TOTAL IN =           0.1874
 
           OUT:                                     OUT:
           ----                                     ----
-              STO-SS =       1.1692E-04                STO-SS =       9.8141E-06     STORAGE                          
-              STO-SY =           1.2660                STO-SY =           0.1066     STORAGE                          
-                 WEL =          18.0000                   WEL =           0.1500     WEL-1                            
+              STO-SS =       5.4794E-05                STO-SS =       3.4818E-06     STORAGE                          
+              STO-SY =           0.6013                STO-SY =       3.7374E-02     STORAGE                          
+                 WEL =           8.0453                   WEL =           0.1500     WEL-1                            
                  CHD =           0.0000                   CHD =           0.0000     CHD-1                            
 
-           TOTAL OUT =          19.2661             TOTAL OUT =           0.2566
+           TOTAL OUT =           8.6467             TOTAL OUT =           0.1874
 
-            IN - OUT =      -5.6016E-05              IN - OUT =      -5.0323E-07
+            IN - OUT =       1.6364E-02              IN - OUT =      -4.1355E-07
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =           0.19     PERCENT DISCREPANCY =          -0.00
 
 
 
