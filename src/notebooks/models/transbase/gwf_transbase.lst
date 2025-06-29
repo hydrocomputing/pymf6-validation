@@ -3691,25 +3691,25 @@ start timestep kper="3" kstp="120" mode="normal"
 
            IN:                                      IN:
            ---                                      ---
-              STO-SS =       2.0608E-03                STO-SS =       1.8746E-04     STORAGE                          
-              STO-SY =          16.4979                STO-SY =           1.4998     STORAGE                          
+              STO-SS =       2.2984E-04                STO-SS =       2.2823E-06     STORAGE                          
+              STO-SY =           1.8964                STO-SY =       2.3522E-02     STORAGE                          
                  WEL =           0.0000                   WEL =           0.0000     WEL-1                            
-                 CHD =       1.7269E-05                   CHD =       3.0488E-06     CHD-1                            
+                 CHD =       4.6532E-06                   CHD =       3.8134E-07     CHD-1                            
 
-            TOTAL IN =          16.4999              TOTAL IN =           1.5000
+            TOTAL IN =           1.8966              TOTAL IN =       2.3524E-02
 
           OUT:                                     OUT:
           ----                                     ----
-              STO-SS =           0.0000                STO-SS =           0.0000     STORAGE                          
-              STO-SY =           0.0000                STO-SY =           0.0000     STORAGE                          
-                 WEL =          16.5000                   WEL =           1.5000     WEL-1                            
+              STO-SS =       2.4705E-05                STO-SS =       2.2823E-06     STORAGE                          
+              STO-SY =           0.2553                STO-SY =       2.3522E-02     STORAGE                          
+                 WEL =           1.6145                   WEL =       1.7738E-44     WEL-1                            
                  CHD =           0.0000                   CHD =           0.0000     CHD-1                            
 
-           TOTAL OUT =          16.5000             TOTAL OUT =           1.5000
+           TOTAL OUT =           1.8698             TOTAL OUT =       2.3524E-02
 
-            IN - OUT =      -5.0531E-05              IN - OUT =      -4.2359E-06
+            IN - OUT =       2.6848E-02              IN - OUT =      -2.4189E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =           1.43     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -5421,25 +5421,25 @@ start timestep kper="4" kstp="120" mode="normal"
 
            IN:                                      IN:
            ---                                      ---
-              STO-SS =       2.3664E-03                STO-SS =       2.8562E-05     STORAGE                          
-              STO-SY =          19.2636                STO-SY =           0.2565     STORAGE                          
+              STO-SS =       4.1719E-04                STO-SS =       1.8747E-05     STORAGE                          
+              STO-SY =           3.3962                STO-SY =           0.1500     STORAGE                          
                  WEL =           0.0000                   WEL =           0.0000     WEL-1                            
-                 CHD =       5.3666E-05                   CHD =       4.2347E-06     CHD-1                            
+                 CHD =       1.0243E-05                   CHD =       7.5009E-07     CHD-1                            
 
-            TOTAL IN =          19.2661              TOTAL IN =           0.2566
+            TOTAL IN =           3.3966              TOTAL IN =           0.1500
 
           OUT:                                     OUT:
           ----                                     ----
-              STO-SS =       1.1692E-04                STO-SS =       9.8141E-06     STORAGE                          
-              STO-SY =           1.2660                STO-SY =           0.1066     STORAGE                          
-                 WEL =          18.0000                   WEL =           0.1500     WEL-1                            
+              STO-SS =       2.4705E-05                STO-SS =           0.0000     STORAGE                          
+              STO-SY =           0.2553                STO-SY =           0.0000     STORAGE                          
+                 WEL =           3.1145                   WEL =           0.1500     WEL-1                            
                  CHD =           0.0000                   CHD =           0.0000     CHD-1                            
 
-           TOTAL OUT =          19.2661             TOTAL OUT =           0.2566
+           TOTAL OUT =           3.3698             TOTAL OUT =           0.1500
 
-            IN - OUT =      -5.6016E-05              IN - OUT =      -5.0323E-07
+            IN - OUT =       2.6844E-02              IN - OUT =      -3.7196E-07
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =           0.79     PERCENT DISCREPANCY =          -0.00
 
 
 

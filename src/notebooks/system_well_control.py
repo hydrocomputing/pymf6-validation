@@ -26,7 +26,7 @@ def run_model(model_path, verbose=False):
 
     # Concentration control parameters
     tolerance_conc = 0.05
-    conc_limit = 5
+    conc_limit = 0.5
     lower_limit_conc = conc_limit - tolerance_conc
     upper_limit_conc = conc_limit + tolerance_conc
 
@@ -42,6 +42,10 @@ def run_model(model_path, verbose=False):
             break
 
     wel = gwf.packages.get_package('wel-1').as_mutable_bc()
+    #cnc = gwf.packages.get_package('cnc').as_mutable_bc()
+    #print(cnc)
+    #cnc_source = cnc.nodelist[:]
+    #print(cnc_source)
     well_coords = wel.nodelist[:]
     well_node_obs_coords = wel.nodelist[0]
     well_regulated_1_coords =  wel.nodelist[1]
@@ -61,7 +65,12 @@ def run_model(model_path, verbose=False):
         if gwf.kper == 2:  # Only operate during stress period 2
             current_head = gwf.X[well_node_obs_coords]
             current_conc = gwt.X[well_node_obs_coords]
+            current_conc_1 = gwt.X[(1, 7, 2)] # node of the source
+            current_conc_2 = gwt.X[(1, 6, 2)] # node of the source 
+            print (current_head)
             print (current_conc)
+            print (current_conc_1)
+            print (current_conc_2)
             
             # Record system state
             mywell_q['step'].append(gwf.kstp)
@@ -73,28 +82,32 @@ def run_model(model_path, verbose=False):
             # Head regulation 
             if current_head <= lower_limit_gw:
                 been_below_gw = True
-                wel.q[1] *= 0.9
-                wel.q[2] *= 0.7
+                wel.q *= 0.9
+                #wel.q[1] *= 0.9
+                #wel.q[2] *= 0.7
                 #wel.q[2] *= 0.9
             elif been_below_gw and current_head >= upper_limit_gw:
-                wel.q[1] *= 1.1
-                wel.q[2] *= 1.1
+                wel.q *= 1.1
+                #wel.q[1] *= 1.1
+                #wel.q[2] *= 1.1
                 #wel.q[2] *= 1.1
 
             # Concentration regulation
-            if current_conc >= upper_limit_conc:
+            if current_conc_1 >= upper_limit_conc:
                 been_above_conc = True
                 print(wel.q)
-                print(wel.q[1])
-                print(wel.q[2])
+                #print(wel.q[1])
+                #print(wel.q[2])
+                wel.q *= 0.9
                 #wel.q *= 0.9
-                wel.q[1] *= 0.9
-                wel.q[2] *= 0.7
+                #wel.q[1] *= 0.9
+                #wel.q[2] *= 0.7
                 #wel.q[2] *= 0.9
-            elif been_above_conc and current_conc <= lower_limit_conc:
+            elif been_above_conc and current_conc_1 <= lower_limit_conc:
                 been_above_conc = False
-                wel.q[1] *= 1.1
-                wel.q[2] *= 1.1
+                wel.q *= 1.1
+                #wel.q[1] *= 1.1
+                #wel.q[2] *= 1.1
                 
     # Save results
     df = pd.DataFrame(mywell_q)
