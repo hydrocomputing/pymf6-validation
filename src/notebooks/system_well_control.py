@@ -18,24 +18,6 @@ def run_model(model_path, verbose=False):
     transport_models = mf6.models['gwt6']
     gwt = transport_models['gwt_transbase'] # Transport model name
 
-    # Head control parameters
-    tolerance_gw = 0.01
-    gw_head_limit = 9
-    lower_limit_gw = gw_head_limit - tolerance_gw
-    upper_limit_gw = gw_head_limit + tolerance_gw
-
-    # Concentration control parameters
-    tolerance_conc = 0.05
-    conc_limit = 0.5
-    lower_limit_conc = conc_limit - tolerance_conc
-    upper_limit_conc = conc_limit + tolerance_conc
-
-    # State tracking variables
-    been_below_gw = False
-    been_above_conc = False
-    well_node = None
-    prev_conc = 0.0  # Stores last known concentration
-
     # Get well package
     for _ in mf6.model_loop():
         if gwf.kper > 0: # break after 
@@ -50,7 +32,25 @@ def run_model(model_path, verbose=False):
     well_node_obs_coords = wel.nodelist[0]
     well_regulated_1_coords =  wel.nodelist[1]
     well_regulated_2_coords =  wel.nodelist[2]
+    gw_head = gwf.X[well_node_obs_coords]
+    
+    # Head control parameters
+    tolerance_gw = 0.5
+    gw_head_limit = gw_head
+    lower_limit_gw = gw_head_limit - tolerance_gw
+    upper_limit_gw = gw_head_limit + tolerance_gw
 
+    # Concentration control parameters
+    tolerance_conc = 0.05
+    conc_limit = 0.5
+    lower_limit_conc = conc_limit - tolerance_conc
+    upper_limit_conc = conc_limit + tolerance_conc
+
+    # State tracking variables
+    been_below_gw = False
+    been_above_conc = False
+    well_node = None
+    prev_conc = 0.0  # Stores last known concentration
    # print("Regulated wells:", well_regulated)
     mywell_q = {
         'step': [],
@@ -67,10 +67,10 @@ def run_model(model_path, verbose=False):
             current_conc = gwt.X[well_node_obs_coords]
             current_conc_1 = gwt.X[(1, 7, 2)] # node of the source
             current_conc_2 = gwt.X[(1, 6, 2)] # node of the source 
-            print (current_head)
-            print (current_conc)
-            print (current_conc_1)
-            print (current_conc_2)
+            #print (current_head)
+            #print (current_conc)
+            #print (current_conc_1)
+            #print (current_conc_2)
             
             # Record system state
             mywell_q['step'].append(gwf.kstp)
@@ -93,17 +93,17 @@ def run_model(model_path, verbose=False):
                 #wel.q[2] *= 1.1
 
             # Concentration regulation
-            if current_conc_1 >= upper_limit_conc:
+            if current_conc >= upper_limit_conc:
                 been_above_conc = True
-                print(wel.q)
                 #print(wel.q[1])
                 #print(wel.q[2])
                 wel.q *= 0.9
+                #print(wel.q)
                 #wel.q *= 0.9
                 #wel.q[1] *= 0.9
                 #wel.q[2] *= 0.7
                 #wel.q[2] *= 0.9
-            elif been_above_conc and current_conc_1 <= lower_limit_conc:
+            elif been_above_conc and current_conc <= lower_limit_conc:
                 been_above_conc = False
                 wel.q *= 1.1
                 #wel.q[1] *= 1.1
