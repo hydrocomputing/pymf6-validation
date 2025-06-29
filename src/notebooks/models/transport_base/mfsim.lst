@@ -61,7 +61,7 @@ MODFLOW 6 compiler options: /Isrc\libmf6core.a.p /Isrc /I..\src
 /Fosrc/libmf6core.a.p/Utilities_compilerversion.F90.obj /c
 
 System command used to initiate simulation:
-C:/Users/lucialabarca/pymf6-validation/.pixi/envs/default\python.exe -m ipykernel_launcher -f C:\Users\lucialabarca\AppData\Roaming\jupyter\runtime\kernel-0ad1ba93-27b6-4d79-a98e-3f5343c40588.json
+C:/Users/lucialabarca/pymf6-validation/.pixi/envs/default\python.exe -m ipykernel_launcher -f C:\Users\lucialabarca\AppData\Roaming\jupyter\runtime\kernel-09c4b2a5-4f80-4295-8e4a-c0baa52bbd28.json
 
 MODFLOW was compiled using uniform precision.
 

@@ -1,6 +1,9 @@
 from pymf6.mf6 import MF6
 import os
 from pathlib import Path
+import pandas as pd
+import matplotlib.pyplot as plt
+from flopy.plot import PlotMapView
 
 dir = os.getcwd()
 model_name = "gwf_riverbase"
@@ -49,8 +52,22 @@ def run_model(nam_file):
             mywell_q['step'].append(gwf.kstp)
             mywell_q['q'].append(mywell.q[0])
 
-        print(mywell_q)
+        #print(mywell_q)
 
+    # Save the well flow history
+    df = pd.DataFrame(mywell_q)
+    df.to_csv("well_q_log.csv", index=False)
+    
+    # Plot the well flow
+    plt.figure(figsize=(8, 5))
+    plt.plot(df['step'], df['q'], marker='x')
+    plt.xlabel('Timestep')
+    plt.ylabel('Well Flow Rate (q)')
+    plt.title('Well Pumping Rate Over Time')
+    plt.grid(True)
+    plt.tight_layout()
+    plt.savefig("well_flow_plot.png")
+    plt.show()
 
 if __name__ == '__main__':
     run_model(nam_file)
