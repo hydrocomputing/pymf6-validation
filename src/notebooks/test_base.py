@@ -25,7 +25,7 @@ def test_base_flow():
     print(model_path)
     specific_model_data = {
         'model_path': model_path,
-        'name': 'gwf_flowbase',
+        'name': 'flowbase',
         'transport': False,
         'river_active': False,
         'wells_active': False,
@@ -36,7 +36,7 @@ def test_base_transport():
     model_path = get_full_model_path('transbase')
     specific_model_data = {
         'model_path': model_path,
-        'name': 'gwf_transbase',
+        'name': 'transbase',
         'transport': True,
         'river_active': False,
         'wells_active': True,
@@ -44,10 +44,10 @@ def test_base_transport():
     do_test(specific_model_data, model_path)
 
 def test_base_river():
-    model_path = get_full_model_path('gwf_riverbase')
+    model_path = get_full_model_path('riverbase')
     specific_model_data = {
         'model_path': model_path,
-        'name': 'gwf_riverbase',
+        'name': 'riverbase',
         'transport': True,
         'river_active': True,
         'wells_active': False,
@@ -58,7 +58,7 @@ def test_base_transport_river():
     model_path = get_full_model_path('transport_river_base')
     specific_model_data = {
         'model_path': model_path,
-        'name': 'gwf_transriver',
+        'name': 'transriver',
         'transport': True,
         'river_active': True,
         'wells_active': True,

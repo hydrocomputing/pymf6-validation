@@ -42,6 +42,7 @@ python = "3.13.*"
 jupyterlab = ">=4.4.3,<5"
 pytest = ">=8.4.1,<9"
 pymf6-tools = ">=0.1.3,<0.2"
+pymf6 = ">=1.5.2,<2"
 
 [tool.pixi.pypi-dependencies]
 pymf6_validation = { path = ".", editable = true }

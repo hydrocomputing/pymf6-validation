@@ -5,12 +5,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from flopy.plot import PlotMapView
 
-dir = os.getcwd()
-model_name = "gwf_riverbase"
-model_path = os.path.abspath(os.path.join(dir, 'models', model_name))
-nam_file = os.path.join(model_path, 'mfsim.nam')
 
-def run_model(nam_file):
+
+def run_model(model_path):
     """Control script to regulate the pumping wells dynamically. The regulation of the system is regulated by
      river vital water level and the groundwater mimimum threshold. """
     print('started')
@@ -20,7 +17,7 @@ def run_model(nam_file):
 
     # Get the flow models
     flow_models = mf6.models['gwf6']
-    gwf = flow_models['riverbase']
+    gwf = flow_models['gwf_riverbase']
 
     # Set tolerance and head limit values for control - groundwater and river threshold
     tolerance = 0.01  # for the oscillation of the head for both thresholds
@@ -36,16 +33,20 @@ def run_model(nam_file):
     # Dictionary to store information about each well
     mywell_q = {'step':[], 'q':[]}
 
+    for _ in mf6.model_loop():
+        if gwf.kper > 1:
+            break
+
+    mywell = gwf.packages.wel_0.as_mutable_bc()
+    mywell_coords = mywell.nodelist[0]
     # Main simulation loop
     for model in mf6.model_loop():
         print('inside of the loop')
         # Check if the start of a new time step
         if gwf.kper == 2:
-            mywell = gwf.packages.wel_0.as_mutable_bc()
-            mywell_coords = mywell.nodelist[0]
             mywell_head = gwf.X[mywell_coords]
             if mywell_head <= lower_limit_gw:
-                been_below_gw = True 
+                been_below_gw = True
                 mywell.q *= 0.9
             elif been_below_gw and mywell_head >= upper_limit_gw:
                 mywell.q *= 1.1
@@ -57,7 +58,7 @@ def run_model(nam_file):
     # Save the well flow history
     df = pd.DataFrame(mywell_q)
     df.to_csv("well_q_log.csv", index=False)
-    
+
     # Plot the well flow
     plt.figure(figsize=(8, 5))
     plt.plot(df['step'], df['q'], marker='x')
@@ -70,5 +71,8 @@ def run_model(nam_file):
     plt.show()
 
 if __name__ == '__main__':
-    run_model(nam_file)
+    dir = os.getcwd()
+    model_name = "riverbase"
+    model_path = os.path.abspath(os.path.join(dir, 'models', model_name))
+    run_model(model_path)
     print('done')
