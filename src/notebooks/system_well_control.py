@@ -20,13 +20,13 @@ def run_model(model_path, verbose=False):
 
     # Head control parameters
     tolerance_gw = 0.01
-    gw_head_limit = 0.5
+    gw_head_limit = 9
     lower_limit_gw = gw_head_limit - tolerance_gw
     upper_limit_gw = gw_head_limit + tolerance_gw
 
     # Concentration control parameters
     tolerance_conc = 0.05
-    conc_limit = 0.5
+    conc_limit = 5
     lower_limit_conc = conc_limit - tolerance_conc
     upper_limit_conc = conc_limit + tolerance_conc
 
@@ -70,11 +70,11 @@ def run_model(model_path, verbose=False):
             mywell_q['q_well1'].append(wel.q[1])
             mywell_q['q_well2'].append(wel.q[2])
 
-            # Head regulation well 1 
+            # Head regulation 
             if current_head <= lower_limit_gw:
                 been_below_gw = True
-                wel.q[1] *= 0.7
-                wel.q[2] *= 0.3
+                wel.q[1] *= 0.9
+                wel.q[2] *= 0.7
                 #wel.q[2] *= 0.9
             elif been_below_gw and current_head >= upper_limit_gw:
                 wel.q[1] *= 1.1
@@ -88,8 +88,9 @@ def run_model(model_path, verbose=False):
                 print(wel.q[1])
                 print(wel.q[2])
                 #wel.q *= 0.9
-                wel.q[1] *= 0.7
-                wel.q[2] *= 0.3
+                wel.q[1] *= 0.9
+                wel.q[2] *= 0.7
+                #wel.q[2] *= 0.9
             elif been_above_conc and current_conc <= lower_limit_conc:
                 been_above_conc = False
                 wel.q[1] *= 1.1
