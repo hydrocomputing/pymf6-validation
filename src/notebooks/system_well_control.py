@@ -80,6 +80,7 @@ def run_model(model_path, verbose=False):
                 below_gw = True
                 print(wel.q)
                 q = wel.q
+                q[0] = q[0] * 0 
                 q[1] = q[1] * 0.9 
                 q[2] = q[2] * 0.8
                 wel.q = q
@@ -88,6 +89,7 @@ def run_model(model_path, verbose=False):
                 below_gw = False # Reset the state 
                 print(wel.q)
                 q = wel.q
+                q[0] = q[0] * 0
                 q[1] = q[1] * 1.1
                 q[2] = q[2] * 1.2
                 wel.q = q
@@ -98,6 +100,7 @@ def run_model(model_path, verbose=False):
                 above_conc = True # only act on the transition 
                 print(wel.q)
                 q = wel.q
+                q[0] = q[0] * 0
                 q[1] = q[1] * 1.1
                 q[2] = q[2] * 1.2
                 wel.q = q
@@ -106,6 +109,7 @@ def run_model(model_path, verbose=False):
                 above_conc = False # reset state
                 print(wel.q)
                 q = wel.q
+                q[0] = q[0] * 0
                 q[1] = q[1] * 0.9
                 q[2] = q[2] * 0.8
                 wel.q = q
@@ -140,7 +144,7 @@ def plot(mywell_q):
 
     plt.title("Well Control Performance")
     plt.tight_layout()
-    plt.savefig("well_control_plot.png")
+    plt.savefig("well_control_plot.png", dpi=300)
     plt.show()
 
 
@@ -191,7 +195,7 @@ def plot_state(mywell_q):
     
     plt.suptitle("Well Control System Performance", fontsize=16)
     plt.tight_layout()
-    plt.savefig("well_control_analysis.png", dpi=150)
+    plt.savefig("well_control_analysis.png", dpi=300)
     plt.show()
 
 if __name__ == '__main__':
