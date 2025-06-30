@@ -30,7 +30,7 @@ def run_model(model_path, verbose=False):
     well_regulated_1_coords =  wel.nodelist[1]
     well_regulated_2_coords =  wel.nodelist[2]
     initial_head = gwf.X[well_node_obs_coords]
-    
+
     # Head control parameters
     tolerance_gw = 2
     gw_head_limit = initial_head
@@ -43,21 +43,21 @@ def run_model(model_path, verbose=False):
     lower_limit_conc = conc_limit - tolerance_conc
     upper_limit_conc = conc_limit + tolerance_conc
 
-    # Set limits for pumping rate 
+    # Set limits for pumping rate
     min_rate = -0.05  # Minimum extraction rate (m³/day)
     max_rate = -50.0  # Maximum extraction rate (m³/day)
 
     # State tracking variables
     below_gw = False
     above_conc = False
-    
+
    # print("Regulated wells:", well_regulated)
     mywell_q = {
         'step': [],
         'head': [],
         'conc': [],
         'q_well1': [],
-        'q_well2': [], 
+        'q_well2': [],
         'head_state': [],
         'conc_state': []
     } # Dict of lists per well
@@ -80,68 +80,68 @@ def run_model(model_path, verbose=False):
             mywell_q['head_state'].append('below' if below_gw else 'normal')
             mywell_q['conc_state'].append('above' if above_conc else 'normal')
 
-             # Head regulation
-            if current_head <= lower_limit_gw: 
-                below_gw = True
-                print(wel.q)
-                q = wel.q
-                # Deactive observation well
-                q[0] = q[0] * 0
-                # Control for well 1
-                q[1] = q[1] * 0.9
-                print(' HEAD CONTROL Q1 control well 1' , q[1])
-                if q[1] > max_rate:
-                    q[1] = max_rate  # Prevent recharge
-                elif q[1] < min_rate:
-                    q[1] = min_rate # Prevent over-pumping
+            # # Head regulation
+            # if current_head <= lower_limit_gw:
+            #     below_gw = True
+            #     print(wel.q)
+            #     q = wel.q
+            #     # Deactive observation well
+            #     q[0] = q[0] * 0
+            #     # Control for well 1
+            #     q[1] = q[1] * 0.999
+            #     print(' HEAD CONTROL Q1 control well 1' , q[1])
+            #     if q[1] > max_rate:
+            #         q[1] = max_rate  # Prevent recharge
+            #     elif q[1] < min_rate:
+            #         q[1] = min_rate # Prevent over-pumping
 
-                # Control for well 2
-                q[2] = q[2] * 0.8
-                if q[2] > max_rate:
-                    q[2] = max_rate  # Prevent recharge
-                elif q[2] < min_rate:
-                    q[2] = min_rate # Prevent over-pumping
-               
-                wel.q = q
-                print(f"Step {gwf.kstp}: Head below limit! Reducing pumping")
-                
-            elif below_gw and current_head >= upper_limit_gw:
-                below_gw = False # Reset the state 
-                print(wel.q)
-                q = wel.q
-                q[0] = q[0] * 0
-                q[1] = q[1] * 1.1
-                q[2] = q[2] * 1.2
-                wel.q = q
-                print(f"Step {gwf.kstp}: Head recovered! Increasing pumping")
+            #     # Control for well 2
+            #     q[2] = q[2] * 0.999
+            #     if q[2] < max_rate:
+            #         q[2] = max_rate  # Prevent recharge
+            #     elif q[2] > min_rate:
+            #         q[2] = min_rate # Prevent over-pumping
+
+            #     wel.q = q
+            #     print(f"Step {gwf.kstp}: Head below limit! Reducing pumping")
+
+            # elif below_gw and current_head >= upper_limit_gw:
+            #     below_gw = False # Reset the state
+            #     print(wel.q)
+            #     q = wel.q
+            #     q[0] = q[0] * 0
+            #     q[1] = q[1] * 1.001
+            #     q[2] = q[2] * 1.001
+            #     wel.q = q
+            #     print(f"Step {gwf.kstp}: Head recovered! Increasing pumping")
 
             # Concentration regulation
             if current_conc >= upper_limit_conc:
-                above_conc = True # only act on the transition 
+                above_conc = True # only act on the transition
                 print(wel.q)
                 q = wel.q
                 # Deactive observation well
                 q[0] = q[0] * 0
-                
+
                 # Control for well 1
                 q[1] = q[1] * 1.1
                 print('CONCENTRATION Q1 control well 1' , q[1])
-                if q[1] > max_rate:
+                if q[1] < max_rate:
                     q[1] = max_rate  # Prevent recharge
-                elif q[1] < min_rate:
+                elif q[1] > min_rate:
                     q[1] = min_rate # Prevent over-pumping
 
                 # Control for well 2
-                q[2] = q[2] * 1.2
-                if q[2] > max_rate:
+                q[2] = q[2] * 1.1
+                if q[2] < max_rate:
                     q[2] = max_rate  # Prevent recharge
-                elif q[2] < min_rate:
+                elif q[2] > min_rate:
                     q[2] = min_rate # Prevent over-pumping
 
                 wel.q = q
                 print(f"Step {gwf.kstp}: Conc above limit! Increase pumping")
-                
-            elif above_conc and current_conc <= lower_limit_conc:
+
+            elif current_conc <= lower_limit_conc:
                 above_conc = False # reset state
                 print(wel.q)
                 q = wel.q
@@ -149,7 +149,11 @@ def run_model(model_path, verbose=False):
                 q[0] = q[0] * 0
 
                 q[1] = q[1] * 0.9
-                q[2] = q[2] * 0.8
+                q[2] = q[2] * 0.9
+                if q[2] < max_rate:
+                    q[2] = max_rate  # Prevent recharge
+                elif q[2] > min_rate:
+                    q[2] = min_rate # Prevent over-pumping
                 wel.q = q
                 print(f"Step {gwf.kstp}: Conc recovered! Reduce pumping")
 
@@ -188,7 +192,7 @@ def plot(mywell_q):
 def plot_state(mywell_q):
     """Enhanced visualization with state tracking"""
     fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=(12, 10), sharex=True)
-    
+
     # Plot 1: Pumping Rates
     ax1.plot(mywell_q['step'], mywell_q['q_well1'], 'b-', label='Well 1')
     ax1.plot(mywell_q['step'], mywell_q['q_well2'], 'r-', label='Well 2')
@@ -196,40 +200,40 @@ def plot_state(mywell_q):
     ax1.grid(True, alpha=0.3)
     ax1.legend()
     ax1.set_title("Pumping Rates")
-    
+
     # Plot 2: Head with state indicators
     ax2.plot(mywell_q['step'], mywell_q['head'], 'go', label='Head')
     ax2.axhline(y=10, color='gray', linestyle='--', label='Target')
     ax2.axhline(y=7, color='red', linestyle=':', alpha=0.5, label='Lower Limit')
     ax2.axhline(y=11, color='blue', linestyle=':', alpha=0.5, label='Upper Limit')
-    
+
     # Mark head below state
     for i, state in enumerate(mywell_q['head_state']):
         if state == 'below':
             ax2.axvline(x=mywell_q['step'][i], color='orange', alpha=0.2)
-    
+
     ax2.set_ylabel("Head [L]")
     ax2.grid(True, alpha=0.3)
     ax2.legend()
     ax2.set_title("Head at Observation Well")
-    
+
     # Plot 3: Concentration with state indicators
     ax3.plot(mywell_q['step'], mywell_q['conc'], 'm-', label='Concentration')
     ax3.axhline(y=0.5, color='purple', linestyle='--', label='Target')
     ax3.axhline(y=0.45, color='pink', linestyle=':', alpha=0.7, label='Lower Limit')
     ax3.axhline(y=0.55, color='pink', linestyle=':', alpha=0.7, label='Upper Limit')
-    
+
     # Mark conc above state
     for i, state in enumerate(mywell_q['conc_state']):
         if state == 'above':
             ax3.axvline(x=results['step'][i], color='red', alpha=0.2)
-    
+
     ax3.set_xlabel("Timestep")
     ax3.set_ylabel("Concentration")
     ax3.grid(True, alpha=0.3)
     ax3.legend()
     ax3.set_title("Concentration at Observation Well")
-    
+
     plt.suptitle("Well Control System Performance", fontsize=16)
     plt.tight_layout()
     plt.savefig("well_control_analysis.png", dpi=300)

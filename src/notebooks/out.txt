@@ -1,0 +1,1133 @@
+started
+mf6 initialized
+0   -0.05
+1   -0.05
+2   -0.05
+Name: q, dtype: float64
+Step 0: Conc above limit! Increase pumping
+0   -0.000
+1   -0.055
+2   -0.060
+Name: q, dtype: float64
+Step 0: Conc above limit! Increase pumping
+0   -0.0000
+1   -0.0605
+2   -0.0720
+Name: q, dtype: float64
+Step 0: Conc above limit! Increase pumping
+0   -0.00000
+1   -0.06655
+2   -0.08640
+Name: q, dtype: float64
+Step 0: Conc above limit! Increase pumping
+0   -0.000000
+1   -0.073205
+2   -0.103680
+Name: q, dtype: float64
+Step 0: Conc above limit! Increase pumping
+0   -0.000000
+1   -0.080526
+2   -0.124416
+Name: q, dtype: float64
+Step 0: Conc above limit! Increase pumping
+0   -0.000000
+1   -0.088578
+2   -0.149299
+Name: q, dtype: float64
+Step 0: Conc above limit! Increase pumping
+0   -0.000000
+1   -0.097436
+2   -0.179159
+Name: q, dtype: float64
+Step 0: Conc above limit! Increase pumping
+0   -0.000000
+1   -0.107179
+2   -0.214991
+Name: q, dtype: float64
+Step 0: Conc above limit! Increase pumping
+0   -0.000000
+1   -0.117897
+2   -0.257989
+Name: q, dtype: float64
+Step 0: Conc above limit! Increase pumping
+0   -0.000000
+1   -0.129687
+2   -0.309587
+Name: q, dtype: float64
+Step 0: Conc above limit! Increase pumping
+0   -0.000000
+1   -0.142656
+2   -0.371504
+Name: q, dtype: float64
+Step 1: Conc above limit! Increase pumping
+0   -0.000000
+1   -0.156921
+2   -0.445805
+Name: q, dtype: float64
+Step 1: Conc above limit! Increase pumping
+0   -0.000000
+1   -0.172614
+2   -0.534966
+Name: q, dtype: float64
+Step 1: Conc above limit! Increase pumping
+0   -0.000000
+1   -0.189875
+2   -0.641959
+Name: q, dtype: float64
+Step 1: Conc above limit! Increase pumping
+0   -0.000000
+1   -0.208862
+2   -0.770351
+Name: q, dtype: float64
+Step 1: Conc above limit! Increase pumping
+0   -0.000000
+1   -0.229749
+2   -0.924421
+Name: q, dtype: float64
+Step 1: Conc above limit! Increase pumping
+0   -0.000000
+1   -0.252724
+2   -1.109306
+Name: q, dtype: float64
+Step 1: Conc above limit! Increase pumping
+0   -0.000000
+1   -0.277996
+2   -1.331167
+Name: q, dtype: float64
+Step 1: Conc above limit! Increase pumping
+0   -0.000000
+1   -0.305795
+2   -1.597400
+Name: q, dtype: float64
+Step 2: Conc above limit! Increase pumping
+0   -0.000000
+1   -0.336375
+2   -1.916880
+Name: q, dtype: float64
+Step 2: Conc above limit! Increase pumping
+0   -0.000000
+1   -0.370012
+2   -2.300256
+Name: q, dtype: float64
+Step 2: Conc above limit! Increase pumping
+0   -0.000000
+1   -0.407014
+2   -2.760307
+Name: q, dtype: float64
+Step 2: Conc above limit! Increase pumping
+0   -0.000000
+1   -0.447715
+2   -3.312369
+Name: q, dtype: float64
+Step 2: Conc above limit! Increase pumping
+0   -0.000000
+1   -0.492487
+2   -3.974842
+Name: q, dtype: float64
+Step 2: Conc above limit! Increase pumping
+0   -0.000000
+1   -0.541735
+2   -4.769811
+Name: q, dtype: float64
+Step 2: Conc above limit! Increase pumping
+0   -0.000000
+1   -0.595909
+2   -5.723773
+Name: q, dtype: float64
+Step 2: Conc above limit! Increase pumping
+0   -0.000000
+1   -0.655500
+2   -6.868528
+Name: q, dtype: float64
+Step 3: Conc above limit! Increase pumping
+0   -0.000000
+1   -0.721050
+2   -8.242233
+Name: q, dtype: float64
+Step 3: Conc above limit! Increase pumping
+0   -0.000000
+1   -0.793155
+2   -9.890680
+Name: q, dtype: float64
+Step 3: Conc above limit! Increase pumping
+0    -0.000000
+1    -0.872470
+2   -11.868816
+Name: q, dtype: float64
+Step 3: Conc above limit! Increase pumping
+0    -0.000000
+1    -0.959717
+2   -14.242579
+Name: q, dtype: float64
+Step 3: Conc above limit! Increase pumping
+0    -0.000000
+1    -1.055689
+2   -17.091095
+Name: q, dtype: float64
+Step 3: Conc above limit! Increase pumping
+0    -0.000000
+1    -1.161258
+2   -20.509314
+Name: q, dtype: float64
+Step 3: Conc above limit! Increase pumping
+0    -0.000000
+1    -1.277383
+2   -24.611176
+Name: q, dtype: float64
+Step 3: Conc above limit! Increase pumping
+0    -0.000000
+1    -1.405122
+2   -29.533411
+Name: q, dtype: float64
+Step 4: Conc above limit! Increase pumping
+0    -0.000000
+1    -1.545634
+2   -35.440094
+Name: q, dtype: float64
+Step 4: Conc above limit! Increase pumping
+0    -0.000000
+1    -1.700197
+2   -42.528112
+Name: q, dtype: float64
+Step 4: Conc above limit! Increase pumping
+0    -0.000000
+1    -1.870217
+2   -51.033735
+Name: q, dtype: float64
+Step 4: Conc above limit! Increase pumping
+0    -0.000000
+1    -2.057239
+2   -61.240482
+Name: q, dtype: float64
+Step 4: Conc above limit! Increase pumping
+0    -0.000000
+1    -2.262963
+2   -73.488578
+Name: q, dtype: float64
+Step 4: Conc above limit! Increase pumping
+0    -0.000000
+1    -2.489259
+2   -88.186294
+Name: q, dtype: float64
+Step 4: Conc above limit! Increase pumping
+0     -0.000000
+1     -2.738185
+2   -105.823553
+Name: q, dtype: float64
+Step 4: Conc above limit! Increase pumping
+0     -0.000000
+1     -3.012003
+2   -126.988263
+Name: q, dtype: float64
+Step 5: Conc above limit! Increase pumping
+0     -0.000000
+1     -3.313204
+2   -152.385916
+Name: q, dtype: float64
+Step 5: Conc above limit! Increase pumping
+0     -0.000000
+1     -3.644524
+2   -182.863099
+Name: q, dtype: float64
+Step 5: Conc above limit! Increase pumping
+0     -0.000000
+1     -4.008977
+2   -219.435719
+Name: q, dtype: float64
+Step 5: Conc above limit! Increase pumping
+0     -0.000000
+1     -4.409874
+2   -263.322863
+Name: q, dtype: float64
+Step 5: Conc above limit! Increase pumping
+0     -0.000000
+1     -4.850862
+2   -315.987436
+Name: q, dtype: float64
+Step 5: Conc above limit! Increase pumping
+0     -0.000000
+1     -5.335948
+2   -379.184923
+Name: q, dtype: float64
+Step 5: Conc above limit! Increase pumping
+0     -0.000000
+1     -5.869543
+2   -455.021908
+Name: q, dtype: float64
+Step 5: Conc above limit! Increase pumping
+0     -0.000000
+1     -6.456497
+2   -546.026289
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0     -0.000000
+1     -7.102147
+2   -655.231547
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0     -0.000000
+1     -7.812361
+2   -786.277856
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0     -0.000000
+1     -8.593597
+2   -943.533427
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0      -0.000000
+1      -9.452957
+2   -1132.240113
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0      -0.000000
+1     -10.398253
+2   -1358.688135
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0      -0.000000
+1     -11.438078
+2   -1630.425763
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0      -0.000000
+1     -12.581886
+2   -1956.510915
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0      -0.000000
+1     -13.840075
+2   -2347.813098
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0      -0.000000
+1     -15.224082
+2   -2817.375718
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0      -0.000000
+1     -16.746490
+2   -3380.850861
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0      -0.000000
+1     -18.421139
+2   -4057.021033
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0      -0.000000
+1     -20.263253
+2   -4868.425240
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0      -0.000000
+1     -22.289578
+2   -5842.110288
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0      -0.000000
+1     -24.518536
+2   -7010.532346
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0      -0.000000
+1     -26.970390
+2   -8412.638815
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0       -0.000000
+1      -29.667429
+2   -10095.166578
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0       -0.000000
+1      -32.634172
+2   -12114.199893
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0       -0.000000
+1      -35.897589
+2   -14537.039872
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0       -0.000000
+1      -39.487348
+2   -17444.447847
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0       -0.000000
+1      -43.436083
+2   -20933.337416
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0       -0.000000
+1      -47.779691
+2   -25120.004899
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0       -0.000000
+1      -52.557660
+2   -30144.005879
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0       -0.000000
+1      -57.813426
+2   -36172.807055
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0       -0.000000
+1      -63.594769
+2   -43407.368466
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0       -0.000000
+1      -69.954245
+2   -52088.842159
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0       -0.000000
+1      -76.949670
+2   -62506.610591
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0       -0.000000
+1      -84.644637
+2   -75007.932709
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0       -0.000000
+1      -93.109101
+2   -90009.519250
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0        -0.000000
+1      -102.420011
+2   -108011.423101
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0        -0.000000
+1      -112.662012
+2   -129613.707721
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0        -0.000000
+1      -123.928213
+2   -155536.449265
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0        -0.000000
+1      -136.321034
+2   -186643.739118
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0        -0.000000
+1      -149.953138
+2   -223972.486941
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0        -0.000000
+1      -164.948451
+2   -268766.984329
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0        -0.000000
+1      -181.443297
+2   -322520.381195
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0        -0.000000
+1      -199.587626
+2   -387024.457434
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0        -0.000000
+1      -219.546389
+2   -464429.348921
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0        -0.000000
+1      -241.501028
+2   -557315.218706
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0        -0.000000
+1      -265.651131
+2   -668778.262447
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0        -0.000000
+1      -292.216244
+2   -802533.914936
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0        -0.000000
+1      -321.437868
+2   -963040.697923
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -3.535817e+02
+2   -1.155649e+06
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -3.889398e+02
+2   -1.386779e+06
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -4.278338e+02
+2   -1.664134e+06
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -4.706172e+02
+2   -1.996961e+06
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -5.176789e+02
+2   -2.396353e+06
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -4.659110e+02
+2   -1.917083e+06
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -5.125021e+02
+2   -2.300499e+06
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -4.612519e+02
+2   -1.840399e+06
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -5.073771e+02
+2   -2.208479e+06
+Name: q, dtype: float64
+Step 6: Head recovered! Increasing pumping
+0   -0.000000e+00
+1   -5.581148e+02
+2   -2.650175e+06
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -6.139263e+02
+2   -3.180210e+06
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -6.753189e+02
+2   -3.816252e+06
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -6.077870e+02
+2   -3.053002e+06
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -6.685657e+02
+2   -3.663602e+06
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -6.017091e+02
+2   -2.930882e+06
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -6.618801e+02
+2   -3.517058e+06
+Name: q, dtype: float64
+Step 6: Head recovered! Increasing pumping
+0   -0.000000e+00
+1   -7.280681e+02
+2   -4.220470e+06
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -8.008749e+02
+2   -5.064564e+06
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -8.809624e+02
+2   -6.077476e+06
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -7.928661e+02
+2   -4.861981e+06
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -8.721527e+02
+2   -5.834377e+06
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -7.849375e+02
+2   -4.667502e+06
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -8.634312e+02
+2   -5.601002e+06
+Name: q, dtype: float64
+Step 6: Head recovered! Increasing pumping
+0   -0.000000e+00
+1   -9.497743e+02
+2   -6.721203e+06
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -1.044752e+03
+2   -8.065443e+06
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -1.149227e+03
+2   -9.678532e+06
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -1.034304e+03
+2   -7.742825e+06
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -1.137735e+03
+2   -9.291391e+06
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -1.023961e+03
+2   -7.433112e+06
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -1.126357e+03
+2   -8.919735e+06
+Name: q, dtype: float64
+Step 6: Head recovered! Increasing pumping
+0   -0.000000e+00
+1   -1.238993e+03
+2   -1.070368e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -1.362892e+03
+2   -1.284442e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -1.499182e+03
+2   -1.541330e+07
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -1.349263e+03
+2   -1.233064e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -1.484190e+03
+2   -1.479677e+07
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -1.335771e+03
+2   -1.183742e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -1.469348e+03
+2   -1.420490e+07
+Name: q, dtype: float64
+Step 6: Head recovered! Increasing pumping
+0   -0.000000e+00
+1   -1.616283e+03
+2   -1.704588e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -1.777911e+03
+2   -2.045505e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -1.955702e+03
+2   -2.454607e+07
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -1.760132e+03
+2   -1.963685e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -1.936145e+03
+2   -2.356422e+07
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -1.742531e+03
+2   -1.885138e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -1.916784e+03
+2   -2.262165e+07
+Name: q, dtype: float64
+Step 6: Head recovered! Increasing pumping
+0   -0.000000e+00
+1   -2.108462e+03
+2   -2.714598e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -2.319308e+03
+2   -3.257518e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -2.551239e+03
+2   -3.909022e+07
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -2.296115e+03
+2   -3.127217e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -2.525727e+03
+2   -3.752661e+07
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -2.273154e+03
+2   -3.002129e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -2.500469e+03
+2   -3.602555e+07
+Name: q, dtype: float64
+Step 6: Head recovered! Increasing pumping
+0   -0.000000e+00
+1   -2.750516e+03
+2   -4.323065e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -3.025568e+03
+2   -5.187679e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -3.328125e+03
+2   -6.225214e+07
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -2.995312e+03
+2   -4.980171e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -3.294843e+03
+2   -5.976206e+07
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -2.965359e+03
+2   -4.780965e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -3.261895e+03
+2   -5.737157e+07
+Name: q, dtype: float64
+Step 6: Head recovered! Increasing pumping
+0   -0.000000e+00
+1   -3.588084e+03
+2   -6.884589e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -3.946893e+03
+2   -8.261507e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -4.341582e+03
+2   -9.913808e+07
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -3.907424e+03
+2   -7.931046e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -4.298166e+03
+2   -9.517256e+07
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -3.868350e+03
+2   -7.613805e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -4.255185e+03
+2   -9.136565e+07
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -3.829666e+03
+2   -7.309252e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -4.212633e+03
+2   -8.771103e+07
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -3.791370e+03
+2   -7.016882e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -4.170506e+03
+2   -8.420259e+07
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -3.753456e+03
+2   -6.736207e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -4.128801e+03
+2   -8.083448e+07
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -3.715921e+03
+2   -6.466759e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -4.087513e+03
+2   -7.760110e+07
+Name: q, dtype: float64
+Step 6: Head recovered! Increasing pumping
+0   -0.000000e+00
+1   -4.496265e+03
+2   -9.312133e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -4.945891e+03
+2   -1.117456e+08
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -5.440480e+03
+2   -1.340947e+08
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -4.896432e+03
+2   -1.072758e+08
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -5.386076e+03
+2   -1.287309e+08
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -4.847468e+03
+2   -1.029847e+08
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -5.332215e+03
+2   -1.235817e+08
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -4.798993e+03
+2   -9.886535e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -5.278893e+03
+2   -1.186384e+08
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -4.751003e+03
+2   -9.491073e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -5.226104e+03
+2   -1.138929e+08
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -4.703493e+03
+2   -9.111430e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -5.173843e+03
+2   -1.093372e+08
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -4.656458e+03
+2   -8.746973e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -5.122104e+03
+2   -1.049637e+08
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -4.609894e+03
+2   -8.397094e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -5.070883e+03
+2   -1.007651e+08
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -4.563795e+03
+2   -8.061210e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -5.020174e+03
+2   -9.673453e+07
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -4.518157e+03
+2   -7.738762e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -4.969973e+03
+2   -9.286514e+07
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -4.472975e+03
+2   -7.429212e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -4.920273e+03
+2   -8.915054e+07
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -4.428246e+03
+2   -7.132043e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -4.871070e+03
+2   -8.558452e+07
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -4.383963e+03
+2   -6.846761e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -4.822359e+03
+2   -8.216114e+07
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -4.340124e+03
+2   -6.572891e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -4.774136e+03
+2   -7.887469e+07
+Name: q, dtype: float64
+Step 6: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -4.296722e+03
+2   -6.309975e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -4.726395e+03
+2   -7.571970e+07
+Name: q, dtype: float64
+Step 6: Head recovered! Increasing pumping
+0   -0.000000e+00
+1   -5.199034e+03
+2   -9.086364e+07
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -5.718937e+03
+2   -1.090364e+08
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -6.290831e+03
+2   -1.308436e+08
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -6.919914e+03
+2   -1.570124e+08
+Name: q, dtype: float64
+Step 6: Conc above limit! Increase pumping
+0   -0.000000e+00
+1   -7.611906e+03
+2   -1.884149e+08
+Name: q, dtype: float64
+Step 6: Conc recovered! Reduce pumping
+0   -0.000000e+00
+1   -6.850715e+03
+2   -1.507319e+08
+Name: q, dtype: float64
+Step 7: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -6.165644e+03
+2   -1.205855e+08
+Name: q, dtype: float64
+Step 7: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -5.549079e+03
+2   -9.646840e+07
+Name: q, dtype: float64
+Step 7: Head recovered! Increasing pumping
+0   -0.000000e+00
+1   -6.103987e+03
+2   -1.157621e+08
+Name: q, dtype: float64
+Step 8: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -5.493588e+03
+2   -9.260967e+07
+Name: q, dtype: float64
+Step 8: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -4.944230e+03
+2   -7.408773e+07
+Name: q, dtype: float64
+Step 8: Head recovered! Increasing pumping
+0   -0.000000e+00
+1   -5.438653e+03
+2   -8.890528e+07
+Name: q, dtype: float64
+Step 8: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -4.894787e+03
+2   -7.112423e+07
+Name: q, dtype: float64
+Step 8: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -4.405309e+03
+2   -5.689938e+07
+Name: q, dtype: float64
+Step 8: Head recovered! Increasing pumping
+0   -0.000000e+00
+1   -4.845839e+03
+2   -6.827926e+07
+Name: q, dtype: float64
+Step 8: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -4.361255e+03
+2   -5.462340e+07
+Name: q, dtype: float64
+Step 8: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -3.925130e+03
+2   -4.369872e+07
+Name: q, dtype: float64
+Step 8: Head recovered! Increasing pumping
+0   -0.000000e+00
+1   -4.317643e+03
+2   -5.243847e+07
+Name: q, dtype: float64
+Step 9: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -3.885879e+03
+2   -4.195077e+07
+Name: q, dtype: float64
+Step 9: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -3.497291e+03
+2   -3.356062e+07
+Name: q, dtype: float64
+Step 9: Head recovered! Increasing pumping
+0   -0.000000e+00
+1   -3.847020e+03
+2   -4.027274e+07
+Name: q, dtype: float64
+Step 10: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -3.462318e+03
+2   -3.221820e+07
+Name: q, dtype: float64
+Step 10: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -3.116086e+03
+2   -2.577456e+07
+Name: q, dtype: float64
+Step 10: Head recovered! Increasing pumping
+0   -0.000000e+00
+1   -3.427695e+03
+2   -3.092947e+07
+Name: q, dtype: float64
+Step 12: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -3.084925e+03
+2   -2.474357e+07
+Name: q, dtype: float64
+Step 12: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -2.776433e+03
+2   -1.979486e+07
+Name: q, dtype: float64
+Step 12: Head recovered! Increasing pumping
+0   -0.000000e+00
+1   -3.054076e+03
+2   -2.375383e+07
+Name: q, dtype: float64
+Step 12: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -2.748668e+03
+2   -1.900306e+07
+Name: q, dtype: float64
+Step 12: Head below limit! Reducing pumping
+0   -0.000000e+00
+1   -2.473802e+03
+2   -1.520245e+07
+Name: q, dtype: float64
+Step 12: Head recovered! Increasing pumping
+Simulation completed
