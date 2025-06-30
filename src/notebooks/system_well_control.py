@@ -8,6 +8,7 @@ def run_model(model_path, verbose=False):
     """Control script to regulate the pumping wells dynamically. The regulation of the system is regulated by
      river vital water level and the groundwater mimimum threshold. """
     print('started')
+
     # Initialize the MF6 model using the provided nam file
     mf6 = MF6(sim_path=model_path)
     print('mf6 initialized')
@@ -42,11 +43,14 @@ def run_model(model_path, verbose=False):
     lower_limit_conc = conc_limit - tolerance_conc
     upper_limit_conc = conc_limit + tolerance_conc
 
+    # Set limits for pumping rate 
+    min_rate = -0.05  # Minimum extraction rate (m³/day)
+    max_rate = -50.0  # Maximum extraction rate (m³/day)
+
     # State tracking variables
     below_gw = False
     above_conc = False
-    well_node = None
-    prev_conc = 0.0  # Stores last known concentration
+    
    # print("Regulated wells:", well_regulated)
     mywell_q = {
         'step': [],
@@ -69,22 +73,38 @@ def run_model(model_path, verbose=False):
             mywell_q['step'].append(gwf.kstp)
             mywell_q['conc'].append(current_conc)
             mywell_q['head'].append(current_head)
+            current_q = wel.q.copy()  # Get current rates
+            print(current_q)
             mywell_q['q_well1'].append(wel.q[1])
             mywell_q['q_well2'].append(wel.q[2])
             mywell_q['head_state'].append('below' if below_gw else 'normal')
             mywell_q['conc_state'].append('above' if above_conc else 'normal')
 
-
-            # Head regulation
+             # Head regulation
             if current_head <= lower_limit_gw: 
                 below_gw = True
                 print(wel.q)
                 q = wel.q
-                q[0] = q[0] * 0 
-                q[1] = q[1] * 0.9 
+                # Deactive observation well
+                q[0] = q[0] * 0
+                # Control for well 1
+                q[1] = q[1] * 0.9
+                print(' HEAD CONTROL Q1 control well 1' , q[1])
+                if q[1] > max_rate:
+                    q[1] = max_rate  # Prevent recharge
+                elif q[1] < min_rate:
+                    q[1] = min_rate # Prevent over-pumping
+
+                # Control for well 2
                 q[2] = q[2] * 0.8
+                if q[2] > max_rate:
+                    q[2] = max_rate  # Prevent recharge
+                elif q[2] < min_rate:
+                    q[2] = min_rate # Prevent over-pumping
+               
                 wel.q = q
                 print(f"Step {gwf.kstp}: Head below limit! Reducing pumping")
+                
             elif below_gw and current_head >= upper_limit_gw:
                 below_gw = False # Reset the state 
                 print(wel.q)
@@ -100,21 +120,38 @@ def run_model(model_path, verbose=False):
                 above_conc = True # only act on the transition 
                 print(wel.q)
                 q = wel.q
+                # Deactive observation well
                 q[0] = q[0] * 0
+                
+                # Control for well 1
                 q[1] = q[1] * 1.1
+                print('CONCENTRATION Q1 control well 1' , q[1])
+                if q[1] > max_rate:
+                    q[1] = max_rate  # Prevent recharge
+                elif q[1] < min_rate:
+                    q[1] = min_rate # Prevent over-pumping
+
+                # Control for well 2
                 q[2] = q[2] * 1.2
+                if q[2] > max_rate:
+                    q[2] = max_rate  # Prevent recharge
+                elif q[2] < min_rate:
+                    q[2] = min_rate # Prevent over-pumping
+
                 wel.q = q
                 print(f"Step {gwf.kstp}: Conc above limit! Increase pumping")
+                
             elif above_conc and current_conc <= lower_limit_conc:
                 above_conc = False # reset state
                 print(wel.q)
                 q = wel.q
+                # Deactive observation well
                 q[0] = q[0] * 0
+
                 q[1] = q[1] * 0.9
                 q[2] = q[2] * 0.8
                 wel.q = q
                 print(f"Step {gwf.kstp}: Conc recovered! Reduce pumping")
-
 
     # Save results
     df = pd.DataFrame(mywell_q)
@@ -200,6 +237,6 @@ def plot_state(mywell_q):
 
 if __name__ == '__main__':
     model_path = os.path.join(os.getcwd(), 'models', 'transbase')
-    results = run_model(model_path=model_path, verbose=True)
+    results = run_model(model_path=model_path, verbose=False)
     plot(results)
     plot_state(results)

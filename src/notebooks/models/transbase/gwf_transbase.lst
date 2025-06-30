@@ -62,7 +62,7 @@ MODFLOW 6 compiler options: /Isrc\libmf6core.a.p /Isrc /I..\src
 /Fosrc/libmf6core.a.p/Utilities_compilerversion.F90.obj /c
 
 System command used to initiate simulation:
-"C:\Users\lucialabarca\pymf6-validation\.pixi\envs\default\python.EXE" system_well_control.py
+"C:\Users\lucialabarca\pymf6-validation\.pixi\envs\default\python.EXE" control_test_well.py
 
 MODFLOW was compiled using uniform precision.
 
