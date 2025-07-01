@@ -389,3 +389,29 @@ END OF MODEL CONNECTIONS
  ------------------------------------------
  NUMBER OF TIME STEPS = 1
  MULTIPLIER FOR DELT =     1.000
+ INITIAL TIME STEP SIZE =   1.000000    
+
+ SLN_1 OUTER ITERATION SUMMARY
+ ----------------------------------------------------------------------------------------------------------
+                                OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
+ OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
+ ----------------------------------------------------------------------------------------------------------
+ Model                              1          4  5.54595106E-02                              1_GWF-(1,8,9)
+ Model                              2          1  6.21671040E-03       *                     1_GWF-(2,10,1)
+ ----------------------------------------------------------------------------------------------------------
+
+
+ 2 CALLS TO NUMERICAL SOLUTION IN TIME STEP 1 STRESS PERIOD 1
+ 5 TOTAL ITERATIONS
+
+ SLN_2 OUTER ITERATION SUMMARY
+ ----------------------------------------------------------------------------------------------------------
+                                OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
+ OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
+ ----------------------------------------------------------------------------------------------------------
+ Model                              1          1 -2.77593866E-06       *                     2_GWT-(1,10,9)
+ ----------------------------------------------------------------------------------------------------------
+
+
+ 1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 1 STRESS PERIOD 1
+ 1 TOTAL ITERATIONS

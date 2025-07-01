@@ -62,7 +62,7 @@ MODFLOW 6 compiler options: /Isrc\libmf6core.a.p /Isrc /I..\src
 /Fosrc/libmf6core.a.p/Utilities_compilerversion.F90.obj /c
 
 System command used to initiate simulation:
-C:\Users\lucialabarca\mf6.6.2_win64\bin\mf6.exe
+C:/Users/lucialabarca/pymf6-validation/.pixi/envs/default\python.exe -m ipykernel_launcher -f C:\Users\lucialabarca\AppData\Roaming\jupyter\runtime\kernel-a72b034e-09e7-4578-b896-9a04591048e7.json
 
 MODFLOW was compiled using uniform precision.
 
@@ -159,11 +159,11 @@ Logical Variables
     CELL-BY-CELL FLOW INFORMATION WILL BE SAVED TO BINARY FILE WHENEVER ICBCFL IS NOT ZERO.
  END OF STORAGE OPTIONS
     BINARY GRID INFORMATION WILL BE WRITTEN TO:
-      UNIT NUMBER: 1025
+      UNIT NUMBER: 1026
       FILE NAME: gwf_riverbase.dis.grb
 
  OPENED gwf_riverbase.dis.grb
- FILE TYPE:DATA(BINARY)   UNIT 1025   STATUS:REPLACE             
+ FILE TYPE:DATA(BINARY)   UNIT 1026   STATUS:REPLACE             
  FORMAT:UNFORMATTED            ACCESS:STREAM              
  ACTION:READWRITE           
 
@@ -174,21 +174,26 @@ Logical Variables
  PROCESSING OC OPTIONS
 
     BUDGET INFORMATION WILL BE WRITTEN TO:
-      UNIT NUMBER: 1026
+      UNIT NUMBER: 1027
       FILE NAME: gwf_riverbase.bud
 
  OPENED gwf_riverbase.bud
- FILE TYPE:DATA(BINARY)   UNIT 1026   STATUS:REPLACE             
- FORMAT:UNFORMATTED            ACCESS:STREAM              
- ACTION:READWRITE           
-
-    HEAD INFORMATION WILL BE WRITTEN TO:
-      UNIT NUMBER: 1027
-      FILE NAME: gwf_riverbase.hds
-
- OPENED gwf_riverbase.hds
  FILE TYPE:DATA(BINARY)   UNIT 1027   STATUS:REPLACE             
  FORMAT:UNFORMATTED            ACCESS:STREAM              
  ACTION:READWRITE           
 
+    HEAD INFORMATION WILL BE WRITTEN TO:
+      UNIT NUMBER: 1028
+      FILE NAME: gwf_riverbase.hds
+
+ OPENED gwf_riverbase.hds
+ FILE TYPE:DATA(BINARY)   UNIT 1028   STATUS:REPLACE             
+ FORMAT:UNFORMATTED            ACCESS:STREAM              
+ ACTION:READWRITE           
+
  END OF OC OPTIONS
+
+start timestep kper="1" kstp="1" mode="normal"
+
+
+ BEGIN READING OUTPUT CONTROL FOR STRESS PERIOD 0
