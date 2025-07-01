@@ -30,16 +30,11 @@ def run_model(model_path, verbose=False):
     well_regulated_1_coords =  wel.nodelist[1]
     well_regulated_2_coords =  wel.nodelist[2]
     initial_head = gwf.X[well_node_obs_coords]
+    print (initial_head)
     
-    # Head control parameters
-    tolerance_gw = 2
-    gw_head_limit = initial_head
-    lower_limit_gw = gw_head_limit - tolerance_gw
-    upper_limit_gw = gw_head_limit + tolerance_gw
-
     # Concentration control parameters
     tolerance_conc = 0.05
-    conc_limit = 0.5
+    conc_limit = 0.8
     lower_limit_conc = conc_limit - tolerance_conc
     upper_limit_conc = conc_limit + tolerance_conc
 
@@ -57,16 +52,20 @@ def run_model(model_path, verbose=False):
         'head': [],
         'conc': [],
         'q_well1': [],
-        'q_well2': [], 
+        'q_well2': [],
+        'q_well3': [],
         'head_state': [],
-        'conc_state': []
+        'conc_state': [], 
+        #'t_vol': []
     } # Dict of lists per well
 
     # Run the model loop
     for model in mf6.model_loop():
         if gwf.kper == 1:  # Only operate during stress period 2
-            current_head = gwf.X[well_node_obs_coords]
-            current_conc = gwt.X[well_node_obs_coords]
+            current_head = gwf.X[(1, 6, 7)]
+            current_conc = gwt.X[(1, 6, 2)]
+            obs_conc = gwt.X[(1, 6, 9)]
+            #current_conc_round = round(current_conc, 4)
             # print (current_conc)
 
             # Record system state
@@ -75,92 +74,48 @@ def run_model(model_path, verbose=False):
             mywell_q['head'].append(current_head)
             current_q = wel.q.copy()  # Get current rates
             print(current_q)
-            mywell_q['q_well1'].append(wel.q[1])
-            mywell_q['q_well2'].append(wel.q[2])
+            mywell_q['q_well1'].append(wel.q[0])
+            mywell_q['q_well2'].append(wel.q[1])
+            mywell_q['q_well3'].append(wel.q[2])
+            #mywell_q['t_vol'].append(gwf.kstp * wel.q[2]*)
             mywell_q['head_state'].append('below' if below_gw else 'normal')
             mywell_q['conc_state'].append('above' if above_conc else 'normal')
-
-             # Head regulation
-            if current_head <= lower_limit_gw: 
-                below_gw = True
-                print(wel.q)
-                q = wel.q
-                
-                # Control for well 1
-                q[1] = q[1] * 0.9
-                if q[1] > min_rate:
-                    q[1] = min_rate  # Prevent recharge
-                elif q[1] < max_rate:
-                    q[1] = max_rate # Prevent over-pumping
-
-                # Control for well 2
-                q[2] = q[2] * 0.8
-                if q[2] > min_rate:
-                    q[2] = min_rate  # Prevent recharge
-                elif q[2] < max_rate:
-                    q[2] = max_rate # Prevent over-pumping
-               
-                wel.q = q
-                print(f"Step {gwf.kstp}: Head below limit! Reducing pumping")
-                
-            elif current_head >= upper_limit_gw:
-                below_gw = False # Reset the state 
-                print(wel.q)
-                q = wel.q
-                #q[0] = q[0] * 0
-            
-            q[1] = q[1] * 1.1
-            if q[1] > min_rate:
-                q[1] = min_rate  # Prevent recharge
-            elif q[1] < max_rate:
-                q[1] = max_rate # Prevent over-pumping
-
-                
-            # control well 2
-                q[2] = q[2] * 1.2
-            if q[1] > min_rate:
-                q[1] = min_rate  # Prevent recharge
-            elif q[1] < max_rate:
-                q[1] = max_rate # Prevent over-pumping
-                wel.q = q
-                print(f"Step {gwf.kstp}: Head recovered! Increasing pumping")
+            print ( 'CONCENTRATION AT SOURCE IS', current_conc)
+            print ( 'CONCENTRATION AT OBSERVATION WELL IS', obs_conc)
+       # else: 
+          #  mywell_q['t_vol'].append(None)
 
             # Concentration regulation
-            if current_conc >= upper_limit_conc:
-                above_conc = True # only act on the transition 
+            if obs_conc >= upper_limit_conc:
+                above_conc = True  
                 print(wel.q)
                 q = wel.q
-            
                 # Control for well 1
-                q[1] = q[1] * 1.1
-             if q[1] > min_rate:
-                q[1] = min_rate  # Prevent recharge
-            elif q[1] < max_rate:
-                q[1] = max_rate # Prevent over-pumping
-                    
-                # Control for well 2
-                  # Control for well 2
-                q[2] = q[2] * 1.2
-                if q[2] > min_rate:
-                    q[2] = min_rate  # Prevent recharge
-                elif q[2] < max_rate:
-                    q[2] = max_rate # Prevent over-pumping
-
+                q[0] = q[0] * 1.1
+                q[1] = q[1] * 1.2
+                q[2] = q[2] * 1.3
+                # well control
+                for i in range(3):
+                    if q[i] < max_rate:
+                        q[i] = max_rate
+                    elif q[i] > min_rate:
+                        q[i] = min_rate
                 wel.q = q
                 print(f"Step {gwf.kstp}: Conc above limit! Increase pumping")
                 
-            elif current_conc <= lower_limit_conc:
+            elif obs_conc <= lower_limit_conc:
                 above_conc = False # reset state
                 print(wel.q)
                 q = wel.q
-                # Deactive observation well
-                if q[2] > min_rate:
-                    q[2] = min_rate  # Prevent recharge
-                elif q[2] < max_rate:
-                    q[2] = max_rate # Prevent over-pumping
-
-                q[1] = q[1] * 0.9
+               # Control for well 1
+                q[0] = q[0] * 0.9
+                q[1] = q[1] * 0.7
                 q[2] = q[2] * 0.8
+                for i in range(3):
+                    if q[i] < max_rate:
+                        q[i] = max_rate
+                    elif q[i] > min_rate:
+                        q[i] = min_rate
                 wel.q = q
                 print(f"Step {gwf.kstp}: Conc recovered! Reduce pumping")
 
@@ -177,7 +132,8 @@ def plot(mywell_q):
 
     # Plot pumping rates
     plt.plot(mywell_q['step'], mywell_q['q_well1'], 'b-o', label='Well 1 Pumping')
-    plt.plot(mywell_q['step'], mywell_q['q_well2'], 'r-o', label='Well 2 Pumping')
+    plt.plot(mywell_q['step'], mywell_q['q_well2'], 'g-o', label='Well 2 Pumping')
+    plt.plot(mywell_q['step'], mywell_q['q_well3'], 'r-o', label='Well 3 Pumping')
     plt.ylabel("Pumping Rate")
     plt.xlabel("Timestep")
     plt.grid(True)
@@ -203,6 +159,7 @@ def plot_state(mywell_q):
     # Plot 1: Pumping Rates
     ax1.plot(mywell_q['step'], mywell_q['q_well1'], 'b-', label='Well 1')
     ax1.plot(mywell_q['step'], mywell_q['q_well2'], 'r-', label='Well 2')
+    ax1.plot(mywell_q['step'], mywell_q['q_well3'], 'g-', label='Well 3')
     ax1.set_ylabel("Pumping Rate [L³/T]")
     ax1.grid(True, alpha=0.3)
     ax1.legend()
@@ -219,16 +176,16 @@ def plot_state(mywell_q):
         if state == 'below':
             ax2.axvline(x=mywell_q['step'][i], color='orange', alpha=0.2)
     
-    ax2.set_ylabel("Head [L]")
+    ax2.set_ylabel("Head [m]")
     ax2.grid(True, alpha=0.3)
     ax2.legend()
     ax2.set_title("Head at Observation Well")
     
     # Plot 3: Concentration with state indicators
     ax3.plot(mywell_q['step'], mywell_q['conc'], 'm-', label='Concentration')
-    ax3.axhline(y=0.5, color='purple', linestyle='--', label='Target')
-    ax3.axhline(y=0.45, color='pink', linestyle=':', alpha=0.7, label='Lower Limit')
-    ax3.axhline(y=0.55, color='pink', linestyle=':', alpha=0.7, label='Upper Limit')
+    ax3.axhline(y=0.9, color='purple', linestyle='--', label='Target')
+    ax3.axhline(y=0.85, color='pink', linestyle=':', alpha=0.7, label='Lower Limit')
+    ax3.axhline(y=0.95, color='pink', linestyle=':', alpha=0.7, label='Upper Limit')
     
     # Mark conc above state
     for i, state in enumerate(mywell_q['conc_state']):

@@ -1,0 +1,7 @@
+
+ERROR REPORT:
+
+  1. Could not open "mfsim.lst" on unit 1000. Specified file status REPLACE.
+     Specified file format FORMATTED. Specified file access SEQUENTIAL.
+     Specified file action READWRITE. IOSTAT error number 30. STOP EXECUTION
+     in subroutine openfile().
