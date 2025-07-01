@@ -85,33 +85,43 @@ def run_model(model_path, verbose=False):
                 below_gw = True
                 print(wel.q)
                 q = wel.q
-                # Deactive observation well
-                q[0] = q[0] * 0
+                
                 # Control for well 1
                 q[1] = q[1] * 0.9
-                print(' HEAD CONTROL Q1 control well 1' , q[1])
-                if q[1] > max_rate:
-                    q[1] = max_rate  # Prevent recharge
-                elif q[1] < min_rate:
-                    q[1] = min_rate # Prevent over-pumping
+                if q[1] > min_rate:
+                    q[1] = min_rate  # Prevent recharge
+                elif q[1] < max_rate:
+                    q[1] = max_rate # Prevent over-pumping
 
                 # Control for well 2
                 q[2] = q[2] * 0.8
-                if q[2] > max_rate:
-                    q[2] = max_rate  # Prevent recharge
-                elif q[2] < min_rate:
-                    q[2] = min_rate # Prevent over-pumping
+                if q[2] > min_rate:
+                    q[2] = min_rate  # Prevent recharge
+                elif q[2] < max_rate:
+                    q[2] = max_rate # Prevent over-pumping
                
                 wel.q = q
                 print(f"Step {gwf.kstp}: Head below limit! Reducing pumping")
                 
-            elif below_gw and current_head >= upper_limit_gw:
+            elif current_head >= upper_limit_gw:
                 below_gw = False # Reset the state 
                 print(wel.q)
                 q = wel.q
-                q[0] = q[0] * 0
-                q[1] = q[1] * 1.1
+                #q[0] = q[0] * 0
+            
+            q[1] = q[1] * 1.1
+            if q[1] > min_rate:
+                q[1] = min_rate  # Prevent recharge
+            elif q[1] < max_rate:
+                q[1] = max_rate # Prevent over-pumping
+
+                
+            # control well 2
                 q[2] = q[2] * 1.2
+            if q[1] > min_rate:
+                q[1] = min_rate  # Prevent recharge
+            elif q[1] < max_rate:
+                q[1] = max_rate # Prevent over-pumping
                 wel.q = q
                 print(f"Step {gwf.kstp}: Head recovered! Increasing pumping")
 
@@ -120,33 +130,34 @@ def run_model(model_path, verbose=False):
                 above_conc = True # only act on the transition 
                 print(wel.q)
                 q = wel.q
-                # Deactive observation well
-                q[0] = q[0] * 0
-                
+            
                 # Control for well 1
                 q[1] = q[1] * 1.1
-                print('CONCENTRATION Q1 control well 1' , q[1])
-                if q[1] > max_rate:
-                    q[1] = max_rate  # Prevent recharge
-                elif q[1] < min_rate:
-                    q[1] = min_rate # Prevent over-pumping
-
+             if q[1] > min_rate:
+                q[1] = min_rate  # Prevent recharge
+            elif q[1] < max_rate:
+                q[1] = max_rate # Prevent over-pumping
+                    
                 # Control for well 2
+                  # Control for well 2
                 q[2] = q[2] * 1.2
-                if q[2] > max_rate:
-                    q[2] = max_rate  # Prevent recharge
-                elif q[2] < min_rate:
-                    q[2] = min_rate # Prevent over-pumping
+                if q[2] > min_rate:
+                    q[2] = min_rate  # Prevent recharge
+                elif q[2] < max_rate:
+                    q[2] = max_rate # Prevent over-pumping
 
                 wel.q = q
                 print(f"Step {gwf.kstp}: Conc above limit! Increase pumping")
                 
-            elif above_conc and current_conc <= lower_limit_conc:
+            elif current_conc <= lower_limit_conc:
                 above_conc = False # reset state
                 print(wel.q)
                 q = wel.q
                 # Deactive observation well
-                q[0] = q[0] * 0
+                if q[2] > min_rate:
+                    q[2] = min_rate  # Prevent recharge
+                elif q[2] < max_rate:
+                    q[2] = max_rate # Prevent over-pumping
 
                 q[1] = q[1] * 0.9
                 q[2] = q[2] * 0.8

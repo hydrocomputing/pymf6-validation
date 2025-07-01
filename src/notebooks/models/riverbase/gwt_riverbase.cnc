@@ -7,7 +7,6 @@ BEGIN dimensions
 END dimensions
 
 BEGIN period  1
-  1 6 2      10.00000000
-  1 7 2      10.00000000
+
 END period  1
 
