@@ -15,9 +15,9 @@ def run_model(model_path, verbose=False):
 
     # Get the flow models
     flow_models = mf6.models['gwf6']
-    gwf = flow_models['gwf_transbase'] # Flow model name
+    gwf = flow_models['gwf_pumptreat'] # Flow model name
     transport_models = mf6.models['gwt6']
-    gwt = transport_models['gwt_transbase'] # Transport model name
+    gwt = transport_models['gwt_pumptreat'] # Transport model name
 
     # Get well package
     for _ in mf6.model_loop():
@@ -204,7 +204,7 @@ def plot_state(mywell_q):
     plt.show()
 
 if __name__ == '__main__':
-    model_path = os.path.join(os.getcwd(), 'models', 'transbase')
+    model_path = os.path.join(os.getcwd(), 'models', 'pumptreat')
     results = run_model(model_path=model_path, verbose=False)
     plot(results)
     plot_state(results)

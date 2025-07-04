@@ -1,6 +1,7 @@
+from matplotlib.pyplot import viridis
 
 
-def example_2_wells():
+def example_2_nowells():
     # imports
     import os
     import matplotlib.colors as mcolors
@@ -11,10 +12,10 @@ def example_2_wells():
     # For this example, we will set up a temporary workspace.
     # Model input files and output files will reside here.
     dir_name = os.getcwd()
-    workspace = os.path.join(dir_name + '/models', "pumptreat")
+    workspace = os.path.join(dir_name + '/models', "pumptreatnw")
 
     # Set up workspace
-    model_name = "pumptreat"
+    model_name = "pumptreatnw"
 
     # create flopy objects
     h1 = 25
@@ -36,7 +37,7 @@ def example_2_wells():
 
     # Create the Flopy temporal discretization object
     tdis = flopy.mf6.modflow.mftdis.ModflowTdis(
-        sim, pname="tdis", time_units="DAYS", nper=2, perioddata=[(1.0, 1, 1.0), (2000.0, 150, 1.0)]
+        sim, pname="tdis", time_units="DAYS", nper=2, perioddata=[(1.0, 1, 1.0), times]
     )
 
     # Create the Flopy groundwater flow (gwf) model object
@@ -126,25 +127,6 @@ def example_2_wells():
         stress_period_data=chd_rec,
         save_flows=True,
         **chd_kwargs
-    )
-
-    # Create well package
-    # wel location at (1,
-    wel_kwargs = {
-        'auxiliary': 'CONCENTRATION',
-        'pname': 'WEL-1'
-        }
-
-    wel_rec = [
-        ((0, int(N / 2), int(N / 4)), q, 0),
-        ((0, int(N / 3), int(N / 4)), q, 0),
-        ((0, int(N / 4), int(N / 4)), q, 0)
-    ]
-    wel = flopy.mf6.ModflowGwfwel(
-        gwf,
-        stress_period_data=wel_rec,
-        save_flows=True,
-        **wel_kwargs
     )
 
     # Create the output control package
@@ -242,7 +224,6 @@ def example_2_wells():
     sourcerecarray = [
         ('CHD-1', 'AUX', 'CONCENTRATION'),
     ]
-    sourcerecarray.append(('WEL-1', 'AUX', 'CONCENTRATION'))
 
     flopy.mf6.ModflowGwtssm(
         gwt,
@@ -261,7 +242,6 @@ def example_2_wells():
     cnc_rec.append(((0, int(N / 3), int(N / 4)), con_max))
     cnc_rec.append(((0, int(N / 2.4), int(N / 4.3)), con_max))  # Single source
     cnc_rec.append(((0, int(N / 3), int(N / 4.4)), con_max))
-
 
     # Create CNC package
     cnc = flopy.mf6.ModflowGwtcnc(
@@ -301,8 +281,8 @@ def example_2_wells():
     if not success:
         print("\n".join(buff))
 
-        # visualize -----------------------------------------------------------------------------------
-        # Create ibound array to identify boundary condition locations
+    # visualize -----------------------------------------------------------------------------------
+    # Create ibound array to identify boundary condition locations
     ibd = np.ones((Nlay, N, N), dtype=int)  # Start with all cells active (1)
 
     # Mark constant head cells with -1
@@ -414,6 +394,8 @@ def example_2_wells():
     plt.savefig(os.path.join(workspace, "plume.png"))
     plt.show()
 
+
+
     # Save all plots
 
     import matplotlib.pyplot as plt
@@ -507,7 +489,7 @@ def example_2_wells():
 
     # More sensitive colormap for low concentrations
     colors_list = [(0, "white"), (0.001, "lightblue"), (0.01, "cyan"),
-                   (0.1, "green"), (0.5, "yellow"), (1, "red")]
+              (0.1, "green"), (0.5, "yellow"), (1, "red")]
     cmap = LinearSegmentedColormap.from_list("contam_cmap", colors_list)
 
     # Create logarithmic normalization
@@ -526,7 +508,7 @@ def example_2_wells():
     cbar.ax.minorticks_on()
 
     # Create logarithmic contour levels
-    conc_levels = [0.001, 0.01, 0.1, 1, 10, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]
+    conc_levels = [0.001, 0.01, 0.1, 1, 10, 50, 100, 200, 300, 400, 550]
 
     # Plot concentration contours (logarithmic scale)
     conc_contours = modelmap.contour_array(conc, levels=conc_levels, colors='black', linewidths=0.5)
@@ -576,5 +558,6 @@ def example_2_wells():
     print("All plots saved to:", workspace)
 
 
+
 if __name__ == '__main__':
-    example_2_wells()
+    example_2_nowells()
