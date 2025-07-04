@@ -1,21 +1,24 @@
                                    MODFLOW 6
                 U.S. GEOLOGICAL SURVEY MODULAR HYDROLOGIC MODEL
                           GROUNDWATER FLOW MODEL (GWF)
-                  VERSION 6.7.0.dev2 (preliminary) 05/20/2025
-                               ***DEVELOP MODE***
+                            VERSION 6.6.2 05/12/2025
 
-        MODFLOW 6 compiled May 20 2025 13:40:03 with GCC version 13.3.0
+   MODFLOW 6 compiled May 12 2025 12:42:18 with Intel(R) Fortran Intel(R) 64
+   Compiler Classic for applications running on Intel(R) 64, Version 2021.7.0
+                             Build 20220726_000000
 
-This software is preliminary or provisional and is subject to 
-revision. It is being provided to meet the need for timely best 
-science. The software has not received final approval by the U.S. 
-Geological Survey (USGS). No warranty, expressed or implied, is made 
-by the USGS or the U.S. Government as to the functionality of the 
-software and related material nor shall the fact of release 
-constitute any such warranty. The software is provided on the 
-condition that neither the USGS nor the U.S. Government shall be held 
-liable for any damages resulting from the authorized or unauthorized 
-use of the software.
+This software has been approved for release by the U.S. Geological 
+Survey (USGS). Although the software has been subjected to rigorous 
+review, the USGS reserves the right to update the software as needed 
+pursuant to further analysis and review. No warranty, expressed or 
+implied, is made by the USGS or the U.S. Government as to the 
+functionality of the software and related material nor shall the 
+fact of release constitute any such warranty. Furthermore, the 
+software is released on condition that neither the USGS nor the U.S. 
+Government shall be held liable for any damages resulting from its 
+authorized or unauthorized use. Also refer to the USGS Water 
+Resources Software User Rights Notice for complete use, copyright, 
+and distribution information.
 
 
 As a work of the United States Government, this USGS product is 
@@ -50,17 +53,16 @@ The following BSD-3 License libraries are used in this USGS product:
       All rights reserved.
       (https://github.com/jacobwilliams/daglib)
 
-MODFLOW 6 compiler options: -fdiagnostics-color=always -cpp -I
-src/libmf6core.a.p -I src -I ../src -I src/libmf6_external.a.p -iprefix
-/opt/homebrew/Cellar/gcc@13/13.3.0/bin/../lib/gcc/13/gcc/aarch64-apple-darwin2
-3/13/ -D__DYNAMIC__ -D __APPLE__ -fPIC -mmacosx-version-min=14.0.0
--mcpu=apple-m1 -mlittle-endian -mabi=lp64 -O1 -Wall -Wpedantic
--Wcharacter-truncation -Wno-unused-dummy-argument -Wno-intrinsic-shadow
--Wno-maybe-uninitialized -Wno-uninitialized -std=f2018 -fall-intrinsics
--ffpe-summary=overflow -ffpe-trap=overflow,zero,invalid -J src/libmf6core.a.p
+MODFLOW 6 compiler options: /Isrc\libmf6core.a.p /Isrc /I..\src
+/Isrc\libmf6_external.a.p /MT /nologo /warn:general /warn:truncated_source
+/stand:f18 /O2 /fpe:0 /heap-arrays:0 /traceback /fpp /Qdiag-disable:7416
+/Qdiag-disable:7025 /Qdiag-disable:5268 /Qdiag-disable:10448
+/Fdsrc\libmf6core.a.p\Utilities_compilerversion.F90.pdb
+/module:src\libmf6core.a.p
+/Fosrc/libmf6core.a.p/Utilities_compilerversion.F90.obj /c
 
 System command used to initiate simulation:
-/Users/mike/hydrocomputing/projects/2021/003_ModSimple_Phase2/Bearbeitung/MODFLOW6/nightly/20250520/mf6.7.0.dev2_macarm/bin/mf6
+C:\Users\lucialabarca\mf6.6.2_win64\bin\mf6.exe
 
 MODFLOW was compiled using uniform precision.
 
@@ -84,7 +86,7 @@ Long Integer Variables
 Logical Variables
   KIND: 4
   SIZE IN BITS: 32
-
+ 
  NAMEFILE OPTIONS:
     FLOWS WILL BE SAVED TO BUDGET FILE SPECIFIED IN OUTPUT CONTROL
  END NAMEFILE OPTIONS:
@@ -1975,7 +1977,7 @@ start timestep kper="2" kstp="120" mode="normal"
 
            TOTAL OUT =           1.5000             TOTAL OUT =           0.1500
 
-            IN - OUT =      -4.6655E-06              IN - OUT =      -4.3145E-07
+            IN - OUT =      -4.6654E-06              IN - OUT =      -4.3120E-07
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -3705,7 +3707,7 @@ start timestep kper="3" kstp="120" mode="normal"
 
            TOTAL OUT =          16.5000             TOTAL OUT =           1.5000
 
-            IN - OUT =      -5.0531E-05              IN - OUT =      -4.2360E-06
+            IN - OUT =      -5.0531E-05              IN - OUT =      -4.2359E-06
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -5435,7 +5437,7 @@ start timestep kper="4" kstp="120" mode="normal"
 
            TOTAL OUT =          19.2661             TOTAL OUT =           0.2566
 
-            IN - OUT =      -5.6016E-05              IN - OUT =      -5.0252E-07
+            IN - OUT =      -5.6016E-05              IN - OUT =      -5.0323E-07
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 

@@ -1,20 +1,23 @@
                                    MODFLOW 6
                 U.S. GEOLOGICAL SURVEY MODULAR HYDROLOGIC MODEL
-                  VERSION 6.7.0.dev2 (preliminary) 05/20/2025
-                               ***DEVELOP MODE***
+                            VERSION 6.6.2 05/12/2025
 
-        MODFLOW 6 compiled May 20 2025 13:40:03 with GCC version 13.3.0
+   MODFLOW 6 compiled May 12 2025 12:42:18 with Intel(R) Fortran Intel(R) 64
+   Compiler Classic for applications running on Intel(R) 64, Version 2021.7.0
+                             Build 20220726_000000
 
-This software is preliminary or provisional and is subject to 
-revision. It is being provided to meet the need for timely best 
-science. The software has not received final approval by the U.S. 
-Geological Survey (USGS). No warranty, expressed or implied, is made 
-by the USGS or the U.S. Government as to the functionality of the 
-software and related material nor shall the fact of release 
-constitute any such warranty. The software is provided on the 
-condition that neither the USGS nor the U.S. Government shall be held 
-liable for any damages resulting from the authorized or unauthorized 
-use of the software.
+This software has been approved for release by the U.S. Geological 
+Survey (USGS). Although the software has been subjected to rigorous 
+review, the USGS reserves the right to update the software as needed 
+pursuant to further analysis and review. No warranty, expressed or 
+implied, is made by the USGS or the U.S. Government as to the 
+functionality of the software and related material nor shall the 
+fact of release constitute any such warranty. Furthermore, the 
+software is released on condition that neither the USGS nor the U.S. 
+Government shall be held liable for any damages resulting from its 
+authorized or unauthorized use. Also refer to the USGS Water 
+Resources Software User Rights Notice for complete use, copyright, 
+and distribution information.
 
 
 As a work of the United States Government, this USGS product is 
@@ -49,17 +52,16 @@ The following BSD-3 License libraries are used in this USGS product:
       All rights reserved.
       (https://github.com/jacobwilliams/daglib)
 
-MODFLOW 6 compiler options: -fdiagnostics-color=always -cpp -I
-src/libmf6core.a.p -I src -I ../src -I src/libmf6_external.a.p -iprefix
-/opt/homebrew/Cellar/gcc@13/13.3.0/bin/../lib/gcc/13/gcc/aarch64-apple-darwin2
-3/13/ -D__DYNAMIC__ -D __APPLE__ -fPIC -mmacosx-version-min=14.0.0
--mcpu=apple-m1 -mlittle-endian -mabi=lp64 -O1 -Wall -Wpedantic
--Wcharacter-truncation -Wno-unused-dummy-argument -Wno-intrinsic-shadow
--Wno-maybe-uninitialized -Wno-uninitialized -std=f2018 -fall-intrinsics
--ffpe-summary=overflow -ffpe-trap=overflow,zero,invalid -J src/libmf6core.a.p
+MODFLOW 6 compiler options: /Isrc\libmf6core.a.p /Isrc /I..\src
+/Isrc\libmf6_external.a.p /MT /nologo /warn:general /warn:truncated_source
+/stand:f18 /O2 /fpe:0 /heap-arrays:0 /traceback /fpp /Qdiag-disable:7416
+/Qdiag-disable:7025 /Qdiag-disable:5268 /Qdiag-disable:10448
+/Fdsrc\libmf6core.a.p\Utilities_compilerversion.F90.pdb
+/module:src\libmf6core.a.p
+/Fosrc/libmf6core.a.p/Utilities_compilerversion.F90.obj /c
 
 System command used to initiate simulation:
-/Users/mike/hydrocomputing/projects/2021/003_ModSimple_Phase2/Bearbeitung/MODFLOW6/nightly/20250520/mf6.7.0.dev2_macarm/bin/mf6
+C:\Users\lucialabarca\mf6.6.2_win64\bin\mf6.exe
 
 MODFLOW was compiled using uniform precision.
 
@@ -83,7 +85,7 @@ Long Integer Variables
 Logical Variables
   KIND: 4
   SIZE IN BITS: 32
-
+ 
 
  OPENED mfsim.nam
  FILE TYPE:NAM6               UNIT 1001   STATUS:OLD                 
@@ -289,7 +291,7 @@ END OF MODEL CONNECTIONS
  PROCESSING IMS NONLINEAR
  END OF IMS NONLINEAR DATA
  **UNDER-RELAXATION WILL BE USED***
-
+ 
 
  PROCESSING LINEAR DATA
  END OF LINEAR DATA
@@ -336,7 +338,7 @@ END OF MODEL CONNECTIONS
  PROCESSING IMS NONLINEAR
  END OF IMS NONLINEAR DATA
  **UNDER-RELAXATION WILL BE USED***
-
+ 
 
  PROCESSING LINEAR DATA
  END OF LINEAR DATA
@@ -372,9 +374,9 @@ END OF MODEL CONNECTIONS
 
 
 
-
+ 
     Solving:  Stress period:     1    Time step:     1
-
+ 
 1
  STRESS PERIOD NO. 1, LENGTH =   1.000000    
  ------------------------------------------
@@ -405,9 +407,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 1 STRESS PERIOD 1
  0 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:     1
-
+ 
 1
  STRESS PERIOD NO. 2, LENGTH =   10.00000    
  ------------------------------------------
@@ -438,9 +440,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 1 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:     2
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -459,15 +461,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.09938750E-12       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.09960954E-12       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 2 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:     3
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -492,9 +494,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 3 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:     4
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -519,9 +521,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 4 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:     5
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -546,9 +548,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 5 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:     6
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -567,15 +569,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  1.55213620E-11       *                      2_GWT-(2,7,2)
+ Model                              1          1  1.55215840E-11       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 6 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:     7
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -600,9 +602,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 7 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:     8
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -621,15 +623,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  2.12945217E-11       *                      2_GWT-(2,7,2)
+ Model                              1          1  2.12947437E-11       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 8 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:     9
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -654,9 +656,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 9 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    10
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -681,9 +683,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 10 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    11
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -708,9 +710,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 11 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    12
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -735,9 +737,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 12 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    13
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -762,9 +764,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 13 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    14
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -789,9 +791,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 14 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    15
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -810,15 +812,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.15611989E-11       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.15609769E-11       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 15 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    16
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -843,9 +845,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 16 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    17
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -864,15 +866,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.73689976E-11       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.73687756E-11       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 17 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    18
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -897,9 +899,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 18 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    19
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -924,9 +926,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 19 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    20
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -951,9 +953,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 20 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    21
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -972,15 +974,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  5.90081317E-11       *                      2_GWT-(2,7,2)
+ Model                              1          1  5.90079097E-11       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 21 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    22
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -999,15 +1001,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  6.19231333E-11       *                      2_GWT-(2,7,2)
+ Model                              1          1  6.19229112E-11       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 22 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    23
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1032,9 +1034,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 23 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    24
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1059,9 +1061,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 24 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    25
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1086,9 +1088,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 25 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    26
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1113,9 +1115,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 26 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    27
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1140,9 +1142,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 27 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    28
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1167,9 +1169,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 28 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    29
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1194,9 +1196,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 29 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    30
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1221,9 +1223,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 30 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    31
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1242,15 +1244,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  8.82449669E-11       *                      2_GWT-(2,7,2)
+ Model                              1          1  8.82451889E-11       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 31 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    32
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1275,9 +1277,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 32 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    33
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1302,9 +1304,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 33 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    34
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1329,9 +1331,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 34 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    35
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1356,9 +1358,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 35 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    36
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1377,15 +1379,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  1.02939435E-10       *                      2_GWT-(2,7,2)
+ Model                              1          1  1.02939657E-10       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 36 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    37
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1410,9 +1412,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 37 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    38
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1437,9 +1439,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 38 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    39
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1464,9 +1466,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 39 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    40
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1491,9 +1493,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 40 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    41
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1518,9 +1520,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 41 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    42
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1545,9 +1547,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 42 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    43
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1566,15 +1568,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  1.23600241E-10       *                      2_GWT-(2,7,2)
+ Model                              1          1  1.23600019E-10       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 43 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    44
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1599,9 +1601,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 44 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    45
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1626,9 +1628,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 45 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    46
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1647,15 +1649,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  1.32486910E-10       *                      2_GWT-(2,7,2)
+ Model                              1          1  1.32487132E-10       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 46 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    47
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1680,9 +1682,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 47 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    48
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1707,9 +1709,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 48 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    49
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1734,9 +1736,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 49 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    50
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1761,9 +1763,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 50 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    51
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1788,9 +1790,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 51 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    52
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1809,15 +1811,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  1.50319979E-10       *                      2_GWT-(2,7,2)
+ Model                              1          1  1.50319757E-10       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 52 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    53
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1842,9 +1844,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 53 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    54
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1869,9 +1871,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 54 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    55
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1896,9 +1898,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 55 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    56
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1923,9 +1925,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 56 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    57
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1950,9 +1952,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 57 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    58
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -1977,9 +1979,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 58 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    59
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2004,9 +2006,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 59 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    60
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2031,9 +2033,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 60 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    61
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2052,15 +2054,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  1.77222459E-10       *                      2_GWT-(2,7,2)
+ Model                              1          1  1.77222681E-10       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 61 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    62
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2079,15 +2081,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  1.80223614E-10       *                      2_GWT-(2,7,2)
+ Model                              1          1  1.80223836E-10       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 62 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    63
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2112,9 +2114,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 63 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    64
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2139,9 +2141,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 64 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    65
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2166,9 +2168,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 65 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    66
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2187,15 +2189,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  1.92251548E-10       *                      2_GWT-(2,7,2)
+ Model                              1          1  1.92251770E-10       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 66 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    67
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2220,9 +2222,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 67 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    68
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2241,15 +2243,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  1.98280503E-10       *                      2_GWT-(2,7,2)
+ Model                              1          1  1.98280725E-10       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 68 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    69
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2268,15 +2270,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  2.01298533E-10       *                      2_GWT-(2,7,2)
+ Model                              1          1  2.01298311E-10       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 69 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    70
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2301,9 +2303,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 70 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    71
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2322,15 +2324,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  2.07342143E-10       *                      2_GWT-(2,7,2)
+ Model                              1          1  2.07342365E-10       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 71 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    72
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2355,9 +2357,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 72 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    73
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2382,9 +2384,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 73 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    74
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2409,9 +2411,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 74 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    75
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2436,9 +2438,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 75 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    76
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2463,9 +2465,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 76 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    77
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2490,9 +2492,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 77 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    78
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2517,9 +2519,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 78 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    79
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2538,15 +2540,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  2.31620501E-10       *                      2_GWT-(2,7,2)
+ Model                              1          1  2.31620723E-10       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 79 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    80
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2571,9 +2573,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 80 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    81
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2598,9 +2600,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 81 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    82
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2625,9 +2627,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 82 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    83
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2652,9 +2654,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 83 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    84
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2673,15 +2675,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  2.46882070E-10       *                      2_GWT-(2,7,2)
+ Model                              1          1  2.46881848E-10       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 84 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    85
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2706,9 +2708,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 85 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    86
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2733,9 +2735,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 86 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    87
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2754,15 +2756,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  2.56071164E-10       *                      2_GWT-(2,7,2)
+ Model                              1          1  2.56070942E-10       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 87 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    88
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2787,9 +2789,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 88 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    89
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2814,9 +2816,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 89 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    90
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2835,15 +2837,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  2.65286237E-10       *                      2_GWT-(2,7,2)
+ Model                              1          1  2.65286015E-10       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 90 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    91
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2868,9 +2870,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 91 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    92
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2889,15 +2891,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  2.71444200E-10       *                      2_GWT-(2,7,2)
+ Model                              1          1  2.71444422E-10       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 92 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    93
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2922,9 +2924,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 93 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    94
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2949,9 +2951,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 94 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    95
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -2976,9 +2978,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 95 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    96
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3003,9 +3005,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 96 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    97
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3030,9 +3032,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 97 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    98
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3051,15 +3053,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  2.89988478E-10       *                      2_GWT-(2,7,2)
+ Model                              1          1  2.89988700E-10       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 98 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:    99
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3084,9 +3086,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 99 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:   100
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3111,9 +3113,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 100 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:   101
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3138,9 +3140,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 101 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:   102
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3165,9 +3167,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 102 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:   103
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3186,15 +3188,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  3.05524717E-10       *                      2_GWT-(2,7,2)
+ Model                              1          1  3.05524939E-10       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 103 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:   104
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3219,9 +3221,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 104 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:   105
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3240,15 +3242,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  3.11761283E-10       *                      2_GWT-(2,7,2)
+ Model                              1          1  3.11761506E-10       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 105 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:   106
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3273,9 +3275,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 106 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:   107
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3300,9 +3302,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 107 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:   108
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3327,9 +3329,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 108 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:   109
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3348,15 +3350,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  3.24272609E-10       *                      2_GWT-(2,7,2)
+ Model                              1          1  3.24272831E-10       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 109 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:   110
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3381,9 +3383,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 110 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:   111
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3408,9 +3410,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 111 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:   112
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3435,9 +3437,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 112 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:   113
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3462,9 +3464,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 113 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:   114
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3489,9 +3491,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 114 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:   115
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3516,9 +3518,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 115 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:   116
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3543,9 +3545,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 116 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:   117
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3564,15 +3566,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  3.49451135E-10       *                      2_GWT-(2,7,2)
+ Model                              1          1  3.49450913E-10       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 117 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:   118
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3591,15 +3593,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  3.52613494E-10       *                      2_GWT-(2,7,2)
+ Model                              1          1  3.52613272E-10       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 118 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:   119
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3618,15 +3620,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  3.55779184E-10       *                      2_GWT-(2,7,2)
+ Model                              1          1  3.55778962E-10       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 119 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     2    Time step:   120
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3651,9 +3653,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 120 STRESS PERIOD 2
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:     1
-
+ 
 1
  STRESS PERIOD NO. 3, LENGTH =   10.00000    
  ------------------------------------------
@@ -3684,9 +3686,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 1 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:     2
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3711,9 +3713,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 2 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:     3
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3738,9 +3740,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 3 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:     4
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3759,15 +3761,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.59076110E-10       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.59076333E-10       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 4 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:     5
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3786,15 +3788,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.88062479E-10       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.88062701E-10       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 5 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:     6
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3819,9 +3821,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 6 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:     7
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3846,9 +3848,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 7 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:     8
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3873,9 +3875,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 8 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:     9
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3894,15 +3896,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  6.04374106E-10       *                      2_GWT-(2,7,2)
+ Model                              1          1  6.04374328E-10       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 9 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    10
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3927,9 +3929,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 10 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    11
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3954,9 +3956,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 11 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    12
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -3981,9 +3983,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 12 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    13
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4008,9 +4010,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 13 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    14
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4035,9 +4037,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 14 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    15
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4062,9 +4064,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 15 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    16
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4089,9 +4091,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 16 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    17
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4110,15 +4112,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  8.38155101E-10       *                      2_GWT-(2,7,2)
+ Model                              1          1  8.38154879E-10       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 17 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    18
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4143,9 +4145,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 18 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    19
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4170,9 +4172,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 19 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    20
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4197,9 +4199,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 20 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    21
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4224,9 +4226,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 21 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    22
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4251,9 +4253,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 22 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    23
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4272,15 +4274,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  1.01444653E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  1.01444630E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 23 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    24
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4305,9 +4307,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 24 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    25
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4332,9 +4334,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 25 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    26
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4359,9 +4361,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 26 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    27
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4386,9 +4388,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 27 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    28
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4407,15 +4409,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  1.16197518E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  1.16197496E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 28 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    29
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4434,15 +4436,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  1.19154886E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  1.19154864E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 29 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    30
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4467,9 +4469,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 30 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    31
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4494,9 +4496,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 31 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    32
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4521,9 +4523,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 32 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    33
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4548,9 +4550,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 33 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    34
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4575,9 +4577,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 34 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    35
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4602,9 +4604,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 35 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    36
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4629,9 +4631,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 36 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    37
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4656,9 +4658,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 37 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    38
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4677,15 +4679,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  1.45874668E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  1.45874646E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 38 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    39
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4710,9 +4712,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 39 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    40
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4737,9 +4739,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 40 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    41
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4764,9 +4766,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 41 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    42
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4791,9 +4793,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 42 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    43
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4812,15 +4814,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  1.60800973E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  1.60800995E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 43 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    44
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4845,9 +4847,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 44 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    45
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4866,15 +4868,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  1.66788316E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  1.66788294E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 45 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    46
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4893,15 +4895,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  1.69785608E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  1.69785586E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 46 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    47
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4926,9 +4928,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 47 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    48
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4953,9 +4955,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 48 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    49
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -4980,9 +4982,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 49 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    50
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5007,9 +5009,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 50 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    51
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5028,15 +5030,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  1.84809035E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  1.84809013E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 51 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    52
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5061,9 +5063,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 52 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    53
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5088,9 +5090,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 53 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    54
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5115,9 +5117,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 54 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    55
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5142,9 +5144,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 55 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    56
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5169,9 +5171,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 56 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    57
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5190,15 +5192,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  2.02920147E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  2.02920170E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 57 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    58
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5217,15 +5219,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  2.05947659E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  2.05947681E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 58 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    59
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5250,9 +5252,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 59 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    60
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5271,15 +5273,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  2.12010542E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  2.12010565E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 60 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    61
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5304,9 +5306,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 61 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    62
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5331,9 +5333,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 62 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    63
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5358,9 +5360,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 63 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    64
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5385,9 +5387,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 64 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    65
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5412,9 +5414,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 65 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    66
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5433,15 +5435,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  2.30263009E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  2.30262986E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 66 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    67
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5466,9 +5468,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 67 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    68
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5493,9 +5495,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 68 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    69
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5520,9 +5522,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 69 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    70
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5547,9 +5549,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 70 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    71
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5568,15 +5570,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  2.45548293E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  2.45548315E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 71 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    72
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5595,15 +5597,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  2.48613752E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  2.48613730E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 72 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    73
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5628,9 +5630,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 73 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    74
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5655,9 +5657,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 74 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    75
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5682,9 +5684,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 75 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    76
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5703,15 +5705,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  2.60903854E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  2.60903832E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 76 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    77
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5736,9 +5738,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 77 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    78
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5757,15 +5759,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  2.67066214E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  2.67066236E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 78 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    79
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5790,9 +5792,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 79 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    80
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5811,15 +5813,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  2.73240275E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  2.73240253E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 80 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    81
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5844,9 +5846,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 81 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    82
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5871,9 +5873,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 82 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    83
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5898,9 +5900,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 83 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    84
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5925,9 +5927,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 84 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    85
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5952,9 +5954,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 85 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    86
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -5973,15 +5975,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  2.91833868E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  2.91833890E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 86 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    87
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6000,15 +6002,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  2.94943403E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  2.94943425E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 87 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    88
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6033,9 +6035,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 88 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    89
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6060,9 +6062,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 89 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    90
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6081,15 +6083,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  3.04290548E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  3.04290571E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 90 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    91
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6108,15 +6110,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  3.07412473E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  3.07412495E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 91 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    92
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6135,15 +6137,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  3.10537573E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  3.10537551E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 92 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    93
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6168,9 +6170,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 93 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    94
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6189,15 +6191,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  3.16797166E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  3.16797144E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 94 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    95
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6222,9 +6224,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 95 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    96
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6249,9 +6251,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 96 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    97
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6276,9 +6278,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 97 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    98
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6297,15 +6299,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  3.29354788E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  3.29354766E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 98 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:    99
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6330,9 +6332,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 99 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:   100
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6351,15 +6353,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  3.35653039E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  3.35653061E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 100 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:   101
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6378,15 +6380,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  3.38807093E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  3.38807071E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 101 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:   102
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6411,9 +6413,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 102 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:   103
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6432,15 +6434,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  3.45125062E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  3.45125106E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 103 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:   104
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6459,15 +6461,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  3.48289109E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  3.48289086E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 104 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:   105
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6492,9 +6494,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 105 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:   106
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6519,9 +6521,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 106 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:   107
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6546,9 +6548,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 107 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:   108
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6573,9 +6575,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 108 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:   109
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6594,15 +6596,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  3.64159503E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  3.64159525E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 109 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:   110
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6621,15 +6623,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  3.67343822E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  3.67343844E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 110 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:   111
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6654,9 +6656,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 111 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:   112
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6681,9 +6683,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 112 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:   113
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6708,9 +6710,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 113 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:   114
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6735,9 +6737,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 114 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:   115
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6756,15 +6758,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  3.83317089E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  3.83317111E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 115 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:   116
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6783,15 +6785,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  3.86522236E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  3.86522259E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 116 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:   117
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6816,9 +6818,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 117 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:   118
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6837,15 +6839,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  3.92943078E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  3.92943056E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 118 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:   119
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6870,9 +6872,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 119 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     3    Time step:   120
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6897,9 +6899,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 120 STRESS PERIOD 3
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:     1
-
+ 
 1
  STRESS PERIOD NO. 4, LENGTH =   10.00000    
  ------------------------------------------
@@ -6930,9 +6932,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 1 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:     2
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6951,15 +6953,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.02151179E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.02151157E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 2 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:     3
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -6984,9 +6986,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 3 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:     4
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7011,9 +7013,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 4 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:     5
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7038,9 +7040,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 5 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:     6
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7065,9 +7067,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 6 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:     7
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7086,15 +7088,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.05565470E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.05565492E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 7 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:     8
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7119,9 +7121,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 8 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:     9
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7146,9 +7148,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 9 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    10
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7167,15 +7169,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.07593692E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.07593670E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 10 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    11
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7200,9 +7202,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 11 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    12
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7227,9 +7229,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 12 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    13
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7254,9 +7256,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 13 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    14
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7281,9 +7283,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 14 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    15
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7308,9 +7310,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 15 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    16
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7335,9 +7337,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 16 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    17
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7362,9 +7364,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 17 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    18
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7389,9 +7391,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 18 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    19
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7416,9 +7418,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 19 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    20
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7443,9 +7445,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 20 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    21
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7470,9 +7472,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 21 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    22
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7491,15 +7493,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.15902845E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.15902868E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 22 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    23
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7518,15 +7520,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.16608836E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.16608859E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 23 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    24
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7551,9 +7553,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 24 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    25
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7578,9 +7580,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 25 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    26
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7605,9 +7607,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 26 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    27
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7626,15 +7628,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.19452562E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.19452517E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 27 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    28
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7659,9 +7661,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 28 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    29
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7680,15 +7682,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.20885926E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.20885904E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 29 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    30
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7713,9 +7715,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 30 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    31
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7740,9 +7742,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 31 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    32
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7767,9 +7769,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 32 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    33
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7794,9 +7796,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 33 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    34
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7821,9 +7823,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 34 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    35
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7842,15 +7844,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.25229696E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.25229718E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 35 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    36
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7869,15 +7871,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.25959734E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.25959756E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 36 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    37
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7896,15 +7898,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.26691482E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.26691504E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 37 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    38
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7923,15 +7925,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.27424873E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.27424895E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 38 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    39
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7956,9 +7958,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 39 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    40
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -7983,9 +7985,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 40 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    41
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8010,9 +8012,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 41 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    42
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8037,9 +8039,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 42 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    43
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8064,9 +8066,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 43 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    44
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8085,15 +8087,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.31858438E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.31858416E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 44 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    45
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8118,9 +8120,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 45 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    46
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8145,9 +8147,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 46 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    47
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8172,9 +8174,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 47 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    48
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8199,9 +8201,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 48 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    49
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8226,9 +8228,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 49 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    50
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8253,9 +8255,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 50 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    51
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8274,15 +8276,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.37097070E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.37097092E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 51 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    52
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8301,15 +8303,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.37850822E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.37850844E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 52 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    53
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8334,9 +8336,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 53 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    54
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8361,9 +8363,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 54 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    55
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8382,15 +8384,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.40119408E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.40119385E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 55 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    56
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8415,9 +8417,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 56 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    57
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8442,9 +8444,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 57 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    58
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8469,9 +8471,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 58 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    59
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8496,9 +8498,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 59 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    60
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8523,9 +8525,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 60 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    61
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8550,9 +8552,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 61 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    62
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8577,9 +8579,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 62 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    63
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8604,9 +8606,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 63 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    64
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8625,15 +8627,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.46985760E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.46985782E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 64 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    65
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8652,15 +8654,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.47753790E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.47753812E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 65 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    66
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8685,9 +8687,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 66 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    67
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8706,15 +8708,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.49292559E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.49292581E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 67 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    68
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8739,9 +8741,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 68 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    69
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8766,9 +8768,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 69 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    70
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8793,9 +8795,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 70 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    71
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8820,9 +8822,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 71 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    72
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8847,9 +8849,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 72 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    73
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8868,15 +8870,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.53929250E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.53929228E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 73 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    74
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8901,9 +8903,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 74 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    75
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8928,9 +8930,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 75 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    76
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8955,9 +8957,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 76 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    77
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -8982,9 +8984,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 77 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    78
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9009,9 +9011,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 78 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    79
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9036,9 +9038,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 79 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    80
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9057,15 +9059,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.59372163E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.59372140E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 80 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    81
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9084,15 +9086,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.60152250E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.60152227E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 81 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    82
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9111,15 +9113,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.60932936E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.60932914E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 82 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    83
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9138,15 +9140,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.61714156E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.61714178E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 83 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    84
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9165,15 +9167,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.62495908E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.62495886E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 84 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    85
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9198,9 +9200,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 85 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    86
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9225,9 +9227,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 86 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    87
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9252,9 +9254,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 87 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    88
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9279,9 +9281,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 88 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    89
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9300,15 +9302,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.66412020E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.66411998E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 89 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    90
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9333,9 +9335,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 90 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    91
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9354,15 +9356,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.67981520E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.67981498E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 91 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    92
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9381,15 +9383,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.68766870E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.68766848E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 92 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    93
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9408,15 +9410,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.69552575E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.69552552E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 93 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    94
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9441,9 +9443,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 94 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    95
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9462,15 +9464,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.71125050E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.71125028E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 95 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    96
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9495,9 +9497,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 96 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    97
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9522,9 +9524,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 97 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    98
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9543,15 +9545,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.73486095E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.73486073E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 98 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:    99
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9570,15 +9572,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.74273665E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.74273687E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 99 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:   100
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9603,9 +9605,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 100 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:   101
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9630,9 +9632,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 101 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:   102
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9657,9 +9659,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 102 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:   103
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9684,9 +9686,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 103 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:   104
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9711,9 +9713,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 104 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:   105
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9738,9 +9740,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 105 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:   106
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9765,9 +9767,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 106 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:   107
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9792,9 +9794,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 107 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:   108
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9819,9 +9821,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 108 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:   109
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9846,9 +9848,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 109 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:   110
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9873,9 +9875,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 110 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:   111
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9900,9 +9902,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 111 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:   112
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9927,9 +9929,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 112 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:   113
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9954,9 +9956,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 113 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:   114
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -9981,9 +9983,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 114 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:   115
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -10008,9 +10010,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 115 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:   116
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -10035,9 +10037,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 116 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:   117
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -10056,15 +10058,15 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.88479523E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.88479501E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 117 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:   118
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -10089,9 +10091,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 118 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:   119
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -10116,9 +10118,9 @@ END OF MODEL CONNECTIONS
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 119 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
+ 
     Solving:  Stress period:     4    Time step:   120
-
+ 
 
  SLN_1 OUTER ITERATION SUMMARY
  ----------------------------------------------------------------------------------------------------------
@@ -10137,26 +10139,12 @@ END OF MODEL CONNECTIONS
                                 OUTER      INNER                    STEP   MAXIMUM CHANGE MODEL-(CELLID) OR
  OUTER ITERATION STEP       ITERATION  ITERATION  MAXIMUM CHANGE SUCCESS             MODEL-PACKAGE-(NUMBER)
  ----------------------------------------------------------------------------------------------------------
- Model                              1          1  4.90849494E-09       *                      2_GWT-(2,7,2)
+ Model                              1          1  4.90849472E-09       *                      2_GWT-(2,7,2)
  ----------------------------------------------------------------------------------------------------------
 
 
  1 CALLS TO NUMERICAL SOLUTION IN TIME STEP 120 STRESS PERIOD 4
  1 TOTAL ITERATIONS
-
-
- Solution SLN_1 summary
- ----------------------------------------------------------------------
- Total formulate time:  0.26132000000000266E-1 seconds
- Total solution time:   0.11229999999999796E-1 seconds
-
-
-
- Solution SLN_2 summary
- ----------------------------------------------------------------------
- Total formulate time:  0.19700999999999580E-1 seconds
- Total solution time:   0.11432000000000109E-1 seconds
-
 
  MEMORY MANAGER TOTAL STORAGE BY DATA TYPE, IN KILOBYTES
  -------------------------------
@@ -10173,7 +10161,7 @@ END OF MODEL CONNECTIONS
  -------------------------------
 
 
-
- Run end date and time (yyyy/mm/dd hh:mm:ss): 2025/06/25  9:25:21
- Elapsed run time:  0.340 Seconds
+ 
+ Run end date and time (yyyy/mm/dd hh:mm:ss): 2025/07/02 14:16:46
+ Elapsed run time:  1.880 Seconds
  Normal termination of simulation.
