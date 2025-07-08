@@ -314,7 +314,7 @@ def example_2_nowells():
     plt.clabel(c, fmt="%2.1f")
     plt.title('Head file')
     plt.axis("scaled")
-    plt.show()
+    #plt.show()
 
     # We can also use the Flopy PlotMapView capabilities for MODFLOW 6
     fig = plt.figure(figsize=(10, 10))
@@ -379,7 +379,7 @@ def example_2_nowells():
     contours = modelmap.contour_array(h, levels=contour_intervals, colors="black")
     ax.clabel(contours, fmt="%2.1f")
     cb = plt.colorbar(pa, shrink=0.5, ax=ax)
-    plt.show()
+    #plt.show()
 
     # visualize plume contamination
     conc = gwt.output.concentration().get_data()[-1]
@@ -392,7 +392,7 @@ def example_2_nowells():
     pmv.contour_array(conc, levels=(0.0001, 0.001, 0.01, 0.1), colors="y")
     plt.colorbar(c, shrink=0.5)
     plt.savefig(os.path.join(workspace, "plume.png"))
-    plt.show()
+    #plt.show()
 
 
 
@@ -446,7 +446,7 @@ def example_2_nowells():
 
     ax.set_title("Boundary Conditions")
     plt.savefig(os.path.join(workspace, "boundary_conditions.png"))
-    plt.show()
+    #plt.show()
 
     # =======================================================================
     # 2. Plot Head Distribution
@@ -475,7 +475,7 @@ def example_2_nowells():
 
     ax.set_title("Head Distribution")
     plt.savefig(os.path.join(workspace, "head_distribution.png"))
-    plt.show()
+    #plt.show()
 
     # =======================================================================
     # 4. Plot Cross-Section (If multi-layer)
@@ -503,7 +503,7 @@ def example_2_nowells():
         plt.colorbar(conc_cross, shrink=0.5, label="Concentration")
         ax.set_title(f"Concentration Cross-Section (Row {row})")
         plt.savefig(os.path.join(workspace, "concentration_cross_section.png"))
-        plt.show()
+        #plt.show()
 
     print("All plots saved to:", workspace)
 
