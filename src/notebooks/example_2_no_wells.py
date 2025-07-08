@@ -27,7 +27,7 @@ def example_2_nowells():
     k = 1.0
     k33 = 0.3
     q = -150.0
-    times = (5000.0, 150, 1.0)
+    times = (3000.0, 150, 1.0)
     con_max = 1000.0
 
     # Create the Flopy simulation object
@@ -132,7 +132,7 @@ def example_2_nowells():
     # Create the output control package
     headfile = f"{model_name}.hds"
     budgetfile = f"{model_name}.bud"
-    saverecord = [("HEAD", "ALL"), ("BUDGET", "ALL")]
+    saverecord = [("HEAD", "LAST"), ("BUDGET", "LAST")]
 
     oc = flopy.mf6.modflow.mfgwfoc.ModflowGwfoc(
         gwf,
@@ -255,8 +255,8 @@ def example_2_nowells():
         gwt,
         budget_filerecord=f"{gwtname}.cbc",
         concentration_filerecord=f"{gwtname}.ucn",
-        saverecord=[("CONCENTRATION", "ALL")],   # REQUIRED to save .UCN
-        printrecord=[("CONCENTRATION", "ALL")],
+        saverecord=[("CONCENTRATION", "LAST")],   # REQUIRED to save .UCN
+        printrecord=[("CONCENTRATION", "LAST")],
         filename=f"{gwtname}.oc",
     )
 
@@ -477,56 +477,6 @@ def example_2_nowells():
     plt.savefig(os.path.join(workspace, "head_distribution.png"))
     plt.show()
 
-    # =======================================================================
-    # 3. Plot Concentration Distribution
-    # =======================================================================
-    print("Plotting concentration distribution...")
-
-    # Load concentration data
-    conc_file = os.path.join(workspace, f"{gwtname}.ucn")
-    conc_obj = flopy.utils.HeadFile(conc_file, text='CONCENTRATION')
-    conc = conc_obj.get_data(totim=times[-1])  # Last time step
-
-    # More sensitive colormap for low concentrations
-    colors_list = [(0, "white"), (0.001, "lightblue"), (0.01, "cyan"),
-              (0.1, "green"), (0.5, "yellow"), (1, "red")]
-    cmap = LinearSegmentedColormap.from_list("contam_cmap", colors_list)
-
-    # Create logarithmic normalization
-    # Handle values <= 0 by setting a small minimum value
-    conc_min = np.min(conc[conc > 0]) if np.any(conc > 0) else 0.001
-    norm = mcolors.LogNorm(vmin=max(conc_min, 0.001), vmax=con_max)
-
-    fig, ax = plt.subplots(figsize=(10, 8))
-    modelmap = flopy.plot.PlotMapView(model=gwf, ax=ax, layer=0)
-
-    # Plot concentration array with logarithmic normalization
-    conc_plot = modelmap.plot_array(conc, cmap=cmap, norm=norm, alpha=0.8)
-    cbar = plt.colorbar(conc_plot, shrink=0.5, label='Concentration (log scale)')
-
-    # Add minor ticks to the colorbar for better readability
-    cbar.ax.minorticks_on()
-
-    # Create logarithmic contour levels
-    conc_levels = [0.001, 0.01, 0.1, 1, 10, 50, 100, 200, 300, 400, 550]
-
-    # Plot concentration contours (logarithmic scale)
-    conc_contours = modelmap.contour_array(conc, levels=conc_levels, colors='black', linewidths=0.5)
-    plt.clabel(conc_contours, fmt="%.3f", fontsize=8)  # Format with 3 decimal places
-
-    # Plot boundary conditions
-    for value, color in [(-1, 'blue'), (2, 'red'), (3, 'purple')]:
-        cells = np.argwhere(ibd[0] == value)
-        if cells.size > 0:
-            ax.scatter(
-                [x[j] for i, j in cells],
-                [y[i] for i, j in cells],
-                color=color, s=50, marker='s', alpha=0.7
-            )
-
-    ax.set_title("Concentration Distribution (Log Scale)")
-    plt.savefig(os.path.join(workspace, "concentration_distribution_log.png"))
-    plt.show()
     # =======================================================================
     # 4. Plot Cross-Section (If multi-layer)
     # =======================================================================
