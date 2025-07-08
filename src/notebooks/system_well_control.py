@@ -10,7 +10,7 @@ def run_model(model_path, verbose=False):
     print('started')
 
     # Initialize the MF6 model using the provided nam file
-    mf6 = MF6(sim_path=model_path)
+    mf6 = MF6(model_path)
     print('mf6 initialized')
 
     # Get the flow models

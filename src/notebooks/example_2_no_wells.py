@@ -27,7 +27,7 @@ def example_2_nowells():
     k = 1.0
     k33 = 0.3
     q = -150.0
-    times = (2000.0, 150, 1.0)
+    times = (5000.0, 150, 1.0)
     con_max = 1000.0
 
     # Create the Flopy simulation object
@@ -382,7 +382,7 @@ def example_2_nowells():
     plt.show()
 
     # visualize plume contamination
-    conc = gwt.output.concentration().get_data()
+    conc = gwt.output.concentration().get_data()[-1]
 
     fig = plt.figure(figsize=(10, 10))
     ax = plt.subplot(1, 1, 1, aspect="equal")
@@ -495,7 +495,7 @@ def example_2_nowells():
     # Create logarithmic normalization
     # Handle values <= 0 by setting a small minimum value
     conc_min = np.min(conc[conc > 0]) if np.any(conc > 0) else 0.001
-    norm = mcolors.LogNorm(vmin=max(conc_min, 0.001), vmax=550)
+    norm = mcolors.LogNorm(vmin=max(conc_min, 0.001), vmax=con_max)
 
     fig, ax = plt.subplots(figsize=(10, 8))
     modelmap = flopy.plot.PlotMapView(model=gwf, ax=ax, layer=0)

@@ -25,8 +25,8 @@ def example_2_wells():
     H = 30.0
     k = 1.0
     k33 = 0.3
-    q = -150.0
-    times = (2000.0, 150, 1.0)
+    q = -50.0
+    times = (5000.0, 150, 1.0)
     con_max = 1000.0
 
     # Create the Flopy simulation object
@@ -36,7 +36,7 @@ def example_2_wells():
 
     # Create the Flopy temporal discretization object
     tdis = flopy.mf6.modflow.mftdis.ModflowTdis(
-        sim, pname="tdis", time_units="DAYS", nper=2, perioddata=[(1.0, 1, 1.0), (2000.0, 150, 1.0)]
+        sim, pname="tdis", time_units="DAYS", nper=2, perioddata=[(1.0, 1, 1.0), times]
     )
 
     # Create the Flopy groundwater flow (gwf) model object
@@ -136,7 +136,7 @@ def example_2_wells():
         }
 
     wel_rec = [
-        ((0, int(N / 2), int(N / 4)), q, 0),
+        ((0, int(N / 2.5), int(N / 4)), q, 0),
         ((0, int(N / 3), int(N / 4)), q, 0),
         ((0, int(N / 4), int(N / 4)), q, 0)
     ]
@@ -402,7 +402,7 @@ def example_2_wells():
     plt.show()
 
     # visualize plume contamination
-    conc = gwt.output.concentration().get_data()
+    conc = gwt.output.concentration().get_data()[-1]
 
     fig = plt.figure(figsize=(10, 10))
     ax = plt.subplot(1, 1, 1, aspect="equal")
@@ -513,7 +513,7 @@ def example_2_wells():
     # Create logarithmic normalization
     # Handle values <= 0 by setting a small minimum value
     conc_min = np.min(conc[conc > 0]) if np.any(conc > 0) else 0.001
-    norm = mcolors.LogNorm(vmin=max(conc_min, 0.001), vmax=550)
+    norm = mcolors.LogNorm(vmin=max(conc_min, 0.001), vmax=con_max)
 
     fig, ax = plt.subplots(figsize=(10, 8))
     modelmap = flopy.plot.PlotMapView(model=gwf, ax=ax, layer=0)
@@ -545,6 +545,47 @@ def example_2_wells():
     ax.set_title("Concentration Distribution (Log Scale)")
     plt.savefig(os.path.join(workspace, "concentration_distribution_log.png"))
     plt.show()
+
+    # concentration with no log
+
+    print("Plotting concentration distribution...")
+
+    # Load concentration data
+    conc_file = os.path.join(workspace, f"{gwtname}.ucn")
+    conc_obj = flopy.utils.HeadFile(conc_file, text='CONCENTRATION')
+    conc = conc_obj.get_data(totim=times[-1])  # Last time step
+
+    fig, ax = plt.subplots(figsize=(10, 8))
+    modelmap = flopy.plot.PlotMapView(model=gwf, ax=ax, layer=0)
+
+    # Plot concentration array with logarithmic normalization
+    conc_plot = modelmap.plot_array(conc, cmap='viridis', alpha=0.8)
+    cbar = plt.colorbar(conc_plot, shrink=0.5, label='Concentration (log scale)')
+
+    # Add minor ticks to the colorbar for better readability
+    cbar.ax.minorticks_on()
+
+    # Create logarithmic contour levels
+    conc_levels = [1, 10, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]
+
+    # Plot concentration contours (logarithmic scale)
+    conc_contours = modelmap.contour_array(conc, levels=conc_levels, colors='black', linewidths=0.5)
+    plt.clabel(conc_contours, fmt="%.3f", fontsize=8)  # Format with 3 decimal places
+
+    # Plot boundary conditions
+    for value, color in [(-1, 'blue'), (2, 'red'), (3, 'purple')]:
+        cells = np.argwhere(ibd[0] == value)
+        if cells.size > 0:
+            ax.scatter(
+                [x[j] for i, j in cells],
+                [y[i] for i, j in cells],
+                color=color, s=50, marker='s', alpha=0.7
+            )
+
+    ax.set_title("Concentration Distribution")
+    plt.savefig(os.path.join(workspace, "concentration_distribution_no_log.png"))
+    plt.show()
+
     # =======================================================================
     # 4. Plot Cross-Section (If multi-layer)
     # =======================================================================
