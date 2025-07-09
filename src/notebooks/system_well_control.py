@@ -6,7 +6,7 @@ from matplotlib import pyplot as plt
 
 def run_model(model_path, verbose=False):
     """Control script to regulate the pumping wells dynamically. The regulation of the system is regulated by
-     river vital water level and the groundwater mimimum threshold. """
+     concentration threshold at the obesrvation well, the groundwater mimimum threshold and volume of water to treat. """
     print('started')
 
     # Initialize the MF6 model using the provided nam file
@@ -58,13 +58,19 @@ def run_model(model_path, verbose=False):
         'conc_state': [], 
         #'t_vol': []
     } # Dict of lists per well
+    
+    # Models parameters 
+    N = 101 
 
     # Run the model loop
     for model in mf6.model_loop():
         if gwf.kper == 1:  # Only operate during stress period 2
-            current_head = gwf.X[(1, 6, 7)]
-            current_conc = gwt.X[(1, 6, 2)]
-            obs_conc = gwt.X[(1, 6, 9)]
+            # concentration at the source 
+            current_head = gwf.X[(0, int(N / 2.5), int(N / 4))]
+            current_conc = gwt.X[(0, int(N / 2.5), int(N / 4))]
+            # concentration at the observation well 
+            current_head = gwf.X[(1, int (N/2), int (N/2))]
+            obs_conc = gwt.X[(1, int (N/2), int (N/2))]
             #current_conc_round = round(current_conc, 4)
             # print (current_conc)
 
