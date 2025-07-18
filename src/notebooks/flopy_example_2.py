@@ -15,6 +15,7 @@ def example_2_wells():
 
     # Set up workspace
     model_name = "pumptreat"
+    gwfmodel_name = "gwf_pumptreat"
 
     # create flopy objects
     h1 = 25
@@ -31,7 +32,7 @@ def example_2_wells():
 
     # Create the Flopy simulation object
     sim = flopy.mf6.MFSimulation(
-        sim_name=model_name, exe_name="C:/Users/lucialabarca/mf6.6.2_win64/bin/mf6.exe", version="mf6", sim_ws=workspace
+        sim_name=gwfmodel_name, exe_name="C:/Users/lucialabarca/mf6.6.2_win64/bin/mf6.exe", version="mf6", sim_ws=workspace
     )
 
     # Create the Flopy temporal discretization object
@@ -40,14 +41,14 @@ def example_2_wells():
     )
 
     # Create the Flopy groundwater flow (gwf) model object
-    model_nam_file = f"{model_name}.nam"
-    gwf = flopy.mf6.ModflowGwf(sim, modelname=model_name, model_nam_file=model_nam_file, save_flows=True)
+    model_nam_file = f"{gwfmodel_name}.nam"
+    gwf = flopy.mf6.ModflowGwf(sim, modelname=gwfmodel_name, model_nam_file=model_nam_file, save_flows=True)
 
     # Solver for GWF (register this one FIRST)
     ims_gwf = flopy.mf6.ModflowIms(
         sim,
         pname="ims_gwf",
-        filename="gwf_" + model_name + ".ims",
+        filename=f"{gwfmodel_name}" + ".ims",
         complexity="SIMPLE",
         print_option="SUMMARY"
     )
@@ -148,9 +149,9 @@ def example_2_wells():
     )
 
     # Create the output control package
-    headfile = f"{model_name}.hds"
-    budgetfile = f"{model_name}.bud"
-    saverecord = [("HEAD", "LAST"), ("BUDGET", "LAST")]
+    headfile = f"{gwfmodel_name}.hds"
+    budgetfile = f"{gwfmodel_name}.bud"
+    saverecord = [("HEAD", "ALL"), ("BUDGET", "ALL")]
 
     oc = flopy.mf6.modflow.mfgwfoc.ModflowGwfoc(
         gwf,
@@ -161,7 +162,7 @@ def example_2_wells():
         )
 
     # create gwt name
-    gwtname = 'gwt_' + model_name
+    gwtname = "gwt_pumptreat"
     # create transport model
     gwt = flopy.mf6.MFModel(
             sim,
@@ -283,7 +284,7 @@ def example_2_wells():
     # GWF-GWT exchange
     flopy.mf6.ModflowGwfgwt(sim,
                             exgtype="GWF6-GWT6",
-                            exgmnamea=model_name,
+                            exgmnamea=gwfmodel_name,
                             exgmnameb=gwtname,
                             filename=f"{model_name}.gwfgwt")
 

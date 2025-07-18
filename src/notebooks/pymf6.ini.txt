@@ -1,0 +1,4 @@
+[paths]
+dll_path = C:/Users/lucialabarca/mf6.6.2_win64/bin/libmf6.dll
+exe_path = C:/Users/lucialabarca/mf6.6.2_win64/bin/mf6
+

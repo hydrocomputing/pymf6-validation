@@ -188,7 +188,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/pure_eval-0.2.3-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pycparser-2.22-pyh29332c3_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pygments-2.19.2-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/hydrocomputing/noarch/pymf6-1.4.0-py_0.tar.bz2
+      - conda: https://conda.anaconda.org/hydrocomputing/noarch/pymf6-1.5.2-py_0.conda
       - conda: https://conda.anaconda.org/hydrocomputing/noarch/pymf6-tools-0.1.3-py_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pyparsing-3.2.3-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pyside6-6.9.1-py313h7dabd7a_0.conda
@@ -401,7 +401,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/pure_eval-0.2.3-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pycparser-2.22-pyh29332c3_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pygments-2.19.2-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/hydrocomputing/noarch/pymf6-1.4.0-py_0.tar.bz2
+      - conda: https://conda.anaconda.org/hydrocomputing/noarch/pymf6-1.5.2-py_0.conda
       - conda: https://conda.anaconda.org/hydrocomputing/noarch/pymf6-tools-0.1.3-py_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/pyobjc-core-11.1-py313had225c5_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/pyobjc-framework-cocoa-11.1-py313hb6afeec_0.conda
@@ -611,7 +611,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/pure_eval-0.2.3-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pycparser-2.22-pyh29332c3_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pygments-2.19.2-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/hydrocomputing/noarch/pymf6-1.4.0-py_0.tar.bz2
+      - conda: https://conda.anaconda.org/hydrocomputing/noarch/pymf6-1.5.2-py_0.conda
       - conda: https://conda.anaconda.org/hydrocomputing/noarch/pymf6-tools-0.1.3-py_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pyparsing-3.2.3-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/pyside6-6.9.1-py313hd8d090c_0.conda
@@ -4949,7 +4949,8 @@ packages:
   - python
   license: BSD-3-Clause
   license_family: BSD
-  purls: []
+  purls:
+  - pkg:pypi/pycparser?source=hash-mapping
   size: 110100
   timestamp: 1733195786147
 - conda: https://conda.anaconda.org/conda-forge/noarch/pygments-2.19.2-pyhd8ed1ab_0.conda
@@ -4963,15 +4964,15 @@ packages:
   - pkg:pypi/pygments?source=compressed-mapping
   size: 889287
   timestamp: 1750615908735
-- conda: https://conda.anaconda.org/hydrocomputing/noarch/pymf6-1.4.0-py_0.tar.bz2
-  sha256: fd23d5efd6da2a65a44f7b247b1ddf2ef48ae9200d28b74e327d4d3e54dcc85f
-  md5: 88e7a2ae78852c89598207bb68f6c128
+- conda: https://conda.anaconda.org/hydrocomputing/noarch/pymf6-1.5.2-py_0.conda
+  sha256: 0219a168fcef911352a4738b503d66bc6e431392ac6cc60fe8101d27c7e7e6cd
+  md5: ff776ffede2064abba332dc7af1c8786
   depends:
   - modflowapi
   - python
   license: MIT
-  size: 129383
-  timestamp: 1714407388249
+  size: 190700
+  timestamp: 1750945233695
 - conda: https://conda.anaconda.org/hydrocomputing/noarch/pymf6-tools-0.1.3-py_0.conda
   sha256: 2dfd88d6945c2b74aac523f46a82b9c1deff861e48b408ee3b1bc2354bcbc498
   md5: 52eaef7f5df76edb2bd99d98dab8656d
