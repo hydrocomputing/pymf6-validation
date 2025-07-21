@@ -34,7 +34,7 @@ def run_model(model_path, verbose=False):
     
     # Concentration control parameters
     tolerance_conc = 0.05
-    conc_limit = 2.80
+    conc_limit = 0.1 
     lower_limit_conc = conc_limit - tolerance_conc
     upper_limit_conc = conc_limit + tolerance_conc
 
@@ -51,12 +51,13 @@ def run_model(model_path, verbose=False):
         'step': [],
         'head': [],
         'conc': [],
+        'source_conc':[],
         'q_well1': [],
         'q_well2': [],
         'q_well3': [],
         'head_state': [],
         'conc_state': [], 
-        #'t_vol': []
+        'vol_water':[]
     } # Dict of lists per well
     
     # Models parameters 
@@ -69,14 +70,15 @@ def run_model(model_path, verbose=False):
             current_head = gwf.X[(0, 41, 26)]
             current_conc = gwt.X[(0, 41, 26)]
             # concentration at the observation well 
-            current_head = gwf.X[(0, 50, 26)]
-            obs_conc = gwt.X[(0, 50, 26)]
-            #current_conc_round = round(current_conc, 4)
+            current_head = gwf.X[(0, 56, 26)]
+            obs_conc = gwt.X[(0, 56, 26)]
+            daily_volume = - 12 * (wel.q[0] + wel.q[1] + wel.q[2])
             # print (current_conc)
 
             # Record system state
             mywell_q['step'].append(gwf.kstp)
-            mywell_q['conc'].append(current_conc)
+            mywell_q['conc'].append(obs_conc)
+            mywell_q['source_conc'].append(current_conc)
             mywell_q['head'].append(current_head)
             current_q = wel.q.copy()  # Get current rates
             print(current_q)
@@ -86,8 +88,9 @@ def run_model(model_path, verbose=False):
             #mywell_q['t_vol'].append(gwf.kstp * wel.q[2]*)
             mywell_q['head_state'].append('below' if below_gw else 'normal')
             mywell_q['conc_state'].append('above' if above_conc else 'normal')
-            print ( 'CONCENTRATION AT SOURCE IS', current_conc)
-            print ( 'CONCENTRATION AT OBSERVATION WELL IS', obs_conc)
+            mywell_q['vol_water'].append(daily_volume) # since lenght of each period is 12 days 
+            print ('CONCENTRATION AT SOURCE IS', current_conc)
+            print ('CONCENTRATION AT OBSERVATION WELL IS', obs_conc)
        # else: 
           #  mywell_q['t_vol'].append(None)
 
@@ -125,6 +128,10 @@ def run_model(model_path, verbose=False):
                 wel.q = q
                 print(f"Step {gwf.kstp}: Conc recovered! Reduce pumping")
 
+    # total volume 
+    total_volume = sum(mywell_q['vol_water'])  # in m³
+    print(f"Total volume extracted: {total_volume:.2f} m³")
+    
     # Save results
     df = pd.DataFrame(mywell_q)
     df.to_csv("well_control_results.csv", index=False)
@@ -173,9 +180,9 @@ def plot_state(mywell_q):
     
     # Plot 2: Head with state indicators
     ax2.plot(mywell_q['step'], mywell_q['head'], 'go', label='Head')
-    ax2.axhline(y=10, color='gray', linestyle='--', label='Target')
-    ax2.axhline(y=7, color='red', linestyle=':', alpha=0.5, label='Lower Limit')
-    ax2.axhline(y=11, color='blue', linestyle=':', alpha=0.5, label='Upper Limit')
+    #ax2.axhline(y=24.75, color='gray', linestyle='--', label='Target')
+    #ax2.axhline(y=25, color='red', linestyle=':', alpha=0.5, label='Lower Limit')
+    #ax2.axhline(y=24, color='blue', linestyle=':', alpha=0.5, label='Upper Limit')
     
     # Mark head below state
     for i, state in enumerate(mywell_q['head_state']):
@@ -189,9 +196,9 @@ def plot_state(mywell_q):
     
     # Plot 3: Concentration with state indicators
     ax3.plot(mywell_q['step'], mywell_q['conc'], 'm-', label='Concentration')
-    ax3.axhline(y=0.9, color='purple', linestyle='--', label='Target')
-    ax3.axhline(y=0.85, color='pink', linestyle=':', alpha=0.7, label='Lower Limit')
-    ax3.axhline(y=0.95, color='pink', linestyle=':', alpha=0.7, label='Upper Limit')
+    ax3.axhline(y=2.8, color='purple', linestyle='--', label='Target')
+    ax3.axhline(y=2.75, color='pink', linestyle=':', alpha=0.7, label='Lower Limit')
+    ax3.axhline(y=2.85, color='pink', linestyle=':', alpha=0.7, label='Upper Limit')
     
     # Mark conc above state
     for i, state in enumerate(mywell_q['conc_state']):
