@@ -22,15 +22,306 @@ and distribution information.
  
  MODFLOW runs in SEQUENTIAL mode
  
- Run start date and time (yyyy/mm/dd hh:mm:ss): 2025/07/18 14:07:49
+ Run start date and time (yyyy/mm/dd hh:mm:ss): 2025/07/21 11:49:02
  
  Writing simulation list file: mfsim.lst
  Using Simulation name file: mfsim.nam
  
-
-ERROR REPORT:
-
-  1. Could not open "pumptreat.gwfgwt" on unit 1021. Specified file status
-     OLD. Specified file format FORMATTED. Specified file access SEQUENTIAL.
-     Specified file action READ. IOSTAT error number 29. STOP EXECUTION in
-     subroutine openfile().
+    Solving:  Stress period:     1    Time step:     1
+    Solving:  Stress period:     2    Time step:     1
+    Solving:  Stress period:     2    Time step:     2
+    Solving:  Stress period:     2    Time step:     3
+    Solving:  Stress period:     2    Time step:     4
+    Solving:  Stress period:     2    Time step:     5
+    Solving:  Stress period:     2    Time step:     6
+    Solving:  Stress period:     2    Time step:     7
+    Solving:  Stress period:     2    Time step:     8
+    Solving:  Stress period:     2    Time step:     9
+    Solving:  Stress period:     2    Time step:    10
+    Solving:  Stress period:     2    Time step:    11
+    Solving:  Stress period:     2    Time step:    12
+    Solving:  Stress period:     2    Time step:    13
+    Solving:  Stress period:     2    Time step:    14
+    Solving:  Stress period:     2    Time step:    15
+    Solving:  Stress period:     2    Time step:    16
+    Solving:  Stress period:     2    Time step:    17
+    Solving:  Stress period:     2    Time step:    18
+    Solving:  Stress period:     2    Time step:    19
+    Solving:  Stress period:     2    Time step:    20
+    Solving:  Stress period:     2    Time step:    21
+    Solving:  Stress period:     2    Time step:    22
+    Solving:  Stress period:     2    Time step:    23
+    Solving:  Stress period:     2    Time step:    24
+    Solving:  Stress period:     2    Time step:    25
+    Solving:  Stress period:     2    Time step:    26
+    Solving:  Stress period:     2    Time step:    27
+    Solving:  Stress period:     2    Time step:    28
+    Solving:  Stress period:     2    Time step:    29
+    Solving:  Stress period:     2    Time step:    30
+    Solving:  Stress period:     2    Time step:    31
+    Solving:  Stress period:     2    Time step:    32
+    Solving:  Stress period:     2    Time step:    33
+    Solving:  Stress period:     2    Time step:    34
+    Solving:  Stress period:     2    Time step:    35
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:    36
+    Solving:  Stress period:     2    Time step:    37
+    Solving:  Stress period:     2    Time step:    38
+    Solving:  Stress period:     2    Time step:    39
+    Solving:  Stress period:     2    Time step:    40
+    Solving:  Stress period:     2    Time step:    41
+    Solving:  Stress period:     2    Time step:    42
+    Solving:  Stress period:     2    Time step:    43
+    Solving:  Stress period:     2    Time step:    44
+    Solving:  Stress period:     2    Time step:    45
+    Solving:  Stress period:     2    Time step:    46
+    Solving:  Stress period:     2    Time step:    47
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:    48
+    Solving:  Stress period:     2    Time step:    49
+    Solving:  Stress period:     2    Time step:    50
+    Solving:  Stress period:     2    Time step:    51
+    Solving:  Stress period:     2    Time step:    52
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:    53
+    Solving:  Stress period:     2    Time step:    54
+    Solving:  Stress period:     2    Time step:    55
+    Solving:  Stress period:     2    Time step:    56
+    Solving:  Stress period:     2    Time step:    57
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:    58
+    Solving:  Stress period:     2    Time step:    59
+    Solving:  Stress period:     2    Time step:    60
+    Solving:  Stress period:     2    Time step:    61
+    Solving:  Stress period:     2    Time step:    62
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:    63
+    Solving:  Stress period:     2    Time step:    64
+    Solving:  Stress period:     2    Time step:    65
+    Solving:  Stress period:     2    Time step:    66
+    Solving:  Stress period:     2    Time step:    67
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:    68
+    Solving:  Stress period:     2    Time step:    69
+    Solving:  Stress period:     2    Time step:    70
+    Solving:  Stress period:     2    Time step:    71
+    Solving:  Stress period:     2    Time step:    72
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:    73
+    Solving:  Stress period:     2    Time step:    74
+    Solving:  Stress period:     2    Time step:    75
+    Solving:  Stress period:     2    Time step:    76
+    Solving:  Stress period:     2    Time step:    77
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:    78
+    Solving:  Stress period:     2    Time step:    79
+    Solving:  Stress period:     2    Time step:    80
+    Solving:  Stress period:     2    Time step:    81
+    Solving:  Stress period:     2    Time step:    82
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:    83
+    Solving:  Stress period:     2    Time step:    84
+    Solving:  Stress period:     2    Time step:    85
+    Solving:  Stress period:     2    Time step:    86
+    Solving:  Stress period:     2    Time step:    87
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:    88
+    Solving:  Stress period:     2    Time step:    89
+    Solving:  Stress period:     2    Time step:    90
+    Solving:  Stress period:     2    Time step:    91
+    Solving:  Stress period:     2    Time step:    92
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:    93
+    Solving:  Stress period:     2    Time step:    94
+    Solving:  Stress period:     2    Time step:    95
+    Solving:  Stress period:     2    Time step:    96
+    Solving:  Stress period:     2    Time step:    97
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:    98
+    Solving:  Stress period:     2    Time step:    99
+    Solving:  Stress period:     2    Time step:   100
+    Solving:  Stress period:     2    Time step:   101
+    Solving:  Stress period:     2    Time step:   102
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   103
+    Solving:  Stress period:     2    Time step:   104
+    Solving:  Stress period:     2    Time step:   105
+    Solving:  Stress period:     2    Time step:   106
+    Solving:  Stress period:     2    Time step:   107
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   108
+    Solving:  Stress period:     2    Time step:   109
+    Solving:  Stress period:     2    Time step:   110
+    Solving:  Stress period:     2    Time step:   111
+    Solving:  Stress period:     2    Time step:   112
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   113
+    Solving:  Stress period:     2    Time step:   114
+    Solving:  Stress period:     2    Time step:   115
+    Solving:  Stress period:     2    Time step:   116
+    Solving:  Stress period:     2    Time step:   117
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   118
+    Solving:  Stress period:     2    Time step:   119
+    Solving:  Stress period:     2    Time step:   120
+    Solving:  Stress period:     2    Time step:   121
+    Solving:  Stress period:     2    Time step:   122
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   123
+    Solving:  Stress period:     2    Time step:   124
+    Solving:  Stress period:     2    Time step:   125
+    Solving:  Stress period:     2    Time step:   126
+    Solving:  Stress period:     2    Time step:   127
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   128
+    Solving:  Stress period:     2    Time step:   129
+    Solving:  Stress period:     2    Time step:   130
+    Solving:  Stress period:     2    Time step:   131
+    Solving:  Stress period:     2    Time step:   132
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   133
+    Solving:  Stress period:     2    Time step:   134
+    Solving:  Stress period:     2    Time step:   135
+    Solving:  Stress period:     2    Time step:   136
+    Solving:  Stress period:     2    Time step:   137
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   138
+    Solving:  Stress period:     2    Time step:   139
+    Solving:  Stress period:     2    Time step:   140
+    Solving:  Stress period:     2    Time step:   141
+    Solving:  Stress period:     2    Time step:   142
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   143
+    Solving:  Stress period:     2    Time step:   144
+    Solving:  Stress period:     2    Time step:   145
+    Solving:  Stress period:     2    Time step:   146
+    Solving:  Stress period:     2    Time step:   147
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   148
+    Solving:  Stress period:     2    Time step:   149
+    Solving:  Stress period:     2    Time step:   150
+    Solving:  Stress period:     2    Time step:   151
+    Solving:  Stress period:     2    Time step:   152
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   153
+    Solving:  Stress period:     2    Time step:   154
+    Solving:  Stress period:     2    Time step:   155
+    Solving:  Stress period:     2    Time step:   156
+    Solving:  Stress period:     2    Time step:   157
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   158
+    Solving:  Stress period:     2    Time step:   159
+    Solving:  Stress period:     2    Time step:   160
+    Solving:  Stress period:     2    Time step:   161
+    Solving:  Stress period:     2    Time step:   162
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   163
+    Solving:  Stress period:     2    Time step:   164
+    Solving:  Stress period:     2    Time step:   165
+    Solving:  Stress period:     2    Time step:   166
+    Solving:  Stress period:     2    Time step:   167
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   168
+    Solving:  Stress period:     2    Time step:   169
+    Solving:  Stress period:     2    Time step:   170
+    Solving:  Stress period:     2    Time step:   171
+    Solving:  Stress period:     2    Time step:   172
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   173
+    Solving:  Stress period:     2    Time step:   174
+    Solving:  Stress period:     2    Time step:   175
+    Solving:  Stress period:     2    Time step:   176
+    Solving:  Stress period:     2    Time step:   177
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   178
+    Solving:  Stress period:     2    Time step:   179
+    Solving:  Stress period:     2    Time step:   180
+    Solving:  Stress period:     2    Time step:   181
+    Solving:  Stress period:     2    Time step:   182
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   183
+    Solving:  Stress period:     2    Time step:   184
+    Solving:  Stress period:     2    Time step:   185
+    Solving:  Stress period:     2    Time step:   186
+    Solving:  Stress period:     2    Time step:   187
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   188
+    Solving:  Stress period:     2    Time step:   189
+    Solving:  Stress period:     2    Time step:   190
+    Solving:  Stress period:     2    Time step:   191
+    Solving:  Stress period:     2    Time step:   192
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   193
+    Solving:  Stress period:     2    Time step:   194
+    Solving:  Stress period:     2    Time step:   195
+    Solving:  Stress period:     2    Time step:   196
+    Solving:  Stress period:     2    Time step:   197
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   198
+    Solving:  Stress period:     2    Time step:   199
+    Solving:  Stress period:     2    Time step:   200
+    Solving:  Stress period:     2    Time step:   201
+    Solving:  Stress period:     2    Time step:   202
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   203
+    Solving:  Stress period:     2    Time step:   204
+    Solving:  Stress period:     2    Time step:   205
+    Solving:  Stress period:     2    Time step:   206
+    Solving:  Stress period:     2    Time step:   207
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   208
+    Solving:  Stress period:     2    Time step:   209
+    Solving:  Stress period:     2    Time step:   210
+    Solving:  Stress period:     2    Time step:   211
+    Solving:  Stress period:     2    Time step:   212
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   213
+    Solving:  Stress period:     2    Time step:   214
+    Solving:  Stress period:     2    Time step:   215
+    Solving:  Stress period:     2    Time step:   216
+    Solving:  Stress period:     2    Time step:   217
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   218
+    Solving:  Stress period:     2    Time step:   219
+    Solving:  Stress period:     2    Time step:   220
+    Solving:  Stress period:     2    Time step:   221
+    Solving:  Stress period:     2    Time step:   222
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   223
+    Solving:  Stress period:     2    Time step:   224
+    Solving:  Stress period:     2    Time step:   225
+    Solving:  Stress period:     2    Time step:   226
+    Solving:  Stress period:     2    Time step:   227
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   228
+    Solving:  Stress period:     2    Time step:   229
+    Solving:  Stress period:     2    Time step:   230
+    Solving:  Stress period:     2    Time step:   231
+    Solving:  Stress period:     2    Time step:   232
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   233
+    Solving:  Stress period:     2    Time step:   234
+    Solving:  Stress period:     2    Time step:   235
+    Solving:  Stress period:     2    Time step:   236
+    Solving:  Stress period:     2    Time step:   237
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   238
+    Solving:  Stress period:     2    Time step:   239
+    Solving:  Stress period:     2    Time step:   240
+    Solving:  Stress period:     2    Time step:   241
+    Solving:  Stress period:     2    Time step:   242
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   243
+    Solving:  Stress period:     2    Time step:   244
+    Solving:  Stress period:     2    Time step:   245
+    Solving:  Stress period:     2    Time step:   246
+    Solving:  Stress period:     2    Time step:   247
+ BMI Error, Numerical Solution   1 failed to converge
+    Solving:  Stress period:     2    Time step:   248
+    Solving:  Stress period:     2    Time step:   249
+    Solving:  Stress period:     2    Time step:   250
+ 
+ Run end date and time (yyyy/mm/dd hh:mm:ss): 2025/07/21 11:53:12
+ Elapsed run time:  4 Minutes,  9.803 Seconds
+ 
+ Normal termination of simulation.

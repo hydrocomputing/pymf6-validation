@@ -34,7 +34,7 @@ def run_model(model_path, verbose=False):
     
     # Concentration control parameters
     tolerance_conc = 0.05
-    conc_limit = 0.8
+    conc_limit = 2.80
     lower_limit_conc = conc_limit - tolerance_conc
     upper_limit_conc = conc_limit + tolerance_conc
 
@@ -66,11 +66,11 @@ def run_model(model_path, verbose=False):
     for model in mf6.model_loop():
         if gwf.kper == 1:  # Only operate during stress period 2
             # concentration at the source 
-            current_head = gwf.X[(0, int(N / 2.5), int(N / 4))]
-            current_conc = gwt.X[(0, int(N / 2.5), int(N / 4))]
+            current_head = gwf.X[(0, 41, 26)]
+            current_conc = gwt.X[(0, 41, 26)]
             # concentration at the observation well 
-            current_head = gwf.X[(1, int (N/2), int (N/2))]
-            obs_conc = gwt.X[(1, int (N/2), int (N/2))]
+            current_head = gwf.X[(0, 50, 26)]
+            obs_conc = gwt.X[(0, 50, 26)]
             #current_conc_round = round(current_conc, 4)
             # print (current_conc)
 

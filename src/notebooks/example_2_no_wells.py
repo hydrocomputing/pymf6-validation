@@ -29,7 +29,7 @@ def example_2_nowells():
     k = 1.0
     k33 = 0.3
     q = -150.0
-    times = (3000.0, 150, 1.0)
+    times = (3000.0, 250, 1.0)
     con_max = 1000.0
 
     # Create the Flopy simulation object
@@ -78,11 +78,12 @@ def example_2_nowells():
     # Node property flow - MUST HAVE pname
     npf = flopy.mf6.ModflowGwfnpf(
         gwf,
+        save_flows=True,
+        save_specific_discharge=True,
         pname="npf",  # Critical parameter
         icelltype=1,
         k=k,
-        k33=k33,
-        save_flows=True
+        k33=k33
     )
 
     # Instantiating storage package
