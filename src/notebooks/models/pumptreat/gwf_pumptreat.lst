@@ -62,7 +62,7 @@ MODFLOW 6 compiler options: /Isrc\libmf6core.a.p /Isrc /I..\src
 /Fosrc/libmf6core.a.p/Utilities_compilerversion.F90.obj /c
 
 System command used to initiate simulation:
-"C:\Users\lucialabarca\re-run noteboks\pymf6-validation\.pixi\envs\default\python.EXE" system_well_control.py
+"C:/Users/lucialabarca/re-run noteboks/pymf6-validation/.pixi/envs/default\python.exe" -m ipykernel_launcher -f C:\Users\lucialabarca\AppData\Roaming\jupyter\runtime\kernel-4271cae1-925b-4e3d-81f2-e6a803381ae3.json
 
 MODFLOW was compiled using uniform precision.
 
@@ -1910,48 +1910,6 @@ start timestep kper="2" kstp="117" mode="normal"
  UBDSV06 SAVING              CHD IN MODEL GWF_PUMPTREAT    PACKAGE GWF_PUMPTREAT   CONNECTED TO MODEL GWF_PUMPTREAT    PACKAGE CHD-1            ON UNIT   1027 AT TIME STEP    117, STRESS PERIOD      2
 
  HEAD WILL BE SAVED ON UNIT 1028 AT END OF TIME STEP  117, STRESS PERIOD    2
-
-
-  VOLUME BUDGET FOR ENTIRE MODEL AT END OF TIME STEP  117, STRESS PERIOD   2
-  ---------------------------------------------------------------------------------------------------
-
-     CUMULATIVE VOLUME      L**3       RATES FOR THIS TIME STEP      L**3/T          PACKAGE NAME    
-     ------------------                 ------------------------                     ----------------
-
-           IN:                                      IN:
-           ---                                      ---
-              STO-SS =           1.0066                STO-SS =       8.3861E-02     STORAGE                          
-              STO-SY =           0.0000                STO-SY =           0.0000     STORAGE                          
-                 WEL =           0.0000                   WEL =           0.0000     WEL-1                            
-                 CHD =       23086.8143                   CHD =         108.0086     CHD-1                            
-
-            TOTAL IN =       23087.8210              TOTAL IN =         108.0925
-
-          OUT:                                     OUT:
-          ----                                     ----
-              STO-SS =           1.3925                STO-SS =           0.0000     STORAGE                          
-              STO-SY =           0.0000                STO-SY =           0.0000     STORAGE                          
-                 WEL =        1686.1080                   WEL =         110.3983     WEL-1                            
-                 CHD =       20522.8634                   CHD =           0.0000     CHD-1                            
-
-           TOTAL OUT =       22210.3639             TOTAL OUT =         110.3983
-
-            IN - OUT =         877.4571              IN - OUT =          -2.3058
-
- PERCENT DISCREPANCY =           3.87     PERCENT DISCREPANCY =          -2.11
-
-
-
-
-         TIME SUMMARY AT END OF TIME STEP  117 IN STRESS PERIOD    2
-                    SECONDS     MINUTES      HOURS       DAYS        YEARS
-                    -----------------------------------------------------------
-   TIME STEP LENGTH 1.03680E+06  17280.      288.00      12.000     3.28542E-02
- STRESS PERIOD TIME 1.21306E+08 2.02176E+06  33696.      1404.0      3.8439    
-         TOTAL TIME 1.21392E+08 2.02320E+06  33720.      1405.0      3.8467    
-
-
-         ****FAILED TO MEET SOLVER CONVERGENCE CRITERIA IN TIME STEP 117 OF STRESS PERIOD 2****
 
 end timestep
 
@@ -3824,25 +3782,25 @@ start timestep kper="2" kstp="250" mode="normal"
 
            IN:                                      IN:
            ---                                      ---
-              STO-SS =           1.0442                STO-SS =       5.7219E-08     STORAGE                          
+              STO-SS =       3.8594E-03                STO-SS =       8.4543E-07     STORAGE                          
               STO-SY =           0.0000                STO-SY =           0.0000     STORAGE                          
                  WEL =           0.0000                   WEL =           0.0000     WEL-1                            
-                 CHD =       62492.5568                   CHD =          15.9155     CHD-1                            
+                 CHD =      448750.2197                   CHD =         149.6577     CHD-1                            
 
-            TOTAL IN =       62493.6009              TOTAL IN =          15.9155
+            TOTAL IN =      448750.2235              TOTAL IN =         149.6577
 
           OUT:                                     OUT:
           ----                                     ----
-              STO-SS =           2.4304                STO-SS =       2.3447E-06     STORAGE                          
+              STO-SS =       5.4655E-04                STO-SS =       2.0071E-08     STORAGE                          
               STO-SY =           0.0000                STO-SY =           0.0000     STORAGE                          
-                 WEL =       18377.1167                   WEL =           0.3296     WEL-1                            
-                 CHD =       41582.8035                   CHD =          14.5851     CHD-1                            
+                 WEL =      450150.0000                   WEL =         150.0000     WEL-1                            
+                 CHD =           0.0000                   CHD =           0.0000     CHD-1                            
 
-           TOTAL OUT =       59962.3506             TOTAL OUT =          14.9147
+           TOTAL OUT =      450150.0005             TOTAL OUT =         150.0000
 
-            IN - OUT =        2531.2503              IN - OUT =           1.0009
+            IN - OUT =       -1399.7770              IN - OUT =          -0.3423
 
- PERCENT DISCREPANCY =           4.13     PERCENT DISCREPANCY =           6.49
+ PERCENT DISCREPANCY =          -0.31     PERCENT DISCREPANCY =          -0.23
 
 
 

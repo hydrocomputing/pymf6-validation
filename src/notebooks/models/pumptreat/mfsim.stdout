@@ -22,7 +22,7 @@ and distribution information.
  
  MODFLOW runs in SEQUENTIAL mode
  
- Run start date and time (yyyy/mm/dd hh:mm:ss): 2025/07/21 16:42:50
+ Run start date and time (yyyy/mm/dd hh:mm:ss): 2025/07/22 11:22:53
  
  Writing simulation list file: mfsim.lst
  Using Simulation name file: mfsim.nam
@@ -145,7 +145,6 @@ and distribution information.
     Solving:  Stress period:     2    Time step:   115
     Solving:  Stress period:     2    Time step:   116
     Solving:  Stress period:     2    Time step:   117
- BMI Error, Numerical Solution   1 failed to converge
     Solving:  Stress period:     2    Time step:   118
     Solving:  Stress period:     2    Time step:   119
     Solving:  Stress period:     2    Time step:   120
@@ -280,7 +279,7 @@ and distribution information.
     Solving:  Stress period:     2    Time step:   249
     Solving:  Stress period:     2    Time step:   250
  
- Run end date and time (yyyy/mm/dd hh:mm:ss): 2025/07/21 16:45:14
- Elapsed run time:  2 Minutes, 24.410 Seconds
+ Run end date and time (yyyy/mm/dd hh:mm:ss): 2025/07/22 11:24:11
+ Elapsed run time:  1 Minutes, 17.758 Seconds
  
  Normal termination of simulation.

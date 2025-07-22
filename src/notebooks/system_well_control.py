@@ -92,7 +92,6 @@ def run_model(model_path, verbose=False):
             print ('CONCENTRATION AT SOURCE IS', current_conc)
             print ('CONCENTRATION AT OBSERVATION WELL IS', obs_conc)
        # else: 
-          #  mywell_q['t_vol'].append(None)
 
             # Concentration regulation
             if obs_conc >= upper_limit_conc:
@@ -196,9 +195,9 @@ def plot_state(mywell_q):
     
     # Plot 3: Concentration with state indicators
     ax3.plot(mywell_q['step'], mywell_q['conc'], 'm-', label='Concentration')
-    ax3.axhline(y=2.8, color='purple', linestyle='--', label='Target')
-    ax3.axhline(y=2.75, color='pink', linestyle=':', alpha=0.7, label='Lower Limit')
-    ax3.axhline(y=2.85, color='pink', linestyle=':', alpha=0.7, label='Upper Limit')
+    ax3.axhline(y=0.1, color='purple', linestyle='--', label='Target')
+    ax3.axhline(y=0.05, color='pink', linestyle=':', alpha=0.7, label='Lower Limit')
+    ax3.axhline(y=0.15, color='pink', linestyle=':', alpha=0.7, label='Upper Limit')
     
     # Mark conc above state
     for i, state in enumerate(mywell_q['conc_state']):
