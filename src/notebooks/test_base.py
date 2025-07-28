@@ -33,7 +33,7 @@ def test_base_flow():
     do_test(specific_model_data, model_path)
 
 def test_base_transport():
-    model_path = get_full_model_path('transport_base')
+    model_path = get_full_model_path('transbase')
     specific_model_data = {
         'model_path': model_path,
         'name': 'transbase',
