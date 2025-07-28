@@ -216,7 +216,7 @@ def plot_state(mywell_q):
     plt.show()
 
 if __name__ == '__main__':
-    model_path = os.path.join(os.getcwd(), 'models', 'pumptreat')
+    model_path = os.path.join(os.getcwd(), 'models', 'pymf6', 'pumptreat')
     results = run_model(model_path=model_path, verbose=False)
     plot(results)
     plot_state(results)
