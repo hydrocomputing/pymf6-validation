@@ -89,8 +89,8 @@ def run_model(model_path, verbose=False):
             mywell_q['head_state'].append('below' if below_gw else 'normal')
             mywell_q['conc_state'].append('above' if above_conc else 'normal')
             mywell_q['vol_water'].append(daily_volume) # since lenght of each period is 12 days 
-            print ('CONCENTRATION AT SOURCE IS', current_conc)
-            print ('CONCENTRATION AT OBSERVATION WELL IS', obs_conc)
+            #print ('CONCENTRATION AT SOURCE IS', current_conc)
+            #print ('CONCENTRATION AT OBSERVATION WELL IS', obs_conc)
        # else: 
 
             # Concentration regulation
@@ -109,7 +109,7 @@ def run_model(model_path, verbose=False):
                     elif q[i] > min_rate:
                         q[i] = min_rate
                 wel.q = q
-                print(f"Step {gwf.kstp}: Conc above limit! Increase pumping")
+                #print(f"Step {gwf.kstp}: Conc above limit! Increase pumping")
                 
             elif obs_conc <= lower_limit_conc:
                 above_conc = False # reset state
@@ -125,11 +125,12 @@ def run_model(model_path, verbose=False):
                     elif q[i] > min_rate:
                         q[i] = min_rate
                 wel.q = q
-                print(f"Step {gwf.kstp}: Conc recovered! Reduce pumping")
+                #print(f"Step {gwf.kstp}: Conc recovered! Reduce pumping")
 
     # total volume 
     total_volume = sum(mywell_q['vol_water'])  # in m³
-    print(f"Total volume extracted: {total_volume:.2f} m³")
+    #print(f"Total volume extracted: {total_volume:.2f} m³")
+    print("Results for all the time-steps are saved in well_control_results.csv")
     
     # Save results
     df = pd.DataFrame(mywell_q)
