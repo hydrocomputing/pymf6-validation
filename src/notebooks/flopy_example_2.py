@@ -553,7 +553,7 @@ def example_2_wells():
     # Add threshold line (example: 50 μg/L)
     threshold = 0.1
     plt.axhline(y=threshold, color='r', linestyle='--', linewidth=1.5)
-    plt.text(times[-1] * 1.02, threshold, f'Threshold: {threshold} mg/L',
+    plt.text(times[-1] * 1.02, threshold, f'Threshold: {threshold} ',
              color='r', va='center')
 
     # Format plot
