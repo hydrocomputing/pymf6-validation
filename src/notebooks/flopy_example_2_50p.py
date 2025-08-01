@@ -26,7 +26,7 @@ def example_2_wells():
     H = 30.0
     k = 1.0
     k33 = 0.3
-    q = -50.0*0.5
+    q = -25.00
     times = (3000.0, 250, 1.0)
     con_max = 1000.0
 
@@ -137,11 +137,14 @@ def example_2_wells():
         'pname': 'WEL-1'
         }
 
-    wel_rec = [
-        ((0, int(N / 2.5), int(N / 4)), q, 0),
-        ((0, int(N / 3), int(N / 4)), q, 0),
-        ((0, int(N / 4), int(N / 4)), q, 0)
-    ]
+    wel_rec = {
+        0: [],
+        1: [
+            ((0, int(N / 2.5), int(N / 4)), q, 0),
+            ((0, int(N / 3), int(N / 4)), q, 0),
+            ((0, int(N / 4), int(N / 4)), q, 0)
+        ]
+    }
     wel = flopy.mf6.ModflowGwfwel(
         gwf,
         stress_period_data=wel_rec,
@@ -525,6 +528,47 @@ def example_2_wells():
         plt.show()
 
     print("All plots saved to:", workspace)
+
+    # =======================================================================
+    # POST-PROCESSING: Concentration Time Series at (0, 56, 26)
+    # =======================================================================
+    print("\nGenerating concentration time series plot...")
+
+    # Load concentration data
+    conc_file = os.path.join(workspace, f"{gwtname}.ucn")
+    conc_obj = flopy.utils.HeadFile(conc_file, text="CONCENTRATION")
+
+    # Get all available times
+    times = conc_obj.get_times()
+
+    # Extract concentration at specific cell (layer, row, col) = (0, 56, 26)
+    concentrations = []
+    for time in times:
+        conc_data = conc_obj.get_data(totim=time)
+        concentrations.append(conc_data[0, 56, 26])  # Layer 0, Row 56, Column 26
+
+    # Create plot
+    plt.figure(figsize=(12, 6))
+    plt.plot(times, concentrations, 'b-', linewidth=2, marker='o', markersize=5)
+
+    # Add threshold line (example: 50 μg/L)
+    threshold = 0.1
+    plt.axhline(y=threshold, color='r', linestyle='--', linewidth=1.5)
+    plt.text(times[-1] * 1.02, threshold, f'Threshold: {threshold} mg/L',
+             color='r', va='center')
+
+    # Format plot
+    plt.title(f"Concentration at Cell (Layer 0, Row 56, Column 26)")
+    plt.xlabel("Time (days)")
+    plt.ylabel("Concentration (μg/L)")
+    plt.grid(True, alpha=0.3)
+    plt.tight_layout()
+
+    # Save and show
+    plot_path = os.path.join(workspace, "concentration_time_series.png")
+    plt.savefig(plot_path)
+    print(f"Plot saved to: {plot_path}")
+    plt.show()
 
 
 if __name__ == '__main__':
