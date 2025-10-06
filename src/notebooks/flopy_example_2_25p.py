@@ -1,6 +1,6 @@
 
 
-def example_2_wells():
+def example_2_wells_25p():
     # imports
     import os
     import matplotlib.colors as mcolors
@@ -11,7 +11,7 @@ def example_2_wells():
     # For this example, we will set up a temporary workspace.
     # Model input files and output files will reside here.
     dir_name = os.getcwd()
-    workspace = os.path.join(dir_name + '/models/mf6', "pumptreat_50p")
+    workspace = os.path.join(dir_name + '/models/mf6', "pumptreat_25p")
 
     # Set up workspace
     model_name = "pumptreat"
@@ -26,7 +26,7 @@ def example_2_wells():
     H = 30.0
     k = 1.0
     k33 = 0.3
-    q = -25.00
+    q = -12.5
     times = (3000.0, 250, 1.0)
     con_max = 1000.0
 
@@ -572,4 +572,4 @@ def example_2_wells():
 
 
 if __name__ == '__main__':
-    example_2_wells()
+    example_2_wells_25p()
