@@ -142,7 +142,8 @@ def example_2_wells_0p66p():
         1: [
             ((0, int(N / 2.5), int(N / 4)), q, 0),
             ((0, int(N / 3), int(N / 4)), q, 0),
-            ((0, int(N / 4), int(N / 4)), q, 0)
+            ((0, int(N / 4), int(N / 4)), q, 0),
+            ((0, 34, 30), 0, 0)
         ]
     }
     wel = flopy.mf6.ModflowGwfwel(
@@ -545,7 +546,7 @@ def example_2_wells_0p66p():
     concentrations = []
     for time in times:
         conc_data = conc_obj.get_data(totim=time)
-        concentrations.append(conc_data[0, 56, 26])  # Layer 0, Row 56, Column 26
+        concentrations.append(conc_data[0, 34, 30])  # Layer 0, Row 56, Column 26
 
     # Create plot
     plt.figure(figsize=(12, 6))

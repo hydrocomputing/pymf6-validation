@@ -5,12 +5,22 @@ format: revealjs
 
 # Workshop 
 
-## Modflow 6 Lab
+## Modflow 6 Lab Ws Overview
 
 # MODFLOW 6 Lab: Customizing for Flow, Transport and Geothermal Modeling
 
 This workshop explores how to extend the capabilities of MODFLOW 6 for advanced groundwater, solute transport, and geothermal modeling. Participants will learn how to use Python and the pymf6 library to implement custom boundary conditions, such as direction-dependent riverbed conductance, and couple MODFLOW with external models or analytical solutions. The focus is on practical, flexible tools to solve complex subsurface problems with minimal code and maximum adaptability.
 
+
+## Co-organizers
+
+![Hydrocomputing](logo_hydrocomputing.png)
+
+![TUBAF](tubaf_logo.png)
+
+![DBU](DBU_logo.png)
+
+![FHDGGV](FHDGGV-Logo.jpg)
 
 ## Introduction round
 
@@ -29,10 +39,7 @@ Lúcia Pedrosa (TUBAF): developer of pymf6-based model features
 
 10:30 -10:45 Break
 
-10:45 – 12:00 pymf6 Principles:
- + Running MODFLOW 6 via pymf6 within a Jupyter Notebook
- + Basics for working with pymf6
- + Inspecting internal MODFLOW values during model run time
+10:45 – 12:00 pymf6 Principles
 
 12:00 – 13:00 Lunch
 
@@ -77,189 +84,3 @@ Lúcia Pedrosa (TUBAF): developer of pymf6-based model features
 
 6. Apply efficient coding patterns to build adaptable, reproducible hydrogeologic simulations.
 
-## Introduction to Modflow 6
-
-🌍 What is MODFLOW 6?
-
-MODFLOW 6 (MF6) is the latest generation of the U.S. Geological Survey (USGS) MODFLOW groundwater modeling framework. It represents a complete redesign of the classic MODFLOW series (MODFLOW-2005, MODFLOW-NWT, MODFLOW-USG, etc.), combining the best features of previous versions into a unified, flexible, and modular system.
-
-🔑 Key characteristics:
-
-1. Unified Framework:
-
-MODFLOW 6 provides a common platform for simulating multiple hydrologic processes such as groundwater flow (GWF), groundwater transport (GWT), and exchanges between models.
-
-2. Modular and Object-Oriented Architecture:
-Each process, model, and package is implemented as a modular unit, allowing flexible model composition. You can run multiple models (e.g., GWF + GWT) within the same simulation and define exchanges between them (e.g., flow coupling, solute transport).
-
-3. Numerical Improvements:
-
- + Enhanced iterative solver (IMS) package with better control over convergence and performance.
-
- + Advanced time-stepping and adaptive convergence checks.
-
- + Support for structured (DIS), vertex-based (DISV), and unstructured (DISU) grids.
-
-4. Inter-model Coupling:
-
- + Native support for GWF–GWF exchanges (linking aquifers or model domains).
-
- + Support for GWF–GWT coupling (flow and transport interactions).
-
- + Facilitates integrated groundwater–surface water or multi-layered aquifer modeling.
-
-5. Enhanced Output Control and Post-processing:
-   
-Output control (OC) allows users to customize which variables are written and at what frequency. Head, budget, and concentration outputs can be easily parsed using FloPy or PyMF6.
-
-## Internal Structure & Hierarchy
-
-MODFLOW 6 uses three primary components:
-
-1. Simulation (SIM): The top-level container that manages time, models, and exchanges.
-
-2. Model (GWF, GWT, etc.): Represents a specific process (flow, transport, etc.). Each model is composed of packages.
-
-3. Package: Defines parameters, boundary conditions, and solver settings.
-
-Packages are the building blocks where each represents a physical process or numerical control (e.g., discretization, boundary conditions, solver settings).
-
-## Package structure 
-
-Common package categories:
-
-+ Discretization: DIS, DISV, DISU
-
-+ Properties: NPF (flow properties), STO (storage)
-
-+ Initial & Boundary Conditions: IC, CHD, WEL, RCH, DRN, RIV, GHB, EVT
-
-+ Solver & Output: IMS, OC
-
-+ Coupling & Exchanges: EXG, GWF-GWT connectors
-
-## Installation and Setup of Pixi and FloPy 
-
-### Installing Pixi 
-
-Please follow the instructions at "https://pixi.sh/latest/installation/"
-
-### Creating pixi workspace 
-
-Create a pixi workspace by typing in a terminal window:
-
-Now the directory pymf6_project contains a file named pixi.toml that contains the configuration. You need to add the channel hydrocomputing to your Pixi workspace. This can be done either by typing in a terminal window:
-
-or by editing the file pixi.toml, modifying the key channels in the section [workspace] from:
-
-to:
-
-## FloPy: Installation
-
-💻 To install FloPy, use pip directly from your Python environment:
-
-Verify the installation:
-
-```python
-import flopy 
-print('FloPy version:', flopy.__version__)
-```
-
-## Introdcution to pymf6
-
-🌍 What is pymf6?
-
-pymf6 is a Python library that enables **real-time programmatic control** of MODFLOW 6 simulations. It acts as a bridge between Python and MODFLOW 6, allowing dynamic interaction during model execution.
-
-### Why use pymf6?
-
-To overcome *Traditional Limitations*:
-
-1. Static parameters: All conditions fixed before simulation
-
-2. No adaptation: Cannot respond to simulated results
-
-3. Manual iteration: Repeated runs for scenario testing
-
-4. Limited coupling: Difficult integration with external models
-
-### PyMF6 Advantages
-
-1. Dynamic control: Adjust parameters during simulation
-
-2. Adaptive management: Respond to model results in real-time
-
-3. Automated optimization: Built-in parameter estimation
-
-4. Coupling: Seamless integration with other models
-
-5. Complex boundary conditions: Implement conditions impossible in standard MF6
-
-### Architecture Overview 
-
-🔑 Key Components:
-
-1. PyMF6 Python Library: User interface and control logic
-
-2. Modified MODFLOW 6: Special version with callback hooks
-
-3. Shared Memory: Real-time data exchange
-
-4. Configuration System: YAML-based setup
-
-## Technology stack
-
- + Basic Model Interface (BMI) - API for simulation models
- + bmi-python - Python specification of BMI
- + xmipy extension to bmi-python accessing the MODFLOW 6 DLL with ctypes
- + modflowapi - High level API for MODFLOW  6
- + pymf6 is based on xmipy and modflowapi
-
-![Technology stack](pymf6_dll.png)
-
-## Usage requirements 
-
-1. Understand the MODFLOW 6 variables as defined in the input files
-
-2. Have a working knowledge of Python programming
-
-## Installation & Setup of pymf6 
-
-pymf6 is a Python package. There are two ways to install pymf6:
-
-1. As a conda package from the hydrocmputing channel
-
-2. As a standard Python package from PyPi
-
-## Installing pymf6 
-
-## Install MODFLOW 6
-
-Download the version for your operating system at "https://github.com/MODFLOW-ORG/modflow6/releases"
-
-### Configuration
-
-While you can specify the path to the DLL and executable for each run, it is highly recommended to create a configuration. You need to create a file named pymf6.ini in your home directory. You can find your home directory with different methods. On Windows, the command:
-
-Posix systems such as Linux and MacOSX, the command:
-
-The file pymf6.ini needs have to have this content on Windows:
-
-On Linux:
-
-On MacOSX:
-
-Replace the path path/to/mf6/bin/ with with your absolute path to the MODFLOW 6 directory bin that contains the shared library and the executable you downloaded from the USGS website (see section “Installation” above).
-
-### Test the Install 
-
-On the command line type:
-
-## Intro to programming 
-
-
-## Conclusions
-
-.....
----
-## Thank You

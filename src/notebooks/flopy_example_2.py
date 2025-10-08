@@ -142,7 +142,8 @@ def example_2_wells():
         1:[
         ((0, int(N / 2.5), int(N / 4)), q, 0),
         ((0, int(N / 3), int(N / 4)), q, 0),
-        ((0, int(N / 4), int(N / 4)), q, 0)
+        ((0, int(N / 4), int(N / 4)), q, 0),
+        ((0, 34, 30), 0, 0)
         ]
     }
     wel = flopy.mf6.ModflowGwfwel(
@@ -306,8 +307,8 @@ def example_2_wells():
     if not success:
         print("\n".join(buff))
 
-        # visualize -----------------------------------------------------------------------------------
-        # Create ibound array to identify boundary condition locations
+    # visualize -----------------------------------------------------------------------------------
+    # Create ibound array to identify boundary condition locations
     ibd = np.ones((Nlay, N, N), dtype=int)  # Start with all cells active (1)
 
     # Mark constant head cells with -1
@@ -325,6 +326,7 @@ def example_2_wells():
     iper = 0
     ra = chd.stress_period_data.get_data(key=iper)
     ra
+
 
     # Read the binary head file and plot the results
     # We can use the existing Flopy HeadFile class because
@@ -345,6 +347,8 @@ def example_2_wells():
     fig = plt.figure(figsize=(10, 10))
     ax = fig.add_subplot(1, 1, 1, aspect="equal")
     modelmap = flopy.plot.PlotMapView(model=gwf, ax=ax)
+
+    modelmap.plot_bc(plotAll=True, name='wel')
 
     # Then we can use the plot_grid() method to draw the grid
     # The return value for this function is a matplotlib LineCollection object,
@@ -544,7 +548,7 @@ def example_2_wells():
     concentrations = []
     for time in times:
         conc_data = conc_obj.get_data(totim=time)
-        concentrations.append(conc_data[0, 56, 26])  # Layer 0, Row 56, Column 26
+        concentrations.append(conc_data[0, 34, 30])  # Layer 0, Row 56, Column 26
 
     # Create plot
     plt.figure(figsize=(12, 6))

@@ -13,7 +13,7 @@ def convert_notebooks_simple():
     print("Looking for Jupyter notebooks...")
     
     # Find all notebooks
-    notebooks = list(Path('presentation_files').glob('*.ipynb'))
+    notebooks = list(Path('presentation_files').glob('Modflow 6 Lab WS Overview.ipynb'))
     
     if not notebooks:
         print("No .ipynb files found in current directory")
@@ -47,15 +47,7 @@ format: revealjs
                         
         except Exception as e:
             print(f"Error processing {notebook_path}: {e}")
-    
-    # Add conclusions
-    presentation += """
-## Conclusions
 
-.....
----
-## Thank You
-"""
     
     with open('presentation.qmd', 'w', encoding='utf-8') as f:
         f.write(presentation)
