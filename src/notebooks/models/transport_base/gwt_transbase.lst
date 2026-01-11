@@ -1,21 +1,24 @@
                                    MODFLOW 6
                 U.S. GEOLOGICAL SURVEY MODULAR HYDROLOGIC MODEL
                              TRANSPORT MODEL (GWT)
-                  VERSION 6.7.0.dev2 (preliminary) 05/20/2025
-                               ***DEVELOP MODE***
+                            VERSION 6.6.2 05/12/2025
 
-        MODFLOW 6 compiled May 20 2025 13:40:03 with GCC version 13.3.0
+   MODFLOW 6 compiled May 12 2025 12:42:18 with Intel(R) Fortran Intel(R) 64
+   Compiler Classic for applications running on Intel(R) 64, Version 2021.7.0
+                             Build 20220726_000000
 
-This software is preliminary or provisional and is subject to 
-revision. It is being provided to meet the need for timely best 
-science. The software has not received final approval by the U.S. 
-Geological Survey (USGS). No warranty, expressed or implied, is made 
-by the USGS or the U.S. Government as to the functionality of the 
-software and related material nor shall the fact of release 
-constitute any such warranty. The software is provided on the 
-condition that neither the USGS nor the U.S. Government shall be held 
-liable for any damages resulting from the authorized or unauthorized 
-use of the software.
+This software has been approved for release by the U.S. Geological 
+Survey (USGS). Although the software has been subjected to rigorous 
+review, the USGS reserves the right to update the software as needed 
+pursuant to further analysis and review. No warranty, expressed or 
+implied, is made by the USGS or the U.S. Government as to the 
+functionality of the software and related material nor shall the 
+fact of release constitute any such warranty. Furthermore, the 
+software is released on condition that neither the USGS nor the U.S. 
+Government shall be held liable for any damages resulting from its 
+authorized or unauthorized use. Also refer to the USGS Water 
+Resources Software User Rights Notice for complete use, copyright, 
+and distribution information.
 
 
 As a work of the United States Government, this USGS product is 
@@ -50,17 +53,16 @@ The following BSD-3 License libraries are used in this USGS product:
       All rights reserved.
       (https://github.com/jacobwilliams/daglib)
 
-MODFLOW 6 compiler options: -fdiagnostics-color=always -cpp -I
-src/libmf6core.a.p -I src -I ../src -I src/libmf6_external.a.p -iprefix
-/opt/homebrew/Cellar/gcc@13/13.3.0/bin/../lib/gcc/13/gcc/aarch64-apple-darwin2
-3/13/ -D__DYNAMIC__ -D __APPLE__ -fPIC -mmacosx-version-min=14.0.0
--mcpu=apple-m1 -mlittle-endian -mabi=lp64 -O1 -Wall -Wpedantic
--Wcharacter-truncation -Wno-unused-dummy-argument -Wno-intrinsic-shadow
--Wno-maybe-uninitialized -Wno-uninitialized -std=f2018 -fall-intrinsics
--ffpe-summary=overflow -ffpe-trap=overflow,zero,invalid -J src/libmf6core.a.p
+MODFLOW 6 compiler options: /Isrc\libmf6core.a.p /Isrc /I..\src
+/Isrc\libmf6_external.a.p /MT /nologo /warn:general /warn:truncated_source
+/stand:f18 /O2 /fpe:0 /heap-arrays:0 /traceback /fpp /Qdiag-disable:7416
+/Qdiag-disable:7025 /Qdiag-disable:5268 /Qdiag-disable:10448
+/Fdsrc\libmf6core.a.p\Utilities_compilerversion.F90.pdb
+/module:src\libmf6core.a.p
+/Fosrc/libmf6core.a.p/Utilities_compilerversion.F90.obj /c
 
 System command used to initiate simulation:
-/Users/mike/hydrocomputing/projects/2021/003_ModSimple_Phase2/Bearbeitung/MODFLOW6/nightly/20250520/mf6.7.0.dev2_macarm/bin/mf6
+C:\Users\lucialabarca\mf6.6.2_win64\bin\mf6.exe
 
 MODFLOW was compiled using uniform precision.
 
@@ -84,7 +86,7 @@ Long Integer Variables
 Logical Variables
   KIND: 4
   SIZE IN BITS: 32
-
+ 
  NAMEFILE OPTIONS:
     FLOWS WILL BE SAVED TO BUDGET FILE SPECIFIED IN OUTPUT CONTROL
  END NAMEFILE OPTIONS:
@@ -419,7 +421,7 @@ start timestep kper="2" kstp="1" mode="normal"
 
            TOTAL OUT =       1.2500E-02             TOTAL OUT =           0.1500
 
-            IN - OUT =      -3.5574E-10              IN - OUT =      -4.2688E-09
+            IN - OUT =      -3.3633E-10              IN - OUT =      -4.0360E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -534,7 +536,7 @@ start timestep kper="2" kstp="2" mode="normal"
 
            TOTAL OUT =       2.5000E-02             TOTAL OUT =           0.1500
 
-            IN - OUT =      -6.2886E-10              IN - OUT =      -3.2775E-09
+            IN - OUT =      -6.1673E-10              IN - OUT =      -3.3648E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -649,7 +651,7 @@ start timestep kper="2" kstp="3" mode="normal"
 
            TOTAL OUT =       3.7500E-02             TOTAL OUT =           0.1500
 
-            IN - OUT =      -7.7897E-10              IN - OUT =      -1.8013E-09
+            IN - OUT =      -7.6199E-10              IN - OUT =      -1.7431E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -757,14 +759,14 @@ start timestep kper="2" kstp="4" mode="normal"
 
           OUT:                                     OUT:
           ----                                     ----
-     STORAGE-AQUEOUS =       7.5030E-07       STORAGE-AQUEOUS =       3.9361E-06     MST                              
+     STORAGE-AQUEOUS =       7.5030E-07       STORAGE-AQUEOUS =       3.9360E-06     MST                              
                  WEL =       5.0000E-02                   WEL =           0.1500     SSM_WEL-1                        
                  CHD =           0.0000                   CHD =           0.0000     SSM_CHD-1                        
                  CNC =           0.0000                   CNC =           0.0000     CNC_0                            
 
            TOTAL OUT =       5.0001E-02             TOTAL OUT =           0.1500
 
-            IN - OUT =      -1.0921E-09              IN - OUT =      -3.7579E-09
+            IN - OUT =      -1.1867E-09              IN - OUT =      -5.0967E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -879,7 +881,7 @@ start timestep kper="2" kstp="5" mode="normal"
 
            TOTAL OUT =       6.2501E-02             TOTAL OUT =           0.1500
 
-            IN - OUT =      -1.4055E-09              IN - OUT =      -3.7601E-09
+            IN - OUT =      -1.3933E-09              IN - OUT =      -2.4795E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -987,14 +989,14 @@ start timestep kper="2" kstp="6" mode="normal"
 
           OUT:                                     OUT:
           ----                                     ----
-     STORAGE-AQUEOUS =       1.6974E-06       STORAGE-AQUEOUS =       6.2650E-06     MST                              
+     STORAGE-AQUEOUS =       1.6974E-06       STORAGE-AQUEOUS =       6.2651E-06     MST                              
                  WEL =       7.5000E-02                   WEL =           0.1500     SSM_WEL-1                        
                  CHD =           0.0000                   CHD =           0.0000     SSM_CHD-1                        
                  CNC =           0.0000                   CNC =           0.0000     CNC_0                            
 
            TOTAL OUT =       7.5002E-02             TOTAL OUT =           0.1500
 
-            IN - OUT =      -1.7103E-09              IN - OUT =      -3.6584E-09
+            IN - OUT =      -1.6255E-09              IN - OUT =      -2.7852E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -1109,7 +1111,7 @@ start timestep kper="2" kstp="7" mode="normal"
 
            TOTAL OUT =       8.7502E-02             TOTAL OUT =           0.1500
 
-            IN - OUT =      -1.8803E-09              IN - OUT =      -2.0399E-09
+            IN - OUT =      -1.8900E-09              IN - OUT =      -3.1750E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -1224,7 +1226,7 @@ start timestep kper="2" kstp="8" mode="normal"
 
            TOTAL OUT =           0.1000             TOTAL OUT =           0.1500
 
-            IN - OUT =      -2.0277E-09              IN - OUT =      -1.7680E-09
+            IN - OUT =      -1.9549E-09              IN - OUT =      -7.7848E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -1332,14 +1334,14 @@ start timestep kper="2" kstp="9" mode="normal"
 
           OUT:                                     OUT:
           ----                                     ----
-     STORAGE-AQUEOUS =       3.8472E-06       STORAGE-AQUEOUS =       9.7670E-06     MST                              
+     STORAGE-AQUEOUS =       3.8472E-06       STORAGE-AQUEOUS =       9.7672E-06     MST                              
                  WEL =           0.1125                   WEL =           0.1500     SSM_WEL-1                        
                  CHD =           0.0000                   CHD =           0.0000     SSM_CHD-1                        
                  CNC =           0.0000                   CNC =           0.0000     CNC_0                            
 
            TOTAL OUT =           0.1125             TOTAL OUT =           0.1500
 
-            IN - OUT =      -2.2935E-09              IN - OUT =      -3.1897E-09
+            IN - OUT =      -2.1116E-09              IN - OUT =      -1.8800E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -1454,7 +1456,7 @@ start timestep kper="2" kstp="10" mode="normal"
 
            TOTAL OUT =           0.1250             TOTAL OUT =           0.1500
 
-            IN - OUT =      -2.4839E-09              IN - OUT =      -2.2857E-09
+            IN - OUT =      -2.3215E-09              IN - OUT =      -2.5185E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -1569,7 +1571,7 @@ start timestep kper="2" kstp="11" mode="normal"
 
            TOTAL OUT =           0.1375             TOTAL OUT =           0.1500
 
-            IN - OUT =      -2.5503E-09              IN - OUT =      -7.9572E-10
+            IN - OUT =      -2.4872E-09              IN - OUT =      -1.9890E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -1677,14 +1679,14 @@ start timestep kper="2" kstp="12" mode="normal"
 
           OUT:                                     OUT:
           ----                                     ----
-     STORAGE-AQUEOUS =       6.8736E-06       STORAGE-AQUEOUS =       1.3276E-05     MST                              
+     STORAGE-AQUEOUS =       6.8737E-06       STORAGE-AQUEOUS =       1.3276E-05     MST                              
                  WEL =           0.1500                   WEL =           0.1500     SSM_WEL-1                        
                  CHD =           0.0000                   CHD =           0.0000     SSM_CHD-1                        
                  CNC =           0.0000                   CNC =           0.0000     CNC_0                            
 
            TOTAL OUT =           0.1500             TOTAL OUT =           0.1500
 
-            IN - OUT =      -2.9838E-09              IN - OUT =      -5.2027E-09
+            IN - OUT =      -2.8043E-09              IN - OUT =      -3.8057E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -1799,7 +1801,7 @@ start timestep kper="2" kstp="13" mode="normal"
 
            TOTAL OUT =           0.1625             TOTAL OUT =           0.1500
 
-            IN - OUT =      -3.2495E-09              IN - OUT =      -3.1884E-09
+            IN - OUT =      -3.0070E-09              IN - OUT =      -2.4317E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -1914,9 +1916,9 @@ start timestep kper="2" kstp="14" mode="normal"
 
            TOTAL OUT =           0.1750             TOTAL OUT =           0.1500
 
-            IN - OUT =      -3.3306E-09              IN - OUT =      -9.7258E-10
+            IN - OUT =      -2.9983E-09              IN - OUT =       1.0426E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -2029,7 +2031,7 @@ start timestep kper="2" kstp="15" mode="normal"
 
            TOTAL OUT =           0.1875             TOTAL OUT =           0.1500
 
-            IN - OUT =      -3.5735E-09              IN - OUT =      -2.9147E-09
+            IN - OUT =      -3.1199E-09              IN - OUT =      -1.4595E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -2144,7 +2146,7 @@ start timestep kper="2" kstp="16" mode="normal"
 
            TOTAL OUT =           0.2000             TOTAL OUT =           0.1500
 
-            IN - OUT =      -3.6595E-09              IN - OUT =      -1.0325E-09
+            IN - OUT =      -3.3782E-09              IN - OUT =      -3.0989E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -2259,7 +2261,7 @@ start timestep kper="2" kstp="17" mode="normal"
 
            TOTAL OUT =           0.2125             TOTAL OUT =           0.1500
 
-            IN - OUT =      -3.6793E-09              IN - OUT =      -2.3765E-10
+            IN - OUT =      -3.4343E-09              IN - OUT =      -6.7420E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -2374,7 +2376,7 @@ start timestep kper="2" kstp="18" mode="normal"
 
            TOTAL OUT =           0.2250             TOTAL OUT =           0.1500
 
-            IN - OUT =      -3.9072E-09              IN - OUT =      -2.7348E-09
+            IN - OUT =      -3.7496E-09              IN - OUT =      -3.7826E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -2489,7 +2491,7 @@ start timestep kper="2" kstp="19" mode="normal"
 
            TOTAL OUT =           0.2375             TOTAL OUT =           0.1500
 
-            IN - OUT =      -4.1682E-09              IN - OUT =      -3.1323E-09
+            IN - OUT =      -3.8238E-09              IN - OUT =      -8.9135E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -2604,7 +2606,7 @@ start timestep kper="2" kstp="20" mode="normal"
 
            TOTAL OUT =           0.2500             TOTAL OUT =           0.1500
 
-            IN - OUT =      -4.2119E-09              IN - OUT =      -5.2391E-10
+            IN - OUT =      -3.9184E-09              IN - OUT =      -1.1351E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -2719,7 +2721,7 @@ start timestep kper="2" kstp="21" mode="normal"
 
            TOTAL OUT =           0.2625             TOTAL OUT =           0.1500
 
-            IN - OUT =      -4.4516E-09              IN - OUT =      -2.8760E-09
+            IN - OUT =      -4.0878E-09              IN - OUT =      -2.0319E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -2834,9 +2836,9 @@ start timestep kper="2" kstp="22" mode="normal"
 
            TOTAL OUT =           0.2750             TOTAL OUT =           0.1500
 
-            IN - OUT =      -4.5311E-09              IN - OUT =      -9.5438E-10
+            IN - OUT =      -4.0824E-09              IN - OUT =       6.4258E-11
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -2949,7 +2951,7 @@ start timestep kper="2" kstp="23" mode="normal"
 
            TOTAL OUT =           0.2875             TOTAL OUT =           0.1500
 
-            IN - OUT =      -4.7123E-09              IN - OUT =      -2.1749E-09
+            IN - OUT =      -4.2467E-09              IN - OUT =      -1.9712E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -3064,7 +3066,7 @@ start timestep kper="2" kstp="24" mode="normal"
 
            TOTAL OUT =           0.3000             TOTAL OUT =           0.1500
 
-            IN - OUT =      -4.7691E-09              IN - OUT =      -6.8151E-10
+            IN - OUT =      -4.2501E-09              IN - OUT =      -4.1230E-11
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -3179,7 +3181,7 @@ start timestep kper="2" kstp="25" mode="normal"
 
            TOTAL OUT =           0.3125             TOTAL OUT =           0.1500
 
-            IN - OUT =      -5.0156E-09              IN - OUT =      -2.9582E-09
+            IN - OUT =      -4.3268E-09              IN - OUT =      -9.2091E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -3294,7 +3296,7 @@ start timestep kper="2" kstp="26" mode="normal"
 
            TOTAL OUT =           0.3250             TOTAL OUT =           0.1500
 
-            IN - OUT =      -5.1275E-09              IN - OUT =      -1.3427E-09
+            IN - OUT =      -4.3514E-09              IN - OUT =      -2.9492E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -3409,7 +3411,7 @@ start timestep kper="2" kstp="27" mode="normal"
 
            TOTAL OUT =           0.3375             TOTAL OUT =           0.1500
 
-            IN - OUT =      -5.0249E-09              IN - OUT =       1.2312E-09
+            IN - OUT =      -4.2779E-09              IN - OUT =       8.8192E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -3524,7 +3526,7 @@ start timestep kper="2" kstp="28" mode="normal"
 
            TOTAL OUT =           0.3500             TOTAL OUT =           0.1500
 
-            IN - OUT =      -5.1973E-09              IN - OUT =      -2.0687E-09
+            IN - OUT =      -4.4649E-09              IN - OUT =      -2.2433E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -3639,7 +3641,7 @@ start timestep kper="2" kstp="29" mode="normal"
 
            TOTAL OUT =           0.3625             TOTAL OUT =           0.1500
 
-            IN - OUT =      -5.4909E-09              IN - OUT =      -3.5233E-09
+            IN - OUT =      -4.6784E-09              IN - OUT =      -2.5629E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -3754,7 +3756,7 @@ start timestep kper="2" kstp="30" mode="normal"
 
            TOTAL OUT =           0.3750             TOTAL OUT =           0.1500
 
-            IN - OUT =      -5.6472E-09              IN - OUT =      -1.8754E-09
+            IN - OUT =      -4.6916E-09              IN - OUT =      -1.5822E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -3869,7 +3871,7 @@ start timestep kper="2" kstp="31" mode="normal"
 
            TOTAL OUT =           0.3875             TOTAL OUT =           0.1500
 
-            IN - OUT =      -5.7952E-09              IN - OUT =      -1.7756E-09
+            IN - OUT =      -4.8808E-09              IN - OUT =      -2.2704E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -3984,9 +3986,9 @@ start timestep kper="2" kstp="32" mode="normal"
 
            TOTAL OUT =           0.4000             TOTAL OUT =           0.1500
 
-            IN - OUT =      -5.8353E-09              IN - OUT =      -4.8131E-10
+            IN - OUT =      -4.7706E-09              IN - OUT =       1.3231E-09
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -4099,9 +4101,9 @@ start timestep kper="2" kstp="33" mode="normal"
 
            TOTAL OUT =           0.4126             TOTAL OUT =           0.1500
 
-            IN - OUT =      -5.8808E-09              IN - OUT =      -5.4663E-10
+            IN - OUT =      -4.7094E-09              IN - OUT =       7.3394E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -4214,7 +4216,7 @@ start timestep kper="2" kstp="34" mode="normal"
 
            TOTAL OUT =           0.4251             TOTAL OUT =           0.1500
 
-            IN - OUT =      -6.0568E-09              IN - OUT =      -2.1112E-09
+            IN - OUT =      -4.9096E-09              IN - OUT =      -2.4023E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -4329,9 +4331,9 @@ start timestep kper="2" kstp="35" mode="normal"
 
            TOTAL OUT =           0.4376             TOTAL OUT =           0.1500
 
-            IN - OUT =      -6.0655E-09              IN - OUT =      -1.0498E-10
+            IN - OUT =      -4.8698E-09              IN - OUT =       4.7709E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -4444,7 +4446,7 @@ start timestep kper="2" kstp="36" mode="normal"
 
            TOTAL OUT =           0.4501             TOTAL OUT =           0.1500
 
-            IN - OUT =      -6.0867E-09              IN - OUT =      -2.5456E-10
+            IN - OUT =      -5.0099E-09              IN - OUT =      -1.6807E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -4559,9 +4561,9 @@ start timestep kper="2" kstp="37" mode="normal"
 
            TOTAL OUT =           0.4626             TOTAL OUT =           0.1500
 
-            IN - OUT =      -6.1612E-09              IN - OUT =      -8.9415E-10
+            IN - OUT =      -5.0019E-09              IN - OUT =       9.5376E-11
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -4674,7 +4676,7 @@ start timestep kper="2" kstp="38" mode="normal"
 
            TOTAL OUT =           0.4751             TOTAL OUT =           0.1500
 
-            IN - OUT =      -6.4071E-09              IN - OUT =      -2.9503E-09
+            IN - OUT =      -5.2211E-09              IN - OUT =      -2.6302E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -4789,7 +4791,7 @@ start timestep kper="2" kstp="39" mode="normal"
 
            TOTAL OUT =           0.4876             TOTAL OUT =           0.1500
 
-            IN - OUT =      -6.5318E-09              IN - OUT =      -1.4965E-09
+            IN - OUT =      -5.2925E-09              IN - OUT =      -8.5623E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -4904,7 +4906,7 @@ start timestep kper="2" kstp="40" mode="normal"
 
            TOTAL OUT =           0.5001             TOTAL OUT =           0.1500
 
-            IN - OUT =      -6.7155E-09              IN - OUT =      -2.2039E-09
+            IN - OUT =      -5.4858E-09              IN - OUT =      -2.3203E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -5019,9 +5021,9 @@ start timestep kper="2" kstp="41" mode="normal"
 
            TOTAL OUT =           0.5126             TOTAL OUT =           0.1500
 
-            IN - OUT =      -6.7131E-09              IN - OUT =       2.8247E-11
+            IN - OUT =      -5.6169E-09              IN - OUT =      -1.5725E-09
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -5134,7 +5136,7 @@ start timestep kper="2" kstp="42" mode="normal"
 
            TOTAL OUT =           0.5251             TOTAL OUT =           0.1500
 
-            IN - OUT =      -6.9828E-09              IN - OUT =      -3.2356E-09
+            IN - OUT =      -5.8307E-09              IN - OUT =      -2.5662E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -5249,7 +5251,7 @@ start timestep kper="2" kstp="43" mode="normal"
 
            TOTAL OUT =           0.5376             TOTAL OUT =           0.1500
 
-            IN - OUT =      -7.0844E-09              IN - OUT =      -1.2197E-09
+            IN - OUT =      -5.9348E-09              IN - OUT =      -1.2488E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -5364,7 +5366,7 @@ start timestep kper="2" kstp="44" mode="normal"
 
            TOTAL OUT =           0.5501             TOTAL OUT =           0.1501
 
-            IN - OUT =      -7.3342E-09              IN - OUT =      -2.9976E-09
+            IN - OUT =      -6.2040E-09              IN - OUT =      -3.2304E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -5479,7 +5481,7 @@ start timestep kper="2" kstp="45" mode="normal"
 
            TOTAL OUT =           0.5626             TOTAL OUT =           0.1501
 
-            IN - OUT =      -7.1311E-09              IN - OUT =       2.4371E-09
+            IN - OUT =      -5.8821E-09              IN - OUT =       3.8632E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -5594,9 +5596,9 @@ start timestep kper="2" kstp="46" mode="normal"
 
            TOTAL OUT =           0.5751             TOTAL OUT =           0.1501
 
-            IN - OUT =      -7.1761E-09              IN - OUT =      -5.3959E-10
+            IN - OUT =      -5.8688E-09              IN - OUT =       1.5890E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -5709,7 +5711,7 @@ start timestep kper="2" kstp="47" mode="normal"
 
            TOTAL OUT =           0.5876             TOTAL OUT =           0.1501
 
-            IN - OUT =      -7.3546E-09              IN - OUT =      -2.1426E-09
+            IN - OUT =      -5.9140E-09              IN - OUT =      -5.4188E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -5824,7 +5826,7 @@ start timestep kper="2" kstp="48" mode="normal"
 
            TOTAL OUT =           0.6001             TOTAL OUT =           0.1501
 
-            IN - OUT =      -7.3796E-09              IN - OUT =      -2.9937E-10
+            IN - OUT =      -5.9535E-09              IN - OUT =      -4.7400E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -5939,7 +5941,7 @@ start timestep kper="2" kstp="49" mode="normal"
 
            TOTAL OUT =           0.6126             TOTAL OUT =           0.1501
 
-            IN - OUT =      -7.4313E-09              IN - OUT =      -6.2127E-10
+            IN - OUT =      -5.9810E-09              IN - OUT =      -3.3024E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -6054,7 +6056,7 @@ start timestep kper="2" kstp="50" mode="normal"
 
            TOTAL OUT =           0.6251             TOTAL OUT =           0.1501
 
-            IN - OUT =      -7.6413E-09              IN - OUT =      -2.5199E-09
+            IN - OUT =      -6.1328E-09              IN - OUT =      -1.8214E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -6169,7 +6171,7 @@ start timestep kper="2" kstp="51" mode="normal"
 
            TOTAL OUT =           0.6376             TOTAL OUT =           0.1501
 
-            IN - OUT =      -7.8833E-09              IN - OUT =      -2.9043E-09
+            IN - OUT =      -6.4354E-09              IN - OUT =      -3.6319E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -6284,9 +6286,9 @@ start timestep kper="2" kstp="52" mode="normal"
 
            TOTAL OUT =           0.6501             TOTAL OUT =           0.1501
 
-            IN - OUT =      -7.9483E-09              IN - OUT =      -7.8000E-10
+            IN - OUT =      -6.4228E-09              IN - OUT =       1.5132E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -6399,7 +6401,7 @@ start timestep kper="2" kstp="53" mode="normal"
 
            TOTAL OUT =           0.6626             TOTAL OUT =           0.1501
 
-            IN - OUT =      -7.9785E-09              IN - OUT =      -3.6211E-10
+            IN - OUT =      -6.5064E-09              IN - OUT =      -1.0024E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -6507,14 +6509,14 @@ start timestep kper="2" kstp="54" mode="normal"
 
           OUT:                                     OUT:
           ----                                     ----
-     STORAGE-AQUEOUS =       1.4235E-04       STORAGE-AQUEOUS =       6.3201E-05     MST                              
+     STORAGE-AQUEOUS =       1.4235E-04       STORAGE-AQUEOUS =       6.3202E-05     MST                              
                  WEL =           0.6750                   WEL =           0.1500     SSM_WEL-1                        
                  CHD =           0.0000                   CHD =           0.0000     SSM_CHD-1                        
                  CNC =           0.0000                   CNC =           0.0000     CNC_0                            
 
            TOTAL OUT =           0.6751             TOTAL OUT =           0.1501
 
-            IN - OUT =      -8.2003E-09              IN - OUT =      -2.6616E-09
+            IN - OUT =      -6.6117E-09              IN - OUT =      -1.2646E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -6629,7 +6631,7 @@ start timestep kper="2" kstp="55" mode="normal"
 
            TOTAL OUT =           0.6876             TOTAL OUT =           0.1501
 
-            IN - OUT =      -8.2724E-09              IN - OUT =      -8.6510E-10
+            IN - OUT =      -6.7711E-09              IN - OUT =      -1.9128E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -6744,7 +6746,7 @@ start timestep kper="2" kstp="56" mode="normal"
 
            TOTAL OUT =           0.7002             TOTAL OUT =           0.1501
 
-            IN - OUT =      -8.3356E-09              IN - OUT =      -7.5792E-10
+            IN - OUT =      -6.9507E-09              IN - OUT =      -2.1549E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -6859,7 +6861,7 @@ start timestep kper="2" kstp="57" mode="normal"
 
            TOTAL OUT =           0.7127             TOTAL OUT =           0.1501
 
-            IN - OUT =      -8.5130E-09              IN - OUT =      -2.1295E-09
+            IN - OUT =      -7.0869E-09              IN - OUT =      -1.6348E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -6974,7 +6976,7 @@ start timestep kper="2" kstp="58" mode="normal"
 
            TOTAL OUT =           0.7252             TOTAL OUT =           0.1501
 
-            IN - OUT =      -8.6609E-09              IN - OUT =      -1.7748E-09
+            IN - OUT =      -7.1985E-09              IN - OUT =      -1.3382E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -7089,9 +7091,9 @@ start timestep kper="2" kstp="59" mode="normal"
 
            TOTAL OUT =           0.7377             TOTAL OUT =           0.1501
 
-            IN - OUT =      -8.6834E-09              IN - OUT =      -2.6990E-10
+            IN - OUT =      -7.0633E-09              IN - OUT =       1.6219E-09
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -7204,7 +7206,7 @@ start timestep kper="2" kstp="60" mode="normal"
 
            TOTAL OUT =           0.7502             TOTAL OUT =           0.1501
 
-            IN - OUT =      -8.7463E-09              IN - OUT =      -7.5396E-10
+            IN - OUT =      -7.1092E-09              IN - OUT =      -5.5023E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -7319,7 +7321,7 @@ start timestep kper="2" kstp="61" mode="normal"
 
            TOTAL OUT =           0.7627             TOTAL OUT =           0.1501
 
-            IN - OUT =      -8.9321E-09              IN - OUT =      -2.2297E-09
+            IN - OUT =      -7.1980E-09              IN - OUT =      -1.0655E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -7434,7 +7436,7 @@ start timestep kper="2" kstp="62" mode="normal"
 
            TOTAL OUT =           0.7752             TOTAL OUT =           0.1501
 
-            IN - OUT =      -9.0928E-09              IN - OUT =      -1.9286E-09
+            IN - OUT =      -7.2932E-09              IN - OUT =      -1.1427E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -7549,7 +7551,7 @@ start timestep kper="2" kstp="63" mode="normal"
 
            TOTAL OUT =           0.7877             TOTAL OUT =           0.1501
 
-            IN - OUT =      -9.2400E-09              IN - OUT =      -1.7672E-09
+            IN - OUT =      -7.4138E-09              IN - OUT =      -1.4470E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -7657,14 +7659,14 @@ start timestep kper="2" kstp="64" mode="normal"
 
           OUT:                                     OUT:
           ----                                     ----
-     STORAGE-AQUEOUS =       2.0056E-04       STORAGE-AQUEOUS =       7.5317E-05     MST                              
+     STORAGE-AQUEOUS =       2.0057E-04       STORAGE-AQUEOUS =       7.5317E-05     MST                              
                  WEL =           0.8000                   WEL =           0.1500     SSM_WEL-1                        
                  CHD =           0.0000                   CHD =           0.0000     SSM_CHD-1                        
                  CNC =           0.0000                   CNC =           0.0000     CNC_0                            
 
            TOTAL OUT =           0.8002             TOTAL OUT =           0.1501
 
-            IN - OUT =      -9.0503E-09              IN - OUT =       2.2769E-09
+            IN - OUT =      -7.1052E-09              IN - OUT =       3.7030E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -7779,9 +7781,9 @@ start timestep kper="2" kstp="65" mode="normal"
 
            TOTAL OUT =           0.8127             TOTAL OUT =           0.1501
 
-            IN - OUT =      -9.0581E-09              IN - OUT =      -9.3562E-11
+            IN - OUT =      -6.9214E-09              IN - OUT =       2.2056E-09
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -7894,7 +7896,7 @@ start timestep kper="2" kstp="66" mode="normal"
 
            TOTAL OUT =           0.8252             TOTAL OUT =           0.1501
 
-            IN - OUT =      -9.0823E-09              IN - OUT =      -2.9000E-10
+            IN - OUT =      -6.9504E-09              IN - OUT =      -3.4821E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -8009,7 +8011,7 @@ start timestep kper="2" kstp="67" mode="normal"
 
            TOTAL OUT =           0.8377             TOTAL OUT =           0.1501
 
-            IN - OUT =      -9.2492E-09              IN - OUT =      -2.0028E-09
+            IN - OUT =      -6.9960E-09              IN - OUT =      -5.4761E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -8124,7 +8126,7 @@ start timestep kper="2" kstp="68" mode="normal"
 
            TOTAL OUT =           0.8502             TOTAL OUT =           0.1501
 
-            IN - OUT =      -9.3355E-09              IN - OUT =      -1.0356E-09
+            IN - OUT =      -7.0411E-09              IN - OUT =      -5.4084E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -8239,9 +8241,9 @@ start timestep kper="2" kstp="69" mode="normal"
 
            TOTAL OUT =           0.8627             TOTAL OUT =           0.1501
 
-            IN - OUT =      -9.3988E-09              IN - OUT =      -7.6041E-10
+            IN - OUT =      -7.0099E-09              IN - OUT =       3.7464E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -8354,7 +8356,7 @@ start timestep kper="2" kstp="70" mode="normal"
 
            TOTAL OUT =           0.8752             TOTAL OUT =           0.1501
 
-            IN - OUT =      -9.6298E-09              IN - OUT =      -2.7714E-09
+            IN - OUT =      -7.1923E-09              IN - OUT =      -2.1893E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -8469,7 +8471,7 @@ start timestep kper="2" kstp="71" mode="normal"
 
            TOTAL OUT =           0.8877             TOTAL OUT =           0.1501
 
-            IN - OUT =      -9.8161E-09              IN - OUT =      -2.2361E-09
+            IN - OUT =      -7.3762E-09              IN - OUT =      -2.2070E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -8577,14 +8579,14 @@ start timestep kper="2" kstp="72" mode="normal"
 
           OUT:                                     OUT:
           ----                                     ----
-     STORAGE-AQUEOUS =       2.5443E-04       STORAGE-AQUEOUS =       8.5078E-05     MST                              
+     STORAGE-AQUEOUS =       2.5443E-04       STORAGE-AQUEOUS =       8.5079E-05     MST                              
                  WEL =           0.9000                   WEL =           0.1500     SSM_WEL-1                        
                  CHD =           0.0000                   CHD =           0.0000     SSM_CHD-1                        
                  CNC =           0.0000                   CNC =           0.0000     CNC_0                            
 
            TOTAL OUT =           0.9003             TOTAL OUT =           0.1501
 
-            IN - OUT =      -9.6819E-09              IN - OUT =       1.6108E-09
+            IN - OUT =      -7.1110E-09              IN - OUT =       3.1824E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -8699,7 +8701,7 @@ start timestep kper="2" kstp="73" mode="normal"
 
            TOTAL OUT =           0.9128             TOTAL OUT =           0.1501
 
-            IN - OUT =      -9.9017E-09              IN - OUT =      -2.6383E-09
+            IN - OUT =      -7.3867E-09              IN - OUT =      -3.3077E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -8814,7 +8816,7 @@ start timestep kper="2" kstp="74" mode="normal"
 
            TOTAL OUT =           0.9253             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.0172E-08              IN - OUT =      -3.2472E-09
+            IN - OUT =      -7.6670E-09              IN - OUT =      -3.3636E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -8929,7 +8931,7 @@ start timestep kper="2" kstp="75" mode="normal"
 
            TOTAL OUT =           0.9378             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.0377E-08              IN - OUT =      -2.4551E-09
+            IN - OUT =      -7.8497E-09              IN - OUT =      -2.1931E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -9044,7 +9046,7 @@ start timestep kper="2" kstp="76" mode="normal"
 
            TOTAL OUT =           0.9503             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.0209E-08              IN - OUT =       2.0132E-09
+            IN - OUT =      -7.7572E-09              IN - OUT =       1.1110E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -9152,14 +9154,14 @@ start timestep kper="2" kstp="77" mode="normal"
 
           OUT:                                     OUT:
           ----                                     ----
-     STORAGE-AQUEOUS =       2.9142E-04       STORAGE-AQUEOUS =       9.1211E-05     MST                              
+     STORAGE-AQUEOUS =       2.9142E-04       STORAGE-AQUEOUS =       9.1210E-05     MST                              
                  WEL =           0.9625                   WEL =           0.1500     SSM_WEL-1                        
                  CHD =           0.0000                   CHD =           0.0000     SSM_CHD-1                        
                  CNC =       7.7781E-10                   CNC =       3.2795E-09     CNC_0                            
 
            TOTAL OUT =           0.9628             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.0352E-08              IN - OUT =      -1.7114E-09
+            IN - OUT =      -7.8367E-09              IN - OUT =      -9.5467E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -9274,9 +9276,9 @@ start timestep kper="2" kstp="78" mode="normal"
 
            TOTAL OUT =           0.9753             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.0362E-08              IN - OUT =      -1.2183E-10
+            IN - OUT =      -7.7814E-09              IN - OUT =       6.6397E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -9389,7 +9391,7 @@ start timestep kper="2" kstp="79" mode="normal"
 
            TOTAL OUT =           0.9878             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.0417E-08              IN - OUT =      -6.6304E-10
+            IN - OUT =      -7.8245E-09              IN - OUT =      -5.1752E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -9504,7 +9506,7 @@ start timestep kper="2" kstp="80" mode="normal"
 
            TOTAL OUT =           1.0003             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.0564E-08              IN - OUT =      -1.7605E-09
+            IN - OUT =      -7.9397E-09              IN - OUT =      -1.3822E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -9619,7 +9621,7 @@ start timestep kper="2" kstp="81" mode="normal"
 
            TOTAL OUT =           1.0128             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.0501E-08              IN - OUT =       7.5227E-10
+            IN - OUT =      -7.7994E-09              IN - OUT =       1.6836E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -9734,9 +9736,9 @@ start timestep kper="2" kstp="82" mode="normal"
 
            TOTAL OUT =           1.0253             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.0442E-08              IN - OUT =       7.0822E-10
+            IN - OUT =      -7.8616E-09              IN - OUT =      -7.4698E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -9849,7 +9851,7 @@ start timestep kper="2" kstp="83" mode="normal"
 
            TOTAL OUT =           1.0378             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.0619E-08              IN - OUT =      -2.1198E-09
+            IN - OUT =      -7.9849E-09              IN - OUT =      -1.4795E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -9964,7 +9966,7 @@ start timestep kper="2" kstp="84" mode="normal"
 
            TOTAL OUT =           1.0503             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.0906E-08              IN - OUT =      -3.4513E-09
+            IN - OUT =      -8.0979E-09              IN - OUT =      -1.3558E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -10079,7 +10081,7 @@ start timestep kper="2" kstp="85" mode="normal"
 
            TOTAL OUT =           1.0629             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.1059E-08              IN - OUT =      -1.8281E-09
+            IN - OUT =      -8.2042E-09              IN - OUT =      -1.2751E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -10194,7 +10196,7 @@ start timestep kper="2" kstp="86" mode="normal"
 
            TOTAL OUT =           1.0754             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.1178E-08              IN - OUT =      -1.4341E-09
+            IN - OUT =      -8.4280E-09              IN - OUT =      -2.6856E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -10309,7 +10311,7 @@ start timestep kper="2" kstp="87" mode="normal"
 
            TOTAL OUT =           1.0879             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.1132E-08              IN - OUT =       5.5361E-10
+            IN - OUT =      -8.2872E-09              IN - OUT =       1.6887E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -10424,7 +10426,7 @@ start timestep kper="2" kstp="88" mode="normal"
 
            TOTAL OUT =           1.1004             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.1294E-08              IN - OUT =      -1.9435E-09
+            IN - OUT =      -8.4783E-09              IN - OUT =      -2.2927E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -10539,7 +10541,7 @@ start timestep kper="2" kstp="89" mode="normal"
 
            TOTAL OUT =           1.1129             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.1405E-08              IN - OUT =      -1.3248E-09
+            IN - OUT =      -8.6930E-09              IN - OUT =      -2.5763E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -10654,9 +10656,9 @@ start timestep kper="2" kstp="90" mode="normal"
 
            TOTAL OUT =           1.1254             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.1468E-08              IN - OUT =      -7.5968E-10
+            IN - OUT =      -8.6835E-09              IN - OUT =       1.1344E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -10769,7 +10771,7 @@ start timestep kper="2" kstp="91" mode="normal"
 
            TOTAL OUT =           1.1379             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.1571E-08              IN - OUT =      -1.2350E-09
+            IN - OUT =      -8.8156E-09              IN - OUT =      -1.5842E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -10884,7 +10886,7 @@ start timestep kper="2" kstp="92" mode="normal"
 
            TOTAL OUT =           1.1504             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.1691E-08              IN - OUT =      -1.4377E-09
+            IN - OUT =      -8.8747E-09              IN - OUT =      -7.1006E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -10999,9 +11001,9 @@ start timestep kper="2" kstp="93" mode="normal"
 
            TOTAL OUT =           1.1629             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.1724E-08              IN - OUT =      -4.0409E-10
+            IN - OUT =      -8.7871E-09              IN - OUT =       1.0511E-09
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -11107,14 +11109,14 @@ start timestep kper="2" kstp="94" mode="normal"
 
           OUT:                                     OUT:
           ----                                     ----
-     STORAGE-AQUEOUS =       4.3637E-04       STORAGE-AQUEOUS =       1.1225E-04     MST                              
+     STORAGE-AQUEOUS =       4.3638E-04       STORAGE-AQUEOUS =       1.1225E-04     MST                              
                  WEL =           1.1750                   WEL =           0.1500     SSM_WEL-1                        
                  CHD =           0.0000                   CHD =           0.0000     SSM_CHD-1                        
                  CNC =       2.3539E-08                   CNC =       2.9636E-08     CNC_0                            
 
            TOTAL OUT =           1.1754             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.1915E-08              IN - OUT =      -2.2926E-09
+            IN - OUT =      -8.9394E-09              IN - OUT =      -1.8269E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -11229,7 +11231,7 @@ start timestep kper="2" kstp="95" mode="normal"
 
            TOTAL OUT =           1.1879             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.1876E-08              IN - OUT =       4.6558E-10
+            IN - OUT =      -8.9030E-09              IN - OUT =       4.3648E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -11344,9 +11346,9 @@ start timestep kper="2" kstp="96" mode="normal"
 
            TOTAL OUT =           1.2005             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.1885E-08              IN - OUT =      -1.0063E-10
+            IN - OUT =      -8.8289E-09              IN - OUT =       8.8890E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -11452,16 +11454,16 @@ start timestep kper="2" kstp="97" mode="normal"
 
           OUT:                                     OUT:
           ----                                     ----
-     STORAGE-AQUEOUS =       4.6506E-04       STORAGE-AQUEOUS =       1.1600E-04     MST                              
+     STORAGE-AQUEOUS =       4.6506E-04       STORAGE-AQUEOUS =       1.1599E-04     MST                              
                  WEL =           1.2125                   WEL =           0.1500     SSM_WEL-1                        
                  CHD =           0.0000                   CHD =           0.0000     SSM_CHD-1                        
                  CNC =       3.1919E-08                   CNC =       3.5498E-08     CNC_0                            
 
            TOTAL OUT =           1.2130             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.1853E-08              IN - OUT =       3.7773E-10
+            IN - OUT =      -8.8557E-09              IN - OUT =      -3.2076E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -11574,7 +11576,7 @@ start timestep kper="2" kstp="98" mode="normal"
 
            TOTAL OUT =           1.2255             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.1789E-08              IN - OUT =       7.6756E-10
+            IN - OUT =      -8.7990E-09              IN - OUT =       6.8025E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -11689,7 +11691,7 @@ start timestep kper="2" kstp="99" mode="normal"
 
            TOTAL OUT =           1.2380             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.1805E-08              IN - OUT =      -1.8157E-10
+            IN - OUT =      -8.8068E-09              IN - OUT =      -9.4259E-11
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -11804,9 +11806,9 @@ start timestep kper="2" kstp="100" mode="normal"
 
            TOTAL OUT =           1.2505             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.1869E-08              IN - OUT =      -7.7767E-10
+            IN - OUT =      -8.7577E-09              IN - OUT =       5.9021E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -11919,7 +11921,7 @@ start timestep kper="2" kstp="101" mode="normal"
 
            TOTAL OUT =           1.2630             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.1986E-08              IN - OUT =      -1.3959E-09
+            IN - OUT =      -8.9904E-09              IN - OUT =      -2.7929E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -12034,7 +12036,7 @@ start timestep kper="2" kstp="102" mode="normal"
 
            TOTAL OUT =           1.2755             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.2199E-08              IN - OUT =      -2.5588E-09
+            IN - OUT =      -9.0242E-09              IN - OUT =      -4.0514E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -12149,7 +12151,7 @@ start timestep kper="2" kstp="103" mode="normal"
 
            TOTAL OUT =           1.2880             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.2370E-08              IN - OUT =      -2.0530E-09
+            IN - OUT =      -9.2437E-09              IN - OUT =      -2.6351E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -12264,7 +12266,7 @@ start timestep kper="2" kstp="104" mode="normal"
 
            TOTAL OUT =           1.3005             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.2549E-08              IN - OUT =      -2.1452E-09
+            IN - OUT =      -9.3667E-09              IN - OUT =      -1.4758E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -12379,7 +12381,7 @@ start timestep kper="2" kstp="105" mode="normal"
 
            TOTAL OUT =           1.3130             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.2656E-08              IN - OUT =      -1.2922E-09
+            IN - OUT =      -9.4550E-09              IN - OUT =      -1.0594E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -12494,7 +12496,7 @@ start timestep kper="2" kstp="106" mode="normal"
 
            TOTAL OUT =           1.3256             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.2551E-08              IN - OUT =       1.2654E-09
+            IN - OUT =      -9.1992E-09              IN - OUT =       3.0699E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -12609,7 +12611,7 @@ start timestep kper="2" kstp="107" mode="normal"
 
            TOTAL OUT =           1.3381             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.2607E-08              IN - OUT =      -6.7034E-10
+            IN - OUT =      -9.3327E-09              IN - OUT =      -1.6017E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -12724,9 +12726,9 @@ start timestep kper="2" kstp="108" mode="normal"
 
            TOTAL OUT =           1.3506             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.2713E-08              IN - OUT =      -1.2774E-09
+            IN - OUT =      -9.3275E-09              IN - OUT =       6.1400E-11
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -12839,7 +12841,7 @@ start timestep kper="2" kstp="109" mode="normal"
 
            TOTAL OUT =           1.3631             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.2784E-08              IN - OUT =      -8.4427E-10
+            IN - OUT =      -9.5119E-09              IN - OUT =      -2.2121E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -12954,7 +12956,7 @@ start timestep kper="2" kstp="110" mode="normal"
 
            TOTAL OUT =           1.3756             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.2964E-08              IN - OUT =      -2.1646E-09
+            IN - OUT =      -9.5710E-09              IN - OUT =      -7.0945E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -13069,7 +13071,7 @@ start timestep kper="2" kstp="111" mode="normal"
 
            TOTAL OUT =           1.3881             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.3046E-08              IN - OUT =      -9.8745E-10
+            IN - OUT =      -9.6630E-09              IN - OUT =      -1.1039E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -13184,7 +13186,7 @@ start timestep kper="2" kstp="112" mode="normal"
 
            TOTAL OUT =           1.4006             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.3171E-08              IN - OUT =      -1.5015E-09
+            IN - OUT =      -9.7323E-09              IN - OUT =      -8.3216E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -13299,9 +13301,9 @@ start timestep kper="2" kstp="113" mode="normal"
 
            TOTAL OUT =           1.4131             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.3240E-08              IN - OUT =      -8.2646E-10
+            IN - OUT =      -9.6921E-09              IN - OUT =       4.8321E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -13414,7 +13416,7 @@ start timestep kper="2" kstp="114" mode="normal"
 
            TOTAL OUT =           1.4256             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.3496E-08              IN - OUT =      -3.0638E-09
+            IN - OUT =      -9.9522E-09              IN - OUT =      -3.1220E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -13529,7 +13531,7 @@ start timestep kper="2" kstp="115" mode="normal"
 
            TOTAL OUT =           1.4382             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.3549E-08              IN - OUT =      -6.4521E-10
+            IN - OUT =      -1.0055E-08              IN - OUT =      -1.2273E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -13644,7 +13646,7 @@ start timestep kper="2" kstp="116" mode="normal"
 
            TOTAL OUT =           1.4507             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.3540E-08              IN - OUT =       1.1278E-10
+            IN - OUT =      -9.8608E-09              IN - OUT =       2.3247E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -13759,9 +13761,9 @@ start timestep kper="2" kstp="117" mode="normal"
 
            TOTAL OUT =           1.4632             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.3547E-08              IN - OUT =      -8.8055E-11
+            IN - OUT =      -9.8414E-09              IN - OUT =       2.3209E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -13874,7 +13876,7 @@ start timestep kper="2" kstp="118" mode="normal"
 
            TOTAL OUT =           1.4757             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.3615E-08              IN - OUT =      -8.1292E-10
+            IN - OUT =      -9.8583E-09              IN - OUT =      -2.0174E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -13989,7 +13991,7 @@ start timestep kper="2" kstp="119" mode="normal"
 
            TOTAL OUT =           1.4882             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.3760E-08              IN - OUT =      -1.7398E-09
+            IN - OUT =      -9.9450E-09              IN - OUT =      -1.0413E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -14104,9 +14106,9 @@ start timestep kper="2" kstp="120" mode="normal"
 
            TOTAL OUT =           1.5007             TOTAL OUT =           0.1501
 
-            IN - OUT =      -1.3691E-08              IN - OUT =       8.2568E-10
+            IN - OUT =      -1.0012E-08              IN - OUT =      -8.0413E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -14221,7 +14223,7 @@ start timestep kper="3" kstp="1" mode="normal"
 
            TOTAL OUT =           1.6257             TOTAL OUT =           1.5002
 
-            IN - OUT =      -1.3873E-08              IN - OUT =      -2.1753E-09
+            IN - OUT =      -1.0159E-08              IN - OUT =      -1.7679E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -14336,7 +14338,7 @@ start timestep kper="3" kstp="2" mode="normal"
 
            TOTAL OUT =           1.7507             TOTAL OUT =           1.5002
 
-            IN - OUT =      -1.4037E-08              IN - OUT =      -1.9684E-09
+            IN - OUT =      -1.0420E-08              IN - OUT =      -3.1326E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -14451,7 +14453,7 @@ start timestep kper="3" kstp="3" mode="normal"
 
            TOTAL OUT =           1.8758             TOTAL OUT =           1.5002
 
-            IN - OUT =      -1.4007E-08              IN - OUT =       3.5668E-10
+            IN - OUT =      -1.0376E-08              IN - OUT =       5.3130E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -14566,9 +14568,9 @@ start timestep kper="3" kstp="4" mode="normal"
 
            TOTAL OUT =           2.0008             TOTAL OUT =           1.5002
 
-            IN - OUT =      -1.3940E-08              IN - OUT =       8.0320E-10
+            IN - OUT =      -1.0401E-08              IN - OUT =      -3.0274E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -14681,7 +14683,7 @@ start timestep kper="3" kstp="5" mode="normal"
 
            TOTAL OUT =           2.1258             TOTAL OUT =           1.5002
 
-            IN - OUT =      -1.3995E-08              IN - OUT =      -6.6288E-10
+            IN - OUT =      -1.0474E-08              IN - OUT =      -8.6661E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -14796,7 +14798,7 @@ start timestep kper="3" kstp="6" mode="normal"
 
            TOTAL OUT =           2.2508             TOTAL OUT =           1.5002
 
-            IN - OUT =      -1.3910E-08              IN - OUT =       1.0173E-09
+            IN - OUT =      -1.0369E-08              IN - OUT =       1.2501E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -14904,14 +14906,14 @@ start timestep kper="3" kstp="7" mode="normal"
 
           OUT:                                     OUT:
           ----                                     ----
-     STORAGE-AQUEOUS =       8.2471E-04       STORAGE-AQUEOUS =       2.2071E-04     MST                              
+     STORAGE-AQUEOUS =       8.2471E-04       STORAGE-AQUEOUS =       2.2070E-04     MST                              
                  WEL =           2.3750                   WEL =           1.5000     SSM_WEL-1                        
                  CHD =           0.0000                   CHD =           0.0000     SSM_CHD-1                        
                  CNC =       1.9551E-07                   CNC =       5.5540E-08     CNC_0                            
 
            TOTAL OUT =           2.3758             TOTAL OUT =           1.5002
 
-            IN - OUT =      -1.4002E-08              IN - OUT =      -1.0937E-09
+            IN - OUT =      -1.0504E-08              IN - OUT =      -1.6176E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -15026,7 +15028,7 @@ start timestep kper="3" kstp="8" mode="normal"
 
            TOTAL OUT =           2.5008             TOTAL OUT =           1.5002
 
-            IN - OUT =      -1.4179E-08              IN - OUT =      -2.1340E-09
+            IN - OUT =      -1.0653E-08              IN - OUT =      -1.7847E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -15141,7 +15143,7 @@ start timestep kper="3" kstp="9" mode="normal"
 
            TOTAL OUT =           2.6259             TOTAL OUT =           1.5002
 
-            IN - OUT =      -1.4198E-08              IN - OUT =      -2.2101E-10
+            IN - OUT =      -1.0691E-08              IN - OUT =      -4.5384E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -15256,7 +15258,7 @@ start timestep kper="3" kstp="10" mode="normal"
 
            TOTAL OUT =           2.7509             TOTAL OUT =           1.5003
 
-            IN - OUT =      -1.4141E-08              IN - OUT =       6.8325E-10
+            IN - OUT =      -1.0624E-08              IN - OUT =       7.9966E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -15371,7 +15373,7 @@ start timestep kper="3" kstp="11" mode="normal"
 
            TOTAL OUT =           2.8759             TOTAL OUT =           1.5003
 
-            IN - OUT =      -1.4288E-08              IN - OUT =      -1.7703E-09
+            IN - OUT =      -1.0701E-08              IN - OUT =      -9.2629E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -15486,7 +15488,7 @@ start timestep kper="3" kstp="12" mode="normal"
 
            TOTAL OUT =           3.0009             TOTAL OUT =           1.5003
 
-            IN - OUT =      -1.4609E-08              IN - OUT =      -3.8503E-09
+            IN - OUT =      -1.0821E-08              IN - OUT =      -1.4347E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -15601,9 +15603,9 @@ start timestep kper="3" kstp="13" mode="normal"
 
            TOTAL OUT =           3.1260             TOTAL OUT =           1.5003
 
-            IN - OUT =      -1.4598E-08              IN - OUT =       1.3819E-10
+            IN - OUT =      -1.0826E-08              IN - OUT =      -6.5537E-11
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -15716,7 +15718,7 @@ start timestep kper="3" kstp="14" mode="normal"
 
            TOTAL OUT =           3.2510             TOTAL OUT =           1.5003
 
-            IN - OUT =      -1.4699E-08              IN - OUT =      -1.2113E-09
+            IN - OUT =      -1.0947E-08              IN - OUT =      -1.4441E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -15831,9 +15833,9 @@ start timestep kper="3" kstp="15" mode="normal"
 
            TOTAL OUT =           3.3760             TOTAL OUT =           1.5003
 
-            IN - OUT =      -1.4720E-08              IN - OUT =      -2.5923E-10
+            IN - OUT =      -1.0854E-08              IN - OUT =       1.1086E-09
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -15946,7 +15948,7 @@ start timestep kper="3" kstp="16" mode="normal"
 
            TOTAL OUT =           3.5010             TOTAL OUT =           1.5003
 
-            IN - OUT =      -1.4738E-08              IN - OUT =      -2.1755E-10
+            IN - OUT =      -1.0969E-08              IN - OUT =      -1.3817E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -16061,7 +16063,7 @@ start timestep kper="3" kstp="17" mode="normal"
 
            TOTAL OUT =           3.6261             TOTAL OUT =           1.5003
 
-            IN - OUT =      -1.5006E-08              IN - OUT =      -3.2125E-09
+            IN - OUT =      -1.1278E-08              IN - OUT =      -3.7073E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -16176,7 +16178,7 @@ start timestep kper="3" kstp="18" mode="normal"
 
            TOTAL OUT =           3.7511             TOTAL OUT =           1.5004
 
-            IN - OUT =      -1.5134E-08              IN - OUT =      -1.5313E-09
+            IN - OUT =      -1.1353E-08              IN - OUT =      -8.9101E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -16291,9 +16293,9 @@ start timestep kper="3" kstp="19" mode="normal"
 
            TOTAL OUT =           3.8761             TOTAL OUT =           1.5004
 
-            IN - OUT =      -1.5131E-08              IN - OUT =       3.1925E-11
+            IN - OUT =      -1.1389E-08              IN - OUT =      -4.3374E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -16406,7 +16408,7 @@ start timestep kper="3" kstp="20" mode="normal"
 
            TOTAL OUT =           4.0012             TOTAL OUT =           1.5004
 
-            IN - OUT =      -1.5221E-08              IN - OUT =      -1.0750E-09
+            IN - OUT =      -1.1391E-08              IN - OUT =      -2.7262E-11
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -16521,7 +16523,7 @@ start timestep kper="3" kstp="21" mode="normal"
 
            TOTAL OUT =           4.1262             TOTAL OUT =           1.5004
 
-            IN - OUT =      -1.5442E-08              IN - OUT =      -2.6565E-09
+            IN - OUT =      -1.1632E-08              IN - OUT =      -2.8893E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -16636,7 +16638,7 @@ start timestep kper="3" kstp="22" mode="normal"
 
            TOTAL OUT =           4.2512             TOTAL OUT =           1.5004
 
-            IN - OUT =      -1.5552E-08              IN - OUT =      -1.3226E-09
+            IN - OUT =      -1.1708E-08              IN - OUT =      -9.1516E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -16751,9 +16753,9 @@ start timestep kper="3" kstp="23" mode="normal"
 
            TOTAL OUT =           4.3763             TOTAL OUT =           1.5004
 
-            IN - OUT =      -1.5569E-08              IN - OUT =      -1.9919E-10
+            IN - OUT =      -1.1649E-08              IN - OUT =       7.0302E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -16866,7 +16868,7 @@ start timestep kper="3" kstp="24" mode="normal"
 
            TOTAL OUT =           4.5013             TOTAL OUT =           1.5004
 
-            IN - OUT =      -1.5607E-08              IN - OUT =      -4.5975E-10
+            IN - OUT =      -1.1678E-08              IN - OUT =      -3.4334E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -16981,7 +16983,7 @@ start timestep kper="3" kstp="25" mode="normal"
 
            TOTAL OUT =           4.6263             TOTAL OUT =           1.5004
 
-            IN - OUT =      -1.5781E-08              IN - OUT =      -2.0848E-09
+            IN - OUT =      -1.1731E-08              IN - OUT =      -6.2962E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -17096,9 +17098,9 @@ start timestep kper="3" kstp="26" mode="normal"
 
            TOTAL OUT =           4.7514             TOTAL OUT =           1.5004
 
-            IN - OUT =      -1.5739E-08              IN - OUT =       5.0345E-10
+            IN - OUT =      -1.1737E-08              IN - OUT =      -7.8627E-11
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -17211,7 +17213,7 @@ start timestep kper="3" kstp="27" mode="normal"
 
            TOTAL OUT =           4.8764             TOTAL OUT =           1.5005
 
-            IN - OUT =      -1.5882E-08              IN - OUT =      -1.7231E-09
+            IN - OUT =      -1.1854E-08              IN - OUT =      -1.4030E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -17326,9 +17328,9 @@ start timestep kper="3" kstp="28" mode="normal"
 
            TOTAL OUT =           5.0014             TOTAL OUT =           1.5005
 
-            IN - OUT =      -1.5854E-08              IN - OUT =       3.3877E-10
+            IN - OUT =      -1.1874E-08              IN - OUT =      -2.4331E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -17441,7 +17443,7 @@ start timestep kper="3" kstp="29" mode="normal"
 
            TOTAL OUT =           5.1265             TOTAL OUT =           1.5005
 
-            IN - OUT =      -1.6088E-08              IN - OUT =      -2.8057E-09
+            IN - OUT =      -1.2128E-08              IN - OUT =      -3.0385E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -17556,7 +17558,7 @@ start timestep kper="3" kstp="30" mode="normal"
 
            TOTAL OUT =           5.2515             TOTAL OUT =           1.5005
 
-            IN - OUT =      -1.6276E-08              IN - OUT =      -2.2572E-09
+            IN - OUT =      -1.2340E-08              IN - OUT =      -2.5483E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -17671,7 +17673,7 @@ start timestep kper="3" kstp="31" mode="normal"
 
            TOTAL OUT =           5.3766             TOTAL OUT =           1.5005
 
-            IN - OUT =      -1.6392E-08              IN - OUT =      -1.3955E-09
+            IN - OUT =      -1.2493E-08              IN - OUT =      -1.8320E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -17786,7 +17788,7 @@ start timestep kper="3" kstp="32" mode="normal"
 
            TOTAL OUT =           5.5016             TOTAL OUT =           1.5005
 
-            IN - OUT =      -1.6494E-08              IN - OUT =      -1.2156E-09
+            IN - OUT =      -1.2557E-08              IN - OUT =      -7.7902E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -17901,7 +17903,7 @@ start timestep kper="3" kstp="33" mode="normal"
 
            TOTAL OUT =           5.6266             TOTAL OUT =           1.5005
 
-            IN - OUT =      -1.6497E-08              IN - OUT =      -3.6779E-11
+            IN - OUT =      -1.2594E-08              IN - OUT =      -4.4423E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -18016,7 +18018,7 @@ start timestep kper="3" kstp="34" mode="normal"
 
            TOTAL OUT =           5.7517             TOTAL OUT =           1.5005
 
-            IN - OUT =      -1.6627E-08              IN - OUT =      -1.5586E-09
+            IN - OUT =      -1.2673E-08              IN - OUT =      -9.4739E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -18131,9 +18133,9 @@ start timestep kper="3" kstp="35" mode="normal"
 
            TOTAL OUT =           5.8767             TOTAL OUT =           1.5006
 
-            IN - OUT =      -1.6587E-08              IN - OUT =       4.7178E-10
+            IN - OUT =      -1.2690E-08              IN - OUT =      -1.9761E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -18246,7 +18248,7 @@ start timestep kper="3" kstp="36" mode="normal"
 
            TOTAL OUT =           6.0018             TOTAL OUT =           1.5006
 
-            IN - OUT =      -1.6813E-08              IN - OUT =      -2.7119E-09
+            IN - OUT =      -1.2935E-08              IN - OUT =      -2.9447E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -18361,7 +18363,7 @@ start timestep kper="3" kstp="37" mode="normal"
 
            TOTAL OUT =           6.1268             TOTAL OUT =           1.5006
 
-            IN - OUT =      -1.7107E-08              IN - OUT =      -3.5180E-09
+            IN - OUT =      -1.3316E-08              IN - OUT =      -4.5658E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -18476,9 +18478,9 @@ start timestep kper="3" kstp="38" mode="normal"
 
            TOTAL OUT =           6.2519             TOTAL OUT =           1.5006
 
-            IN - OUT =      -1.7136E-08              IN - OUT =      -3.5213E-10
+            IN - OUT =      -1.3207E-08              IN - OUT =       1.3068E-09
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -18591,9 +18593,9 @@ start timestep kper="3" kstp="39" mode="normal"
 
            TOTAL OUT =           6.3769             TOTAL OUT =           1.5006
 
-            IN - OUT =      -1.7100E-08              IN - OUT =       4.3522E-10
+            IN - OUT =      -1.3234E-08              IN - OUT =      -3.2149E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -18706,7 +18708,7 @@ start timestep kper="3" kstp="40" mode="normal"
 
            TOTAL OUT =           6.5020             TOTAL OUT =           1.5006
 
-            IN - OUT =      -1.7172E-08              IN - OUT =      -8.7163E-10
+            IN - OUT =      -1.3258E-08              IN - OUT =      -2.8955E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -18821,9 +18823,9 @@ start timestep kper="3" kstp="41" mode="normal"
 
            TOTAL OUT =           6.6270             TOTAL OUT =           1.5006
 
-            IN - OUT =      -1.7257E-08              IN - OUT =      -1.0167E-09
+            IN - OUT =      -1.3255E-08              IN - OUT =       3.1071E-11
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -18936,9 +18938,9 @@ start timestep kper="3" kstp="42" mode="normal"
 
            TOTAL OUT =           6.7521             TOTAL OUT =           1.5006
 
-            IN - OUT =      -1.7265E-08              IN - OUT =      -9.4432E-11
+            IN - OUT =      -1.3164E-08              IN - OUT =       1.0988E-09
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -19051,7 +19053,7 @@ start timestep kper="3" kstp="43" mode="normal"
 
            TOTAL OUT =           6.8771             TOTAL OUT =           1.5007
 
-            IN - OUT =      -1.7389E-08              IN - OUT =      -1.4895E-09
+            IN - OUT =      -1.3276E-08              IN - OUT =      -1.3439E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -19166,7 +19168,7 @@ start timestep kper="3" kstp="44" mode="normal"
 
            TOTAL OUT =           7.0022             TOTAL OUT =           1.5007
 
-            IN - OUT =      -1.7549E-08              IN - OUT =      -1.9189E-09
+            IN - OUT =      -1.3440E-08              IN - OUT =      -1.9771E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -19281,7 +19283,7 @@ start timestep kper="3" kstp="45" mode="normal"
 
            TOTAL OUT =           7.1273             TOTAL OUT =           1.5007
 
-            IN - OUT =      -1.7430E-08              IN - OUT =       1.4306E-09
+            IN - OUT =      -1.3413E-08              IN - OUT =       3.2467E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -19396,9 +19398,9 @@ start timestep kper="3" kstp="46" mode="normal"
 
            TOTAL OUT =           7.2523             TOTAL OUT =           1.5007
 
-            IN - OUT =      -1.7427E-08              IN - OUT =       2.6886E-11
+            IN - OUT =      -1.3457E-08              IN - OUT =      -5.2609E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -19511,9 +19513,9 @@ start timestep kper="3" kstp="47" mode="normal"
 
            TOTAL OUT =           7.3774             TOTAL OUT =           1.5007
 
-            IN - OUT =      -1.7461E-08              IN - OUT =      -4.0548E-10
+            IN - OUT =      -1.3382E-08              IN - OUT =       9.0419E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -19626,9 +19628,9 @@ start timestep kper="3" kstp="48" mode="normal"
 
            TOTAL OUT =           7.5024             TOTAL OUT =           1.5007
 
-            IN - OUT =      -1.7485E-08              IN - OUT =      -2.8355E-10
+            IN - OUT =      -1.3308E-08              IN - OUT =       8.8060E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -19741,9 +19743,9 @@ start timestep kper="3" kstp="49" mode="normal"
 
            TOTAL OUT =           7.6275             TOTAL OUT =           1.5007
 
-            IN - OUT =      -1.7424E-08              IN - OUT =       7.3083E-10
+            IN - OUT =      -1.3349E-08              IN - OUT =      -4.9154E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -19856,7 +19858,7 @@ start timestep kper="3" kstp="50" mode="normal"
 
            TOTAL OUT =           7.7526             TOTAL OUT =           1.5007
 
-            IN - OUT =      -1.7755E-08              IN - OUT =      -3.9759E-09
+            IN - OUT =      -1.3581E-08              IN - OUT =      -2.7826E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -19971,7 +19973,7 @@ start timestep kper="3" kstp="51" mode="normal"
 
            TOTAL OUT =           7.8776             TOTAL OUT =           1.5007
 
-            IN - OUT =      -1.7800E-08              IN - OUT =      -5.3121E-10
+            IN - OUT =      -1.3613E-08              IN - OUT =      -3.8570E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -20086,7 +20088,7 @@ start timestep kper="3" kstp="52" mode="normal"
 
            TOTAL OUT =           8.0027             TOTAL OUT =           1.5008
 
-            IN - OUT =      -1.7822E-08              IN - OUT =      -2.7009E-10
+            IN - OUT =      -1.3670E-08              IN - OUT =      -6.7754E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -20201,9 +20203,9 @@ start timestep kper="3" kstp="53" mode="normal"
 
            TOTAL OUT =           8.1277             TOTAL OUT =           1.5008
 
-            IN - OUT =      -1.7936E-08              IN - OUT =      -1.3693E-09
+            IN - OUT =      -1.3660E-08              IN - OUT =       1.1499E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -20316,9 +20318,9 @@ start timestep kper="3" kstp="54" mode="normal"
 
            TOTAL OUT =           8.2528             TOTAL OUT =           1.5008
 
-            IN - OUT =      -1.7902E-08              IN - OUT =       4.1005E-10
+            IN - OUT =      -1.3682E-08              IN - OUT =      -2.5934E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -20431,9 +20433,9 @@ start timestep kper="3" kstp="55" mode="normal"
 
            TOTAL OUT =           8.3779             TOTAL OUT =           1.5008
 
-            IN - OUT =      -1.7963E-08              IN - OUT =      -7.3805E-10
+            IN - OUT =      -1.3663E-08              IN - OUT =       2.2238E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -20546,7 +20548,7 @@ start timestep kper="3" kstp="56" mode="normal"
 
            TOTAL OUT =           8.5029             TOTAL OUT =           1.5008
 
-            IN - OUT =      -1.8055E-08              IN - OUT =      -1.0998E-09
+            IN - OUT =      -1.3784E-08              IN - OUT =      -1.4491E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -20661,7 +20663,7 @@ start timestep kper="3" kstp="57" mode="normal"
 
            TOTAL OUT =           8.6280             TOTAL OUT =           1.5008
 
-            IN - OUT =      -1.8168E-08              IN - OUT =      -1.3586E-09
+            IN - OUT =      -1.4011E-08              IN - OUT =      -2.7265E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -20776,7 +20778,7 @@ start timestep kper="3" kstp="58" mode="normal"
 
            TOTAL OUT =           8.7531             TOTAL OUT =           1.5008
 
-            IN - OUT =      -1.8099E-08              IN - OUT =       8.2808E-10
+            IN - OUT =      -1.3901E-08              IN - OUT =       1.3228E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -20891,7 +20893,7 @@ start timestep kper="3" kstp="59" mode="normal"
 
            TOTAL OUT =           8.8782             TOTAL OUT =           1.5008
 
-            IN - OUT =      -1.8184E-08              IN - OUT =      -1.0151E-09
+            IN - OUT =      -1.4034E-08              IN - OUT =      -1.5972E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -21006,9 +21008,9 @@ start timestep kper="3" kstp="60" mode="normal"
 
            TOTAL OUT =           9.0032             TOTAL OUT =           1.5009
 
-            IN - OUT =      -1.8197E-08              IN - OUT =      -1.5246E-10
+            IN - OUT =      -1.4003E-08              IN - OUT =       3.7141E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -21121,7 +21123,7 @@ start timestep kper="3" kstp="61" mode="normal"
 
            TOTAL OUT =           9.1283             TOTAL OUT =           1.5009
 
-            IN - OUT =      -1.8202E-08              IN - OUT =      -5.9556E-11
+            IN - OUT =      -1.4052E-08              IN - OUT =      -5.8343E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -21236,7 +21238,7 @@ start timestep kper="3" kstp="62" mode="normal"
 
            TOTAL OUT =           9.2534             TOTAL OUT =           1.5009
 
-            IN - OUT =      -1.8473E-08              IN - OUT =      -3.2593E-09
+            IN - OUT =      -1.4268E-08              IN - OUT =      -2.5900E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -21351,7 +21353,7 @@ start timestep kper="3" kstp="63" mode="normal"
 
            TOTAL OUT =           9.3784             TOTAL OUT =           1.5009
 
-            IN - OUT =      -1.8579E-08              IN - OUT =      -1.2707E-09
+            IN - OUT =      -1.4325E-08              IN - OUT =      -6.8860E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -21466,7 +21468,7 @@ start timestep kper="3" kstp="64" mode="normal"
 
            TOTAL OUT =           9.5035             TOTAL OUT =           1.5009
 
-            IN - OUT =      -1.8736E-08              IN - OUT =      -1.8809E-09
+            IN - OUT =      -1.4535E-08              IN - OUT =      -2.5212E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -21581,7 +21583,7 @@ start timestep kper="3" kstp="65" mode="normal"
 
            TOTAL OUT =           9.6286             TOTAL OUT =           1.5009
 
-            IN - OUT =      -1.8977E-08              IN - OUT =      -2.8991E-09
+            IN - OUT =      -1.4736E-08              IN - OUT =      -2.4043E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -21696,7 +21698,7 @@ start timestep kper="3" kstp="66" mode="normal"
 
            TOTAL OUT =           9.7537             TOTAL OUT =           1.5009
 
-            IN - OUT =      -1.9172E-08              IN - OUT =      -2.3340E-09
+            IN - OUT =      -1.5008E-08              IN - OUT =      -3.2653E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -21811,7 +21813,7 @@ start timestep kper="3" kstp="67" mode="normal"
 
            TOTAL OUT =           9.8788             TOTAL OUT =           1.5009
 
-            IN - OUT =      -1.9407E-08              IN - OUT =      -2.8266E-09
+            IN - OUT =      -1.5105E-08              IN - OUT =      -1.1677E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -21926,7 +21928,7 @@ start timestep kper="3" kstp="68" mode="normal"
 
            TOTAL OUT =          10.0038             TOTAL OUT =           1.5010
 
-            IN - OUT =      -1.9628E-08              IN - OUT =      -2.6499E-09
+            IN - OUT =      -1.5260E-08              IN - OUT =      -1.8641E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -22041,7 +22043,7 @@ start timestep kper="3" kstp="69" mode="normal"
 
            TOTAL OUT =          10.1289             TOTAL OUT =           1.5010
 
-            IN - OUT =      -1.9434E-08              IN - OUT =       2.3348E-09
+            IN - OUT =      -1.5153E-08              IN - OUT =       1.2871E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -22156,7 +22158,7 @@ start timestep kper="3" kstp="70" mode="normal"
 
            TOTAL OUT =          10.2540             TOTAL OUT =           1.5010
 
-            IN - OUT =      -1.9524E-08              IN - OUT =      -1.0774E-09
+            IN - OUT =      -1.5216E-08              IN - OUT =      -7.5722E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -22271,7 +22273,7 @@ start timestep kper="3" kstp="71" mode="normal"
 
            TOTAL OUT =          10.3791             TOTAL OUT =           1.5010
 
-            IN - OUT =      -1.9506E-08              IN - OUT =       2.1568E-10
+            IN - OUT =      -1.5152E-08              IN - OUT =       7.6865E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -22386,9 +22388,9 @@ start timestep kper="3" kstp="72" mode="normal"
 
            TOTAL OUT =          10.5042             TOTAL OUT =           1.5010
 
-            IN - OUT =      -1.9501E-08              IN - OUT =       4.9510E-11
+            IN - OUT =      -1.5257E-08              IN - OUT =      -1.2602E-09
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -22501,7 +22503,7 @@ start timestep kper="3" kstp="73" mode="normal"
 
            TOTAL OUT =          10.6292             TOTAL OUT =           1.5010
 
-            IN - OUT =      -1.9708E-08              IN - OUT =      -2.4736E-09
+            IN - OUT =      -1.5303E-08              IN - OUT =      -5.5275E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -22616,9 +22618,9 @@ start timestep kper="3" kstp="74" mode="normal"
 
            TOTAL OUT =          10.7543             TOTAL OUT =           1.5010
 
-            IN - OUT =      -1.9685E-08              IN - OUT =       2.7550E-10
+            IN - OUT =      -1.5469E-08              IN - OUT =      -1.9946E-09
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -22731,7 +22733,7 @@ start timestep kper="3" kstp="75" mode="normal"
 
            TOTAL OUT =          10.8794             TOTAL OUT =           1.5010
 
-            IN - OUT =      -1.9992E-08              IN - OUT =      -3.6871E-09
+            IN - OUT =      -1.5602E-08              IN - OUT =      -1.5916E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -22846,9 +22848,9 @@ start timestep kper="3" kstp="76" mode="normal"
 
            TOTAL OUT =          11.0045             TOTAL OUT =           1.5011
 
-            IN - OUT =      -1.9977E-08              IN - OUT =       1.7861E-10
+            IN - OUT =      -1.5694E-08              IN - OUT =      -1.1020E-09
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -22961,7 +22963,7 @@ start timestep kper="3" kstp="77" mode="normal"
 
            TOTAL OUT =          11.1296             TOTAL OUT =           1.5011
 
-            IN - OUT =      -2.0044E-08              IN - OUT =      -8.0604E-10
+            IN - OUT =      -1.5705E-08              IN - OUT =      -1.3665E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -23076,7 +23078,7 @@ start timestep kper="3" kstp="78" mode="normal"
 
            TOTAL OUT =          11.2547             TOTAL OUT =           1.5011
 
-            IN - OUT =      -2.0070E-08              IN - OUT =      -3.1590E-10
+            IN - OUT =      -1.5744E-08              IN - OUT =      -4.6142E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -23191,7 +23193,7 @@ start timestep kper="3" kstp="79" mode="normal"
 
            TOTAL OUT =          11.3798             TOTAL OUT =           1.5011
 
-            IN - OUT =      -2.0054E-08              IN - OUT =       1.9925E-10
+            IN - OUT =      -1.5717E-08              IN - OUT =       3.1566E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -23306,7 +23308,7 @@ start timestep kper="3" kstp="80" mode="normal"
 
            TOTAL OUT =          11.5049             TOTAL OUT =           1.5011
 
-            IN - OUT =      -2.0212E-08              IN - OUT =      -1.9034E-09
+            IN - OUT =      -1.5917E-08              IN - OUT =      -2.3982E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -23421,9 +23423,9 @@ start timestep kper="3" kstp="81" mode="normal"
 
            TOTAL OUT =          11.6300             TOTAL OUT =           1.5011
 
-            IN - OUT =      -2.0296E-08              IN - OUT =      -1.0012E-09
+            IN - OUT =      -1.5865E-08              IN - OUT =       6.2861E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -23536,9 +23538,9 @@ start timestep kper="3" kstp="82" mode="normal"
 
            TOTAL OUT =          11.7551             TOTAL OUT =           1.5011
 
-            IN - OUT =      -2.0289E-08              IN - OUT =       8.4848E-11
+            IN - OUT =      -1.5899E-08              IN - OUT =      -4.0992E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -23651,7 +23653,7 @@ start timestep kper="3" kstp="83" mode="normal"
 
            TOTAL OUT =          11.8801             TOTAL OUT =           1.5011
 
-            IN - OUT =      -2.0423E-08              IN - OUT =      -1.6093E-09
+            IN - OUT =      -1.5992E-08              IN - OUT =      -1.1146E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -23766,7 +23768,7 @@ start timestep kper="3" kstp="84" mode="normal"
 
            TOTAL OUT =          12.0052             TOTAL OUT =           1.5012
 
-            IN - OUT =      -2.0323E-08              IN - OUT =       1.1935E-09
+            IN - OUT =      -1.5958E-08              IN - OUT =       4.0770E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -23881,7 +23883,7 @@ start timestep kper="3" kstp="85" mode="normal"
 
            TOTAL OUT =          12.1303             TOTAL OUT =           1.5012
 
-            IN - OUT =      -2.0440E-08              IN - OUT =      -1.3998E-09
+            IN - OUT =      -1.6084E-08              IN - OUT =      -1.5163E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -23996,7 +23998,7 @@ start timestep kper="3" kstp="86" mode="normal"
 
            TOTAL OUT =          12.2554             TOTAL OUT =           1.5012
 
-            IN - OUT =      -2.0764E-08              IN - OUT =      -3.8867E-09
+            IN - OUT =      -1.6510E-08              IN - OUT =      -5.1091E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -24111,9 +24113,9 @@ start timestep kper="3" kstp="87" mode="normal"
 
            TOTAL OUT =          12.3805             TOTAL OUT =           1.5012
 
-            IN - OUT =      -2.0770E-08              IN - OUT =      -7.1198E-11
+            IN - OUT =      -1.6431E-08              IN - OUT =       9.4744E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -24226,7 +24228,7 @@ start timestep kper="3" kstp="88" mode="normal"
 
            TOTAL OUT =          12.5056             TOTAL OUT =           1.5012
 
-            IN - OUT =      -2.0859E-08              IN - OUT =      -1.0706E-09
+            IN - OUT =      -1.6513E-08              IN - OUT =      -9.8330E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -24341,7 +24343,7 @@ start timestep kper="3" kstp="89" mode="normal"
 
            TOTAL OUT =          12.6307             TOTAL OUT =           1.5012
 
-            IN - OUT =      -2.1244E-08              IN - OUT =      -4.6175E-09
+            IN - OUT =      -1.6847E-08              IN - OUT =      -4.0063E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -24456,7 +24458,7 @@ start timestep kper="3" kstp="90" mode="normal"
 
            TOTAL OUT =          12.7558             TOTAL OUT =           1.5012
 
-            IN - OUT =      -2.1273E-08              IN - OUT =      -3.5427E-10
+            IN - OUT =      -1.6910E-08              IN - OUT =      -7.6173E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -24571,7 +24573,7 @@ start timestep kper="3" kstp="91" mode="normal"
 
            TOTAL OUT =          12.8809             TOTAL OUT =           1.5012
 
-            IN - OUT =      -2.1469E-08              IN - OUT =      -2.3416E-09
+            IN - OUT =      -1.7040E-08              IN - OUT =      -1.5558E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -24686,7 +24688,7 @@ start timestep kper="3" kstp="92" mode="normal"
 
            TOTAL OUT =          13.0061             TOTAL OUT =           1.5013
 
-            IN - OUT =      -2.1511E-08              IN - OUT =      -5.1414E-10
+            IN - OUT =      -1.7190E-08              IN - OUT =      -1.7947E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -24801,7 +24803,7 @@ start timestep kper="3" kstp="93" mode="normal"
 
            TOTAL OUT =          13.1312             TOTAL OUT =           1.5013
 
-            IN - OUT =      -2.1623E-08              IN - OUT =      -1.3409E-09
+            IN - OUT =      -1.7340E-08              IN - OUT =      -1.8065E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -24916,7 +24918,7 @@ start timestep kper="3" kstp="94" mode="normal"
 
            TOTAL OUT =          13.2563             TOTAL OUT =           1.5013
 
-            IN - OUT =      -2.1616E-08              IN - OUT =       9.2268E-11
+            IN - OUT =      -1.7291E-08              IN - OUT =       5.8703E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -25031,9 +25033,9 @@ start timestep kper="3" kstp="95" mode="normal"
 
            TOTAL OUT =          13.3814             TOTAL OUT =           1.5013
 
-            IN - OUT =      -2.1611E-08              IN - OUT =       4.9273E-11
+            IN - OUT =      -1.7307E-08              IN - OUT =      -1.8356E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -25146,7 +25148,7 @@ start timestep kper="3" kstp="96" mode="normal"
 
            TOTAL OUT =          13.5065             TOTAL OUT =           1.5013
 
-            IN - OUT =      -2.1771E-08              IN - OUT =      -1.9145E-09
+            IN - OUT =      -1.7439E-08              IN - OUT =      -1.5943E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -25261,7 +25263,7 @@ start timestep kper="3" kstp="97" mode="normal"
 
            TOTAL OUT =          13.6316             TOTAL OUT =           1.5013
 
-            IN - OUT =      -2.1913E-08              IN - OUT =      -1.7036E-09
+            IN - OUT =      -1.7545E-08              IN - OUT =      -1.2670E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -25376,7 +25378,7 @@ start timestep kper="3" kstp="98" mode="normal"
 
            TOTAL OUT =          13.7567             TOTAL OUT =           1.5013
 
-            IN - OUT =      -2.1981E-08              IN - OUT =      -8.1483E-10
+            IN - OUT =      -1.7664E-08              IN - OUT =      -1.4260E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -25491,7 +25493,7 @@ start timestep kper="3" kstp="99" mode="normal"
 
            TOTAL OUT =          13.8818             TOTAL OUT =           1.5013
 
-            IN - OUT =      -2.2067E-08              IN - OUT =      -1.0369E-09
+            IN - OUT =      -1.7794E-08              IN - OUT =      -1.5608E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -25606,7 +25608,7 @@ start timestep kper="3" kstp="100" mode="normal"
 
            TOTAL OUT =          14.0069             TOTAL OUT =           1.5014
 
-            IN - OUT =      -2.2300E-08              IN - OUT =      -2.7876E-09
+            IN - OUT =      -1.8014E-08              IN - OUT =      -2.6421E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -25721,7 +25723,7 @@ start timestep kper="3" kstp="101" mode="normal"
 
            TOTAL OUT =          14.1320             TOTAL OUT =           1.5014
 
-            IN - OUT =      -2.2678E-08              IN - OUT =      -4.5421E-09
+            IN - OUT =      -1.8310E-08              IN - OUT =      -3.5526E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -25836,7 +25838,7 @@ start timestep kper="3" kstp="102" mode="normal"
 
            TOTAL OUT =          14.2572             TOTAL OUT =           1.5014
 
-            IN - OUT =      -2.2976E-08              IN - OUT =      -3.5765E-09
+            IN - OUT =      -1.8598E-08              IN - OUT =      -3.4601E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -25951,9 +25953,9 @@ start timestep kper="3" kstp="103" mode="normal"
 
            TOTAL OUT =          14.3823             TOTAL OUT =           1.5014
 
-            IN - OUT =      -2.3090E-08              IN - OUT =      -1.3630E-09
+            IN - OUT =      -1.8564E-08              IN - OUT =       4.1228E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -26066,7 +26068,7 @@ start timestep kper="3" kstp="104" mode="normal"
 
            TOTAL OUT =          14.5074             TOTAL OUT =           1.5014
 
-            IN - OUT =      -2.3152E-08              IN - OUT =      -7.4311E-10
+            IN - OUT =      -1.8641E-08              IN - OUT =      -9.1774E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -26181,7 +26183,7 @@ start timestep kper="3" kstp="105" mode="normal"
 
            TOTAL OUT =          14.6325             TOTAL OUT =           1.5014
 
-            IN - OUT =      -2.3403E-08              IN - OUT =      -3.0159E-09
+            IN - OUT =      -1.8919E-08              IN - OUT =      -3.3360E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -26296,7 +26298,7 @@ start timestep kper="3" kstp="106" mode="normal"
 
            TOTAL OUT =          14.7576             TOTAL OUT =           1.5014
 
-            IN - OUT =      -2.3589E-08              IN - OUT =      -2.2335E-09
+            IN - OUT =      -1.9012E-08              IN - OUT =      -1.1276E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -26411,9 +26413,9 @@ start timestep kper="3" kstp="107" mode="normal"
 
            TOTAL OUT =          14.8827             TOTAL OUT =           1.5014
 
-            IN - OUT =      -2.3588E-08              IN - OUT =       9.7553E-12
+            IN - OUT =      -1.9152E-08              IN - OUT =      -1.6783E-09
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -26526,7 +26528,7 @@ start timestep kper="3" kstp="108" mode="normal"
 
            TOTAL OUT =          15.0079             TOTAL OUT =           1.5015
 
-            IN - OUT =      -2.3557E-08              IN - OUT =       3.7695E-10
+            IN - OUT =      -1.9038E-08              IN - OUT =       1.3665E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -26641,7 +26643,7 @@ start timestep kper="3" kstp="109" mode="normal"
 
            TOTAL OUT =          15.1330             TOTAL OUT =           1.5015
 
-            IN - OUT =      -2.3765E-08              IN - OUT =      -2.4950E-09
+            IN - OUT =      -1.9183E-08              IN - OUT =      -1.7383E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -26756,7 +26758,7 @@ start timestep kper="3" kstp="110" mode="normal"
 
            TOTAL OUT =          15.2581             TOTAL OUT =           1.5015
 
-            IN - OUT =      -2.3931E-08              IN - OUT =      -1.9957E-09
+            IN - OUT =      -1.9359E-08              IN - OUT =      -2.1121E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -26871,7 +26873,7 @@ start timestep kper="3" kstp="111" mode="normal"
 
            TOTAL OUT =          15.3832             TOTAL OUT =           1.5015
 
-            IN - OUT =      -2.4000E-08              IN - OUT =      -8.2539E-10
+            IN - OUT =      -1.9435E-08              IN - OUT =      -9.1271E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -26986,7 +26988,7 @@ start timestep kper="3" kstp="112" mode="normal"
 
            TOTAL OUT =          15.5084             TOTAL OUT =           1.5015
 
-            IN - OUT =      -2.4172E-08              IN - OUT =      -2.0676E-09
+            IN - OUT =      -1.9615E-08              IN - OUT =      -2.1549E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -27101,7 +27103,7 @@ start timestep kper="3" kstp="113" mode="normal"
 
            TOTAL OUT =          15.6335             TOTAL OUT =           1.5015
 
-            IN - OUT =      -2.4283E-08              IN - OUT =      -1.3255E-09
+            IN - OUT =      -1.9798E-08              IN - OUT =      -2.1986E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -27216,7 +27218,7 @@ start timestep kper="3" kstp="114" mode="normal"
 
            TOTAL OUT =          15.7586             TOTAL OUT =           1.5015
 
-            IN - OUT =      -2.4489E-08              IN - OUT =      -2.4725E-09
+            IN - OUT =      -1.9873E-08              IN - OUT =      -9.0086E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -27331,9 +27333,9 @@ start timestep kper="3" kstp="115" mode="normal"
 
            TOTAL OUT =          15.8838             TOTAL OUT =           1.5015
 
-            IN - OUT =      -2.4336E-08              IN - OUT =       1.8286E-09
+            IN - OUT =      -1.9883E-08              IN - OUT =      -1.2137E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -27446,7 +27448,7 @@ start timestep kper="3" kstp="116" mode="normal"
 
            TOTAL OUT =          16.0089             TOTAL OUT =           1.5016
 
-            IN - OUT =      -2.4580E-08              IN - OUT =      -2.9195E-09
+            IN - OUT =      -2.0049E-08              IN - OUT =      -1.9881E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -27561,7 +27563,7 @@ start timestep kper="3" kstp="117" mode="normal"
 
            TOTAL OUT =          16.1340             TOTAL OUT =           1.5016
 
-            IN - OUT =      -2.4670E-08              IN - OUT =      -1.0902E-09
+            IN - OUT =      -2.0074E-08              IN - OUT =      -3.0438E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -27676,7 +27678,7 @@ start timestep kper="3" kstp="118" mode="normal"
 
            TOTAL OUT =          16.2591             TOTAL OUT =           1.5016
 
-            IN - OUT =      -2.4726E-08              IN - OUT =      -6.6370E-10
+            IN - OUT =      -2.0161E-08              IN - OUT =      -1.0420E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -27791,7 +27793,7 @@ start timestep kper="3" kstp="119" mode="normal"
 
            TOTAL OUT =          16.3843             TOTAL OUT =           1.5016
 
-            IN - OUT =      -2.4902E-08              IN - OUT =      -2.1106E-09
+            IN - OUT =      -2.0313E-08              IN - OUT =      -1.8195E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -27906,7 +27908,7 @@ start timestep kper="3" kstp="120" mode="normal"
 
            TOTAL OUT =          16.5094             TOTAL OUT =           1.5016
 
-            IN - OUT =      -2.5085E-08              IN - OUT =      -2.2067E-09
+            IN - OUT =      -2.0451E-08              IN - OUT =      -1.6537E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -28023,7 +28025,7 @@ start timestep kper="4" kstp="1" mode="normal"
 
            TOTAL OUT =          16.5345             TOTAL OUT =           0.3005
 
-            IN - OUT =      -2.4955E-08              IN - OUT =       1.5701E-09
+            IN - OUT =      -2.0400E-08              IN - OUT =       6.0963E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -28138,9 +28140,9 @@ start timestep kper="4" kstp="2" mode="normal"
 
            TOTAL OUT =          16.5595             TOTAL OUT =           0.3001
 
-            IN - OUT =      -2.5004E-08              IN - OUT =      -5.8714E-10
+            IN - OUT =      -2.0376E-08              IN - OUT =       2.8597E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -28253,7 +28255,7 @@ start timestep kper="4" kstp="3" mode="normal"
 
            TOTAL OUT =          16.5844             TOTAL OUT =           0.2997
 
-            IN - OUT =      -2.4949E-08              IN - OUT =       6.5978E-10
+            IN - OUT =      -2.0294E-08              IN - OUT =       9.7992E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -28368,7 +28370,7 @@ start timestep kper="4" kstp="4" mode="normal"
 
            TOTAL OUT =          16.6094             TOTAL OUT =           0.2993
 
-            IN - OUT =      -2.4934E-08              IN - OUT =       1.7606E-10
+            IN - OUT =      -2.0246E-08              IN - OUT =       5.8352E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -28483,7 +28485,7 @@ start timestep kper="4" kstp="5" mode="normal"
 
            TOTAL OUT =          16.6343             TOTAL OUT =           0.2989
 
-            IN - OUT =      -2.4932E-08              IN - OUT =       2.4095E-11
+            IN - OUT =      -2.0205E-08              IN - OUT =       4.8976E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -28598,7 +28600,7 @@ start timestep kper="4" kstp="6" mode="normal"
 
            TOTAL OUT =          16.6592             TOTAL OUT =           0.2985
 
-            IN - OUT =      -2.4927E-08              IN - OUT =       5.4135E-11
+            IN - OUT =      -2.0176E-08              IN - OUT =       3.4517E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -28713,7 +28715,7 @@ start timestep kper="4" kstp="7" mode="normal"
 
            TOTAL OUT =          16.6840             TOTAL OUT =           0.2981
 
-            IN - OUT =      -2.4874E-08              IN - OUT =       6.4093E-10
+            IN - OUT =      -2.0116E-08              IN - OUT =       7.2824E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -28828,9 +28830,9 @@ start timestep kper="4" kstp="8" mode="normal"
 
            TOTAL OUT =          16.7088             TOTAL OUT =           0.2976
 
-            IN - OUT =      -2.4849E-08              IN - OUT =       3.0236E-10
+            IN - OUT =      -2.0199E-08              IN - OUT =      -1.0073E-09
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -28943,7 +28945,7 @@ start timestep kper="4" kstp="9" mode="normal"
 
            TOTAL OUT =          16.7336             TOTAL OUT =           0.2972
 
-            IN - OUT =      -2.4783E-08              IN - OUT =       7.9203E-10
+            IN - OUT =      -2.0143E-08              IN - OUT =       6.7561E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -29058,7 +29060,7 @@ start timestep kper="4" kstp="10" mode="normal"
 
            TOTAL OUT =          16.7583             TOTAL OUT =           0.2968
 
-            IN - OUT =      -2.4757E-08              IN - OUT =       3.0652E-10
+            IN - OUT =      -2.0089E-08              IN - OUT =       6.5577E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -29173,9 +29175,9 @@ start timestep kper="4" kstp="11" mode="normal"
 
            TOTAL OUT =          16.7830             TOTAL OUT =           0.2964
 
-            IN - OUT =      -2.4753E-08              IN - OUT =       5.3485E-11
+            IN - OUT =      -2.0200E-08              IN - OUT =      -1.3435E-09
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -29288,9 +29290,9 @@ start timestep kper="4" kstp="12" mode="normal"
 
            TOTAL OUT =          16.8077             TOTAL OUT =           0.2960
 
-            IN - OUT =      -2.4898E-08              IN - OUT =      -1.7378E-09
+            IN - OUT =      -2.0197E-08              IN - OUT =       3.7557E-11
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -29403,7 +29405,7 @@ start timestep kper="4" kstp="13" mode="normal"
 
            TOTAL OUT =          16.8323             TOTAL OUT =           0.2956
 
-            IN - OUT =      -2.4854E-08              IN - OUT =       5.2073E-10
+            IN - OUT =      -2.0115E-08              IN - OUT =       9.8639E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -29518,7 +29520,7 @@ start timestep kper="4" kstp="14" mode="normal"
 
            TOTAL OUT =          16.8569             TOTAL OUT =           0.2952
 
-            IN - OUT =      -2.4671E-08              IN - OUT =       2.2013E-09
+            IN - OUT =      -1.9987E-08              IN - OUT =       1.5319E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -29633,7 +29635,7 @@ start timestep kper="4" kstp="15" mode="normal"
 
            TOTAL OUT =          16.8815             TOTAL OUT =           0.2948
 
-            IN - OUT =      -2.4611E-08              IN - OUT =       7.1147E-10
+            IN - OUT =      -1.9960E-08              IN - OUT =       3.3312E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -29748,9 +29750,9 @@ start timestep kper="4" kstp="16" mode="normal"
 
            TOTAL OUT =          16.9060             TOTAL OUT =           0.2944
 
-            IN - OUT =      -2.4696E-08              IN - OUT =      -1.0131E-09
+            IN - OUT =      -1.9923E-08              IN - OUT =       4.4206E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -29863,9 +29865,9 @@ start timestep kper="4" kstp="17" mode="normal"
 
            TOTAL OUT =          16.9305             TOTAL OUT =           0.2940
 
-            IN - OUT =      -2.4692E-08              IN - OUT =       4.9151E-11
+            IN - OUT =      -1.9941E-08              IN - OUT =      -2.1278E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -29978,7 +29980,7 @@ start timestep kper="4" kstp="18" mode="normal"
 
            TOTAL OUT =          16.9550             TOTAL OUT =           0.2936
 
-            IN - OUT =      -2.4785E-08              IN - OUT =      -1.1156E-09
+            IN - OUT =      -1.9975E-08              IN - OUT =      -4.1713E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -30093,9 +30095,9 @@ start timestep kper="4" kstp="19" mode="normal"
 
            TOTAL OUT =          16.9794             TOTAL OUT =           0.2933
 
-            IN - OUT =      -2.4792E-08              IN - OUT =      -9.0204E-11
+            IN - OUT =      -1.9954E-08              IN - OUT =       2.5904E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -30208,7 +30210,7 @@ start timestep kper="4" kstp="20" mode="normal"
 
            TOTAL OUT =          17.0038             TOTAL OUT =           0.2929
 
-            IN - OUT =      -2.4678E-08              IN - OUT =       1.3705E-09
+            IN - OUT =      -1.9881E-08              IN - OUT =       8.7577E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -30323,7 +30325,7 @@ start timestep kper="4" kstp="21" mode="normal"
 
            TOTAL OUT =          17.0282             TOTAL OUT =           0.2925
 
-            IN - OUT =      -2.4637E-08              IN - OUT =       4.9071E-10
+            IN - OUT =      -1.9799E-08              IN - OUT =       9.8548E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -30438,7 +30440,7 @@ start timestep kper="4" kstp="22" mode="normal"
 
            TOTAL OUT =          17.0525             TOTAL OUT =           0.2921
 
-            IN - OUT =      -2.4645E-08              IN - OUT =      -9.3852E-11
+            IN - OUT =      -1.9833E-08              IN - OUT =      -4.1399E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -30553,9 +30555,9 @@ start timestep kper="4" kstp="23" mode="normal"
 
            TOTAL OUT =          17.0769             TOTAL OUT =           0.2917
 
-            IN - OUT =      -2.4637E-08              IN - OUT =       1.0049E-10
+            IN - OUT =      -1.9961E-08              IN - OUT =      -1.5293E-09
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -30668,9 +30670,9 @@ start timestep kper="4" kstp="24" mode="normal"
 
            TOTAL OUT =          17.1011             TOTAL OUT =           0.2913
 
-            IN - OUT =      -2.4650E-08              IN - OUT =      -1.6303E-10
+            IN - OUT =      -1.9952E-08              IN - OUT =       9.8908E-11
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -30783,7 +30785,7 @@ start timestep kper="4" kstp="25" mode="normal"
 
            TOTAL OUT =          17.1254             TOTAL OUT =           0.2909
 
-            IN - OUT =      -2.4563E-08              IN - OUT =       1.0517E-09
+            IN - OUT =      -1.9770E-08              IN - OUT =       2.1868E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -30898,7 +30900,7 @@ start timestep kper="4" kstp="26" mode="normal"
 
            TOTAL OUT =          17.1496             TOTAL OUT =           0.2905
 
-            IN - OUT =      -2.4528E-08              IN - OUT =       4.1196E-10
+            IN - OUT =      -1.9763E-08              IN - OUT =       9.1815E-11
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -31013,7 +31015,7 @@ start timestep kper="4" kstp="27" mode="normal"
 
            TOTAL OUT =          17.1738             TOTAL OUT =           0.2901
 
-            IN - OUT =      -2.4500E-08              IN - OUT =       3.4460E-10
+            IN - OUT =      -1.9705E-08              IN - OUT =       6.9384E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -31128,9 +31130,9 @@ start timestep kper="4" kstp="28" mode="normal"
 
            TOTAL OUT =          17.1979             TOTAL OUT =           0.2898
 
-            IN - OUT =      -2.4498E-08              IN - OUT =       1.8312E-11
+            IN - OUT =      -1.9769E-08              IN - OUT =      -7.6749E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -31243,7 +31245,7 @@ start timestep kper="4" kstp="29" mode="normal"
 
            TOTAL OUT =          17.2220             TOTAL OUT =           0.2894
 
-            IN - OUT =      -2.4738E-08              IN - OUT =      -2.8825E-09
+            IN - OUT =      -1.9982E-08              IN - OUT =      -2.5623E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -31358,9 +31360,9 @@ start timestep kper="4" kstp="30" mode="normal"
 
            TOTAL OUT =          17.2461             TOTAL OUT =           0.2890
 
-            IN - OUT =      -2.4740E-08              IN - OUT =      -2.4082E-11
+            IN - OUT =      -1.9899E-08              IN - OUT =       9.9455E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -31473,7 +31475,7 @@ start timestep kper="4" kstp="31" mode="normal"
 
            TOTAL OUT =          17.2702             TOTAL OUT =           0.2886
 
-            IN - OUT =      -2.4865E-08              IN - OUT =      -1.4931E-09
+            IN - OUT =      -1.9929E-08              IN - OUT =      -3.5804E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -31588,7 +31590,7 @@ start timestep kper="4" kstp="32" mode="normal"
 
            TOTAL OUT =          17.2942             TOTAL OUT =           0.2882
 
-            IN - OUT =      -2.4727E-08              IN - OUT =       1.6531E-09
+            IN - OUT =      -1.9859E-08              IN - OUT =       8.3822E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -31703,7 +31705,7 @@ start timestep kper="4" kstp="33" mode="normal"
 
            TOTAL OUT =          17.3182             TOTAL OUT =           0.2878
 
-            IN - OUT =      -2.4863E-08              IN - OUT =      -1.6361E-09
+            IN - OUT =      -1.9967E-08              IN - OUT =      -1.2869E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -31818,9 +31820,9 @@ start timestep kper="4" kstp="34" mode="normal"
 
            TOTAL OUT =          17.3421             TOTAL OUT =           0.2875
 
-            IN - OUT =      -2.4805E-08              IN - OUT =       6.9816E-10
+            IN - OUT =      -1.9996E-08              IN - OUT =      -3.4957E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -31933,7 +31935,7 @@ start timestep kper="4" kstp="35" mode="normal"
 
            TOTAL OUT =          17.3660             TOTAL OUT =           0.2871
 
-            IN - OUT =      -2.4779E-08              IN - OUT =       3.1159E-10
+            IN - OUT =      -1.9880E-08              IN - OUT =       1.3884E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -32048,7 +32050,7 @@ start timestep kper="4" kstp="36" mode="normal"
 
            TOTAL OUT =          17.3899             TOTAL OUT =           0.2867
 
-            IN - OUT =      -2.4769E-08              IN - OUT =       1.2126E-10
+            IN - OUT =      -1.9846E-08              IN - OUT =       4.1230E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -32163,7 +32165,7 @@ start timestep kper="4" kstp="37" mode="normal"
 
            TOTAL OUT =          17.4138             TOTAL OUT =           0.2863
 
-            IN - OUT =      -2.4605E-08              IN - OUT =       1.9708E-09
+            IN - OUT =      -1.9737E-08              IN - OUT =       1.3015E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -32278,7 +32280,7 @@ start timestep kper="4" kstp="38" mode="normal"
 
            TOTAL OUT =          17.4376             TOTAL OUT =           0.2860
 
-            IN - OUT =      -2.4516E-08              IN - OUT =       1.0639E-09
+            IN - OUT =      -1.9644E-08              IN - OUT =       1.1221E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -32393,7 +32395,7 @@ start timestep kper="4" kstp="39" mode="normal"
 
            TOTAL OUT =          17.4614             TOTAL OUT =           0.2856
 
-            IN - OUT =      -2.4480E-08              IN - OUT =       4.3436E-10
+            IN - OUT =      -1.9583E-08              IN - OUT =       7.2540E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -32508,9 +32510,9 @@ start timestep kper="4" kstp="40" mode="normal"
 
            TOTAL OUT =          17.4852             TOTAL OUT =           0.2852
 
-            IN - OUT =      -2.4409E-08              IN - OUT =       8.4530E-10
+            IN - OUT =      -1.9598E-08              IN - OUT =      -1.7334E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -32623,9 +32625,9 @@ start timestep kper="4" kstp="41" mode="normal"
 
            TOTAL OUT =          17.5089             TOTAL OUT =           0.2849
 
-            IN - OUT =      -2.4542E-08              IN - OUT =      -1.5947E-09
+            IN - OUT =      -1.9500E-08              IN - OUT =       1.1702E-09
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -32738,7 +32740,7 @@ start timestep kper="4" kstp="42" mode="normal"
 
            TOTAL OUT =          17.5326             TOTAL OUT =           0.2845
 
-            IN - OUT =      -2.4560E-08              IN - OUT =      -2.1389E-10
+            IN - OUT =      -1.9617E-08              IN - OUT =      -1.4071E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -32853,7 +32855,7 @@ start timestep kper="4" kstp="43" mode="normal"
 
            TOTAL OUT =          17.5563             TOTAL OUT =           0.2841
 
-            IN - OUT =      -2.4605E-08              IN - OUT =      -5.3625E-10
+            IN - OUT =      -1.9677E-08              IN - OUT =      -7.1087E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -32968,7 +32970,7 @@ start timestep kper="4" kstp="44" mode="normal"
 
            TOTAL OUT =          17.5800             TOTAL OUT =           0.2837
 
-            IN - OUT =      -2.4638E-08              IN - OUT =      -3.9897E-10
+            IN - OUT =      -1.9734E-08              IN - OUT =      -6.9000E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -33083,7 +33085,7 @@ start timestep kper="4" kstp="45" mode="normal"
 
            TOTAL OUT =          17.6036             TOTAL OUT =           0.2834
 
-            IN - OUT =      -2.4638E-08              IN - OUT =      -7.5517E-13
+            IN - OUT =      -1.9846E-08              IN - OUT =      -1.3395E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -33198,7 +33200,7 @@ start timestep kper="4" kstp="46" mode="normal"
 
            TOTAL OUT =          17.6272             TOTAL OUT =           0.2830
 
-            IN - OUT =      -2.4377E-08              IN - OUT =       3.1389E-09
+            IN - OUT =      -1.9594E-08              IN - OUT =       3.0225E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -33313,7 +33315,7 @@ start timestep kper="4" kstp="47" mode="normal"
 
            TOTAL OUT =          17.6507             TOTAL OUT =           0.2827
 
-            IN - OUT =      -2.4556E-08              IN - OUT =      -2.1490E-09
+            IN - OUT =      -1.9812E-08              IN - OUT =      -2.6147E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -33428,9 +33430,9 @@ start timestep kper="4" kstp="48" mode="normal"
 
            TOTAL OUT =          17.6742             TOTAL OUT =           0.2823
 
-            IN - OUT =      -2.4647E-08              IN - OUT =      -1.1011E-09
+            IN - OUT =      -1.9780E-08              IN - OUT =       3.8321E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -33543,9 +33545,9 @@ start timestep kper="4" kstp="49" mode="normal"
 
            TOTAL OUT =          17.6977             TOTAL OUT =           0.2819
 
-            IN - OUT =      -2.4625E-08              IN - OUT =       2.6530E-10
+            IN - OUT =      -1.9792E-08              IN - OUT =      -1.4215E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -33658,7 +33660,7 @@ start timestep kper="4" kstp="50" mode="normal"
 
            TOTAL OUT =          17.7212             TOTAL OUT =           0.2816
 
-            IN - OUT =      -2.4535E-08              IN - OUT =       1.0864E-09
+            IN - OUT =      -1.9769E-08              IN - OUT =       2.7147E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -33773,7 +33775,7 @@ start timestep kper="4" kstp="51" mode="normal"
 
            TOTAL OUT =          17.7446             TOTAL OUT =           0.2812
 
-            IN - OUT =      -2.4375E-08              IN - OUT =       1.9211E-09
+            IN - OUT =      -1.9633E-08              IN - OUT =       1.6301E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -33888,7 +33890,7 @@ start timestep kper="4" kstp="52" mode="normal"
 
            TOTAL OUT =          17.7680             TOTAL OUT =           0.2808
 
-            IN - OUT =      -2.4352E-08              IN - OUT =       2.7487E-10
+            IN - OUT =      -1.9455E-08              IN - OUT =       2.1375E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -34003,7 +34005,7 @@ start timestep kper="4" kstp="53" mode="normal"
 
            TOTAL OUT =          17.7914             TOTAL OUT =           0.2805
 
-            IN - OUT =      -2.4476E-08              IN - OUT =      -1.4879E-09
+            IN - OUT =      -1.9635E-08              IN - OUT =      -2.1573E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -34118,7 +34120,7 @@ start timestep kper="4" kstp="54" mode="normal"
 
            TOTAL OUT =          17.8148             TOTAL OUT =           0.2801
 
-            IN - OUT =      -2.4414E-08              IN - OUT =       7.4548E-10
+            IN - OUT =      -1.9619E-08              IN - OUT =       1.9251E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -34233,7 +34235,7 @@ start timestep kper="4" kstp="55" mode="normal"
 
            TOTAL OUT =          17.8381             TOTAL OUT =           0.2798
 
-            IN - OUT =      -2.4443E-08              IN - OUT =      -3.5048E-10
+            IN - OUT =      -1.9718E-08              IN - OUT =      -1.1945E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -34348,7 +34350,7 @@ start timestep kper="4" kstp="56" mode="normal"
 
            TOTAL OUT =          17.8614             TOTAL OUT =           0.2794
 
-            IN - OUT =      -2.4440E-08              IN - OUT =       3.5908E-11
+            IN - OUT =      -1.9677E-08              IN - OUT =       5.0157E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -34463,7 +34465,7 @@ start timestep kper="4" kstp="57" mode="normal"
 
            TOTAL OUT =          17.8846             TOTAL OUT =           0.2791
 
-            IN - OUT =      -2.4513E-08              IN - OUT =      -8.7887E-10
+            IN - OUT =      -1.9786E-08              IN - OUT =      -1.3154E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -34578,7 +34580,7 @@ start timestep kper="4" kstp="58" mode="normal"
 
            TOTAL OUT =          17.9078             TOTAL OUT =           0.2787
 
-            IN - OUT =      -2.4620E-08              IN - OUT =      -1.2828E-09
+            IN - OUT =      -1.9857E-08              IN - OUT =      -8.4622E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -34693,7 +34695,7 @@ start timestep kper="4" kstp="59" mode="normal"
 
            TOTAL OUT =          17.9310             TOTAL OUT =           0.2784
 
-            IN - OUT =      -2.4426E-08              IN - OUT =       2.3283E-09
+            IN - OUT =      -1.9692E-08              IN - OUT =       1.9791E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -34808,7 +34810,7 @@ start timestep kper="4" kstp="60" mode="normal"
 
            TOTAL OUT =          17.9542             TOTAL OUT =           0.2780
 
-            IN - OUT =      -2.4493E-08              IN - OUT =      -8.0363E-10
+            IN - OUT =      -1.9737E-08              IN - OUT =      -5.4170E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -34923,7 +34925,7 @@ start timestep kper="4" kstp="61" mode="normal"
 
            TOTAL OUT =          17.9773             TOTAL OUT =           0.2776
 
-            IN - OUT =      -2.4303E-08              IN - OUT =       2.2823E-09
+            IN - OUT =      -1.9634E-08              IN - OUT =       1.2345E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -35038,9 +35040,9 @@ start timestep kper="4" kstp="62" mode="normal"
 
            TOTAL OUT =          18.0004             TOTAL OUT =           0.2773
 
-            IN - OUT =      -2.4391E-08              IN - OUT =      -1.0596E-09
+            IN - OUT =      -1.9633E-08              IN - OUT =       1.7270E-11
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -35153,7 +35155,7 @@ start timestep kper="4" kstp="63" mode="normal"
 
            TOTAL OUT =          18.0235             TOTAL OUT =           0.2769
 
-            IN - OUT =      -2.4500E-08              IN - OUT =      -1.3036E-09
+            IN - OUT =      -1.9775E-08              IN - OUT =      -1.7111E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -35268,7 +35270,7 @@ start timestep kper="4" kstp="64" mode="normal"
 
            TOTAL OUT =          18.0466             TOTAL OUT =           0.2766
 
-            IN - OUT =      -2.4532E-08              IN - OUT =      -3.8643E-10
+            IN - OUT =      -1.9849E-08              IN - OUT =      -8.8119E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -35383,7 +35385,7 @@ start timestep kper="4" kstp="65" mode="normal"
 
            TOTAL OUT =          18.0696             TOTAL OUT =           0.2763
 
-            IN - OUT =      -2.4613E-08              IN - OUT =      -9.7256E-10
+            IN - OUT =      -1.9881E-08              IN - OUT =      -3.9048E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -35498,7 +35500,7 @@ start timestep kper="4" kstp="66" mode="normal"
 
            TOTAL OUT =          18.0926             TOTAL OUT =           0.2759
 
-            IN - OUT =      -2.4515E-08              IN - OUT =       1.1720E-09
+            IN - OUT =      -1.9769E-08              IN - OUT =       1.3466E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -35613,7 +35615,7 @@ start timestep kper="4" kstp="67" mode="normal"
 
            TOTAL OUT =          18.1155             TOTAL OUT =           0.2756
 
-            IN - OUT =      -2.4592E-08              IN - OUT =      -9.2561E-10
+            IN - OUT =      -1.9955E-08              IN - OUT =      -2.2353E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -35728,7 +35730,7 @@ start timestep kper="4" kstp="68" mode="normal"
 
            TOTAL OUT =          18.1385             TOTAL OUT =           0.2752
 
-            IN - OUT =      -2.4537E-08              IN - OUT =       6.6604E-10
+            IN - OUT =      -1.9779E-08              IN - OUT =       2.1212E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -35843,7 +35845,7 @@ start timestep kper="4" kstp="69" mode="normal"
 
            TOTAL OUT =          18.1614             TOTAL OUT =           0.2749
 
-            IN - OUT =      -2.4346E-08              IN - OUT =       2.2940E-09
+            IN - OUT =      -1.9660E-08              IN - OUT =       1.4209E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -35958,7 +35960,7 @@ start timestep kper="4" kstp="70" mode="normal"
 
            TOTAL OUT =          18.1843             TOTAL OUT =           0.2745
 
-            IN - OUT =      -2.4400E-08              IN - OUT =      -6.5229E-10
+            IN - OUT =      -1.9707E-08              IN - OUT =      -5.6498E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -36073,7 +36075,7 @@ start timestep kper="4" kstp="71" mode="normal"
 
            TOTAL OUT =          18.2071             TOTAL OUT =           0.2742
 
-            IN - OUT =      -2.4074E-08              IN - OUT =       3.9182E-09
+            IN - OUT =      -1.9359E-08              IN - OUT =       4.1801E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -36188,7 +36190,7 @@ start timestep kper="4" kstp="72" mode="normal"
 
            TOTAL OUT =          18.2299             TOTAL OUT =           0.2738
 
-            IN - OUT =      -2.4276E-08              IN - OUT =      -2.4292E-09
+            IN - OUT =      -1.9615E-08              IN - OUT =      -3.0695E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -36303,7 +36305,7 @@ start timestep kper="4" kstp="73" mode="normal"
 
            TOTAL OUT =          18.2527             TOTAL OUT =           0.2735
 
-            IN - OUT =      -2.4267E-08              IN - OUT =       1.1386E-10
+            IN - OUT =      -1.9574E-08              IN - OUT =       4.9221E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -36418,7 +36420,7 @@ start timestep kper="4" kstp="74" mode="normal"
 
            TOTAL OUT =          18.2755             TOTAL OUT =           0.2732
 
-            IN - OUT =      -2.4050E-08              IN - OUT =       2.6014E-09
+            IN - OUT =      -1.9415E-08              IN - OUT =       1.9029E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -36533,9 +36535,9 @@ start timestep kper="4" kstp="75" mode="normal"
 
            TOTAL OUT =          18.2982             TOTAL OUT =           0.2728
 
-            IN - OUT =      -2.4046E-08              IN - OUT =       4.3475E-11
+            IN - OUT =      -1.9455E-08              IN - OUT =      -4.8039E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -36648,7 +36650,7 @@ start timestep kper="4" kstp="76" mode="normal"
 
            TOTAL OUT =          18.3209             TOTAL OUT =           0.2725
 
-            IN - OUT =      -2.4304E-08              IN - OUT =      -3.0882E-09
+            IN - OUT =      -1.9657E-08              IN - OUT =      -2.4188E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -36763,9 +36765,9 @@ start timestep kper="4" kstp="77" mode="normal"
 
            TOTAL OUT =          18.3436             TOTAL OUT =           0.2722
 
-            IN - OUT =      -2.4262E-08              IN - OUT =       5.0052E-10
+            IN - OUT =      -1.9673E-08              IN - OUT =      -1.9797E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -36878,7 +36880,7 @@ start timestep kper="4" kstp="78" mode="normal"
 
            TOTAL OUT =          18.3663             TOTAL OUT =           0.2718
 
-            IN - OUT =      -2.4249E-08              IN - OUT =       1.5192E-10
+            IN - OUT =      -1.9653E-08              IN - OUT =       2.3924E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -36993,7 +36995,7 @@ start timestep kper="4" kstp="79" mode="normal"
 
            TOTAL OUT =          18.3889             TOTAL OUT =           0.2715
 
-            IN - OUT =      -2.4241E-08              IN - OUT =       1.0098E-10
+            IN - OUT =      -1.9628E-08              IN - OUT =       3.0471E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -37108,7 +37110,7 @@ start timestep kper="4" kstp="80" mode="normal"
 
            TOTAL OUT =          18.4115             TOTAL OUT =           0.2712
 
-            IN - OUT =      -2.4217E-08              IN - OUT =       2.8376E-10
+            IN - OUT =      -1.9597E-08              IN - OUT =       3.7107E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -37223,7 +37225,7 @@ start timestep kper="4" kstp="81" mode="normal"
 
            TOTAL OUT =          18.4341             TOTAL OUT =           0.2708
 
-            IN - OUT =      -2.4171E-08              IN - OUT =       5.4759E-10
+            IN - OUT =      -1.9571E-08              IN - OUT =       3.1476E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -37338,7 +37340,7 @@ start timestep kper="4" kstp="82" mode="normal"
 
            TOTAL OUT =          18.4566             TOTAL OUT =           0.2705
 
-            IN - OUT =      -2.4319E-08              IN - OUT =      -1.7655E-09
+            IN - OUT =      -1.9572E-08              IN - OUT =      -1.9303E-11
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -37453,7 +37455,7 @@ start timestep kper="4" kstp="83" mode="normal"
 
            TOTAL OUT =          18.4791             TOTAL OUT =           0.2702
 
-            IN - OUT =      -2.4498E-08              IN - OUT =      -2.1514E-09
+            IN - OUT =      -1.9834E-08              IN - OUT =      -3.1409E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -37568,9 +37570,9 @@ start timestep kper="4" kstp="84" mode="normal"
 
            TOTAL OUT =          18.5016             TOTAL OUT =           0.2698
 
-            IN - OUT =      -2.4518E-08              IN - OUT =      -2.3773E-10
+            IN - OUT =      -1.9762E-08              IN - OUT =       8.6821E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -37683,7 +37685,7 @@ start timestep kper="4" kstp="85" mode="normal"
 
            TOTAL OUT =          18.5241             TOTAL OUT =           0.2695
 
-            IN - OUT =      -2.4660E-08              IN - OUT =      -1.7065E-09
+            IN - OUT =      -1.9783E-08              IN - OUT =      -2.5130E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -37798,7 +37800,7 @@ start timestep kper="4" kstp="86" mode="normal"
 
            TOTAL OUT =          18.5465             TOTAL OUT =           0.2692
 
-            IN - OUT =      -2.4743E-08              IN - OUT =      -1.0019E-09
+            IN - OUT =      -1.9975E-08              IN - OUT =      -2.3116E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -37913,9 +37915,9 @@ start timestep kper="4" kstp="87" mode="normal"
 
            TOTAL OUT =          18.5689             TOTAL OUT =           0.2688
 
-            IN - OUT =      -2.4772E-08              IN - OUT =      -3.4180E-10
+            IN - OUT =      -1.9827E-08              IN - OUT =       1.7828E-09
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -38028,7 +38030,7 @@ start timestep kper="4" kstp="88" mode="normal"
 
            TOTAL OUT =          18.5913             TOTAL OUT =           0.2685
 
-            IN - OUT =      -2.4665E-08              IN - OUT =       1.2870E-09
+            IN - OUT =      -1.9790E-08              IN - OUT =       4.4297E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -38143,7 +38145,7 @@ start timestep kper="4" kstp="89" mode="normal"
 
            TOTAL OUT =          18.6136             TOTAL OUT =           0.2682
 
-            IN - OUT =      -2.4654E-08              IN - OUT =       1.2736E-10
+            IN - OUT =      -1.9699E-08              IN - OUT =       1.0878E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -38258,7 +38260,7 @@ start timestep kper="4" kstp="90" mode="normal"
 
            TOTAL OUT =          18.6359             TOTAL OUT =           0.2679
 
-            IN - OUT =      -2.4810E-08              IN - OUT =      -1.8723E-09
+            IN - OUT =      -2.0035E-08              IN - OUT =      -4.0260E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -38373,7 +38375,7 @@ start timestep kper="4" kstp="91" mode="normal"
 
            TOTAL OUT =          18.6582             TOTAL OUT =           0.2676
 
-            IN - OUT =      -2.5089E-08              IN - OUT =      -3.3502E-09
+            IN - OUT =      -2.0268E-08              IN - OUT =      -2.7973E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -38488,7 +38490,7 @@ start timestep kper="4" kstp="92" mode="normal"
 
            TOTAL OUT =          18.6805             TOTAL OUT =           0.2672
 
-            IN - OUT =      -2.5123E-08              IN - OUT =      -4.0561E-10
+            IN - OUT =      -2.0374E-08              IN - OUT =      -1.2787E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -38603,7 +38605,7 @@ start timestep kper="4" kstp="93" mode="normal"
 
            TOTAL OUT =          18.7027             TOTAL OUT =           0.2669
 
-            IN - OUT =      -2.4973E-08              IN - OUT =       1.8065E-09
+            IN - OUT =      -2.0197E-08              IN - OUT =       2.1267E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -38718,7 +38720,7 @@ start timestep kper="4" kstp="94" mode="normal"
 
            TOTAL OUT =          18.7250             TOTAL OUT =           0.2666
 
-            IN - OUT =      -2.5079E-08              IN - OUT =      -1.2830E-09
+            IN - OUT =      -2.0297E-08              IN - OUT =      -1.1957E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -38833,7 +38835,7 @@ start timestep kper="4" kstp="95" mode="normal"
 
            TOTAL OUT =          18.7472             TOTAL OUT =           0.2663
 
-            IN - OUT =      -2.5238E-08              IN - OUT =      -1.9043E-09
+            IN - OUT =      -2.0303E-08              IN - OUT =      -7.0784E-11
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -38948,9 +38950,9 @@ start timestep kper="4" kstp="96" mode="normal"
 
            TOTAL OUT =          18.7693             TOTAL OUT =           0.2659
 
-            IN - OUT =      -2.5202E-08              IN - OUT =       4.3763E-10
+            IN - OUT =      -2.0336E-08              IN - OUT =      -4.0638E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
 
 
@@ -39063,7 +39065,7 @@ start timestep kper="4" kstp="97" mode="normal"
 
            TOTAL OUT =          18.7914             TOTAL OUT =           0.2656
 
-            IN - OUT =      -2.5373E-08              IN - OUT =      -2.0577E-09
+            IN - OUT =      -2.0392E-08              IN - OUT =      -6.6067E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -39178,7 +39180,7 @@ start timestep kper="4" kstp="98" mode="normal"
 
            TOTAL OUT =          18.8136             TOTAL OUT =           0.2653
 
-            IN - OUT =      -2.5445E-08              IN - OUT =      -8.6053E-10
+            IN - OUT =      -2.0546E-08              IN - OUT =      -1.8501E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -39293,7 +39295,7 @@ start timestep kper="4" kstp="99" mode="normal"
 
            TOTAL OUT =          18.8356             TOTAL OUT =           0.2650
 
-            IN - OUT =      -2.5582E-08              IN - OUT =      -1.6462E-09
+            IN - OUT =      -2.0598E-08              IN - OUT =      -6.2754E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -39408,7 +39410,7 @@ start timestep kper="4" kstp="100" mode="normal"
 
            TOTAL OUT =          18.8577             TOTAL OUT =           0.2647
 
-            IN - OUT =      -2.5714E-08              IN - OUT =      -1.5887E-09
+            IN - OUT =      -2.0670E-08              IN - OUT =      -8.6114E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -39523,7 +39525,7 @@ start timestep kper="4" kstp="101" mode="normal"
 
            TOTAL OUT =          18.8797             TOTAL OUT =           0.2644
 
-            IN - OUT =      -2.5796E-08              IN - OUT =      -9.7709E-10
+            IN - OUT =      -2.0763E-08              IN - OUT =      -1.1226E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -39638,7 +39640,7 @@ start timestep kper="4" kstp="102" mode="normal"
 
            TOTAL OUT =          18.9017             TOTAL OUT =           0.2641
 
-            IN - OUT =      -2.5756E-08              IN - OUT =       4.8256E-10
+            IN - OUT =      -2.0701E-08              IN - OUT =       7.4449E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -39753,7 +39755,7 @@ start timestep kper="4" kstp="103" mode="normal"
 
            TOTAL OUT =          18.9237             TOTAL OUT =           0.2637
 
-            IN - OUT =      -2.5860E-08              IN - OUT =      -1.2522E-09
+            IN - OUT =      -2.0898E-08              IN - OUT =      -2.3581E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -39868,7 +39870,7 @@ start timestep kper="4" kstp="104" mode="normal"
 
            TOTAL OUT =          18.9457             TOTAL OUT =           0.2634
 
-            IN - OUT =      -2.6159E-08              IN - OUT =      -3.5864E-09
+            IN - OUT =      -2.1000E-08              IN - OUT =      -1.2290E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -39983,7 +39985,7 @@ start timestep kper="4" kstp="105" mode="normal"
 
            TOTAL OUT =          18.9676             TOTAL OUT =           0.2631
 
-            IN - OUT =      -2.6151E-08              IN - OUT =       9.1445E-11
+            IN - OUT =      -2.0956E-08              IN - OUT =       5.2800E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -40098,7 +40100,7 @@ start timestep kper="4" kstp="106" mode="normal"
 
            TOTAL OUT =          18.9895             TOTAL OUT =           0.2628
 
-            IN - OUT =      -2.6204E-08              IN - OUT =      -6.3504E-10
+            IN - OUT =      -2.1079E-08              IN - OUT =      -1.4791E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -40213,7 +40215,7 @@ start timestep kper="4" kstp="107" mode="normal"
 
            TOTAL OUT =          19.0114             TOTAL OUT =           0.2625
 
-            IN - OUT =      -2.6369E-08              IN - OUT =      -1.9762E-09
+            IN - OUT =      -2.1239E-08              IN - OUT =      -1.9179E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -40328,7 +40330,7 @@ start timestep kper="4" kstp="108" mode="normal"
 
            TOTAL OUT =          19.0332             TOTAL OUT =           0.2622
 
-            IN - OUT =      -2.6289E-08              IN - OUT =       9.6298E-10
+            IN - OUT =      -2.1178E-08              IN - OUT =       7.3014E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -40443,7 +40445,7 @@ start timestep kper="4" kstp="109" mode="normal"
 
            TOTAL OUT =          19.0550             TOTAL OUT =           0.2619
 
-            IN - OUT =      -2.6390E-08              IN - OUT =      -1.2129E-09
+            IN - OUT =      -2.1328E-08              IN - OUT =      -1.7950E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -40558,7 +40560,7 @@ start timestep kper="4" kstp="110" mode="normal"
 
            TOTAL OUT =          19.0768             TOTAL OUT =           0.2616
 
-            IN - OUT =      -2.6409E-08              IN - OUT =      -2.3026E-10
+            IN - OUT =      -2.1420E-08              IN - OUT =      -1.1034E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -40673,7 +40675,7 @@ start timestep kper="4" kstp="111" mode="normal"
 
            TOTAL OUT =          19.0986             TOTAL OUT =           0.2613
 
-            IN - OUT =      -2.6521E-08              IN - OUT =      -1.3507E-09
+            IN - OUT =      -2.1436E-08              IN - OUT =      -1.8659E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -40788,7 +40790,7 @@ start timestep kper="4" kstp="112" mode="normal"
 
            TOTAL OUT =          19.1204             TOTAL OUT =           0.2610
 
-            IN - OUT =      -2.6439E-08              IN - OUT =       9.9345E-10
+            IN - OUT =      -2.1384E-08              IN - OUT =       6.1510E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -40903,9 +40905,9 @@ start timestep kper="4" kstp="113" mode="normal"
 
            TOTAL OUT =          19.1421             TOTAL OUT =           0.2607
 
-            IN - OUT =      -2.6509E-08              IN - OUT =      -8.4646E-10
+            IN - OUT =      -2.1377E-08              IN - OUT =       8.4864E-11
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -41018,7 +41020,7 @@ start timestep kper="4" kstp="114" mode="normal"
 
            TOTAL OUT =          19.1638             TOTAL OUT =           0.2603
 
-            IN - OUT =      -2.6363E-08              IN - OUT =       1.7530E-09
+            IN - OUT =      -2.1306E-08              IN - OUT =       8.5080E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
@@ -41133,7 +41135,7 @@ start timestep kper="4" kstp="115" mode="normal"
 
            TOTAL OUT =          19.1854             TOTAL OUT =           0.2600
 
-            IN - OUT =      -2.6420E-08              IN - OUT =      -6.8602E-10
+            IN - OUT =      -2.1434E-08              IN - OUT =      -1.5300E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -41248,9 +41250,9 @@ start timestep kper="4" kstp="116" mode="normal"
 
            TOTAL OUT =          19.2071             TOTAL OUT =           0.2597
 
-            IN - OUT =      -2.6498E-08              IN - OUT =      -9.3761E-10
+            IN - OUT =      -2.1417E-08              IN - OUT =       1.9744E-10
 
- PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
+ PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =           0.00
 
 
 
@@ -41363,7 +41365,7 @@ start timestep kper="4" kstp="117" mode="normal"
 
            TOTAL OUT =          19.2287             TOTAL OUT =           0.2594
 
-            IN - OUT =      -2.6599E-08              IN - OUT =      -1.2042E-09
+            IN - OUT =      -2.1486E-08              IN - OUT =      -8.2585E-10
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -41478,7 +41480,7 @@ start timestep kper="4" kstp="118" mode="normal"
 
            TOTAL OUT =          19.2503             TOTAL OUT =           0.2591
 
-            IN - OUT =      -2.6719E-08              IN - OUT =      -1.4477E-09
+            IN - OUT =      -2.1672E-08              IN - OUT =      -2.2335E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -41593,7 +41595,7 @@ start timestep kper="4" kstp="119" mode="normal"
 
            TOTAL OUT =          19.2719             TOTAL OUT =           0.2588
 
-            IN - OUT =      -2.6916E-08              IN - OUT =      -2.3541E-09
+            IN - OUT =      -2.1864E-08              IN - OUT =      -2.2959E-09
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 
@@ -41708,7 +41710,7 @@ start timestep kper="4" kstp="120" mode="normal"
 
            TOTAL OUT =          19.2934             TOTAL OUT =           0.2585
 
-            IN - OUT =      -2.6970E-08              IN - OUT =      -6.5408E-10
+            IN - OUT =      -2.1865E-08              IN - OUT =      -1.3792E-11
 
  PERCENT DISCREPANCY =          -0.00     PERCENT DISCREPANCY =          -0.00
 

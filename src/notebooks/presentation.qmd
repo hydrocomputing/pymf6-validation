@@ -1,0 +1,86 @@
+---
+title: "Modflow 6 Lab: Customizing for Flow, Transport and Geothermal Modeling"
+format: revealjs
+---
+
+# Workshop 
+
+## Modflow 6 Lab Ws Overview
+
+# MODFLOW 6 Lab: Customizing for Flow, Transport and Geothermal Modeling
+
+This workshop explores how to extend the capabilities of MODFLOW 6 for advanced groundwater, solute transport, and geothermal modeling. Participants will learn how to use Python and the pymf6 library to implement custom boundary conditions, such as direction-dependent riverbed conductance, and couple MODFLOW with external models or analytical solutions. The focus is on practical, flexible tools to solve complex subsurface problems with minimal code and maximum adaptability.
+
+
+## Co-organizers
+
+![Hydrocomputing](logo_hydrocomputing.png)
+
+![TUBAF](tubaf_logo.png)
+
+![DBU](DBU_logo.png)
+
+![FHDGGV](FHDGGV-Logo.jpg)
+
+## Introduction round
+
+*Speakers*: 
+
+Dr.-Ing. Mike Müller (hydrocomputing): developer of pymf6
+
+Lúcia Pedrosa (TUBAF): developer of pymf6-based model features
+
+# Program
+
+## Thursday: 
+9:30 – 9:45 Welcome & Introduction
+
+9:45 -10:30 Technical set-up
+
+10:30 -10:45 Break
+
+10:45 – 12:00 pymf6 Principles
+
+12:00 – 13:00 Lunch
+
+13:00 – 15:00 Scenario flow: Controlling the well withdraw based on a target groundwater level
+
+15:00 – 15:30 Break
+
+15:30 – 17:00 Scenario flow: Dynamic river bed conductance for gaining and loosing river sections
+
+## Friday 
+
+9:30 – 10:00 Recap & Discussion
+
+10:00 – 11:00 Scenario transport: Optimize the pumping rate of hydraulic barrier for containing a contamination
+
+11:00 – 11:15 Break 
+
+11.15 – 13:00 Scenario geothermal: Extend MODFLOW with a thermal Cauchy boundary condition
+
+13:00 – 14:00 Lunch 
+
+14:00 – 15:30 Outlook: 
+
+ + Coupling analytic solutions to reduce model size
+ + Reactive transport modeling with pymf6
+
+15:30 – 15:45 Break 
+
+15:45 – 16:30 Q&A: Ask questions about your model customization needs and get answers from author of pymf6
+
+## Workshop Goals 
+
+1. Understand and extend the modular design of MODFLOW 6.
+
+2. Learn how to build and couple groundwater, solute transport, and geothermal flow models.
+
+3. Use Python + PyMF6 to automate modeling workflows and customize boundary conditions.
+
+4. Implement direction-dependent and dynamic boundary conditions programmatically.
+
+5. Couple MODFLOW 6 with external analytical or numerical models.
+
+6. Apply efficient coding patterns to build adaptable, reproducible hydrogeologic simulations.
+

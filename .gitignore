@@ -1,4 +1,6 @@
 .ipynb_checkpoints
+**/fort.[0-9]*
 # pixi environments
 .pixi
 *.egg-info
+*.bud
